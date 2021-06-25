@@ -1,0 +1,275 @@
+/* Header */
+header{
+    background-color: var(--color-gris-oscuro);
+    height: 2.1875rem;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2.1875rem;
+}
+
+/* Caja 1 desktop */
+
+header nav .caja-1-desktop{
+    display: none;
+}
+
+/* Caja 1 */
+header nav .caja-1{
+    display: flex;
+    width: 3.875rem;
+    justify-content: space-between;
+} 
+
+header .logo-cybersound{
+    height: 1.8125rem;
+}
+
+header .burguer-menu{
+    width: 1.5625rem;
+    height: 1.5625rem;
+    background-color: var(--color-gris-oscuro);
+    border: none;
+}
+
+header .burguer-menu i{
+    color: var(--color-naranja);
+    font-size: 1.25rem;
+}
+
+ /* Caja 2 */
+ 
+header nav h1{
+    color: var(--color-naranja);
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+ /* Caja 3 */
+header nav .caja-2{
+    display: flex;
+    width: 3.625rem;
+    justify-content: space-between;
+}
+
+header nav .caja-2 .logo-heart , .logo-search{
+    display: none;
+}
+
+/* Media Querys */
+
+@media (min-width:426px){
+
+    /* Header */
+
+    header{
+        height: 2.875rem;
+    }
+    
+    header nav{
+        height: 2.875rem;
+        justify-content: space-between;
+    }
+
+    /* Caja 1*/
+
+    header nav .caja-1{
+        width: 4.25rem;
+        margin-left: 1.5rem;
+    } 
+    
+    header .logo-cybersound{
+        height: 2rem;
+        width: 1.75rem;
+    }
+
+    header .logo-cybersound img{
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+    
+    header .burguer-menu{
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+    
+    header .burguer-menu i{
+        font-size: 1.75rem;
+    }
+    
+    /* Caja 2*/
+
+    header nav h1{
+        font-size: 1.75rem;
+        font-weight: 500;
+        text-shadow: 2px 2px 2px rgba(255, 109, 0, 0.5);
+
+    }
+
+    /* Caja 3 */
+
+    header nav .caja-2{
+        width: 4.25rem;
+        margin-right: 1.5rem;
+    } 
+
+    header nav .caja-2 img{
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}
+
+@media (min-width:769px){
+
+    /* Header */
+
+    header{
+        height: 5rem;
+    }
+
+    header nav{
+        height: 5rem;
+    }
+
+    /* Caja 1*/
+
+    header nav .caja-1{
+        margin-left: 2.9375rem;
+        width: 6.25rem;
+    }
+    
+    header .logo-cybersound{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    header .logo-cybersound img{
+        height: 3.125rem;
+        width: 3.125rem;
+    }
+    
+    header .burguer-menu{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    header .burguer-menu i{
+        font-size: 2.5rem;
+    }
+
+
+    /* Caja 2 */
+
+    header nav h1{
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-shadow: 4px 4px 2px rgba(255, 109, 0, 0.5);
+    }
+
+    /* Caja 3 */
+
+    header nav .caja-2{
+        width: 6.25rem;
+        margin-right: 2.9375rem;
+    }
+
+    header nav .caja-2 img{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+@media (min-width:1024px){
+
+    /* Header */
+
+    header{
+        height: 6.9375rem;
+    }
+
+    header nav{
+        height: 6.9375rem;
+    }
+
+
+    /* Caja 1 desktop */
+
+    header nav .caja-1-desktop{
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+        height: 4.375rem;
+        margin-left: 3vw;
+    }
+
+    header nav .caja-1-desktop .logo-desktop{
+        height: 4.375rem;
+        margin-right: 3vw;
+    }
+
+    header nav .caja-1-desktop .logo-desktop a img{
+        height: 4.375rem;
+        width: 13.875rem;
+    }
+
+    header nav .caja-1-desktop .barra-inicio{
+        align-items: flex-end;
+        display: flex;
+        height: 4rem;
+    }
+
+    header nav .caja-1-desktop .barra-inicio ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header nav .caja-1-desktop .barra-inicio ul li a{
+        font-weight: bold;
+        font-size: 1.375rem;
+        color: var(--color-naranja);
+        text-transform: capitalize;
+    }
+
+    header nav .caja-1-desktop .barra-inicio ul li a:hover{
+        color: var(--color-violeta);
+    }
+
+
+    header nav .caja-1-desktop .barra-inicio ul li{
+        margin-right: 0.9375rem;
+    }
+
+    /* Caja 1 */
+
+    header nav .caja-1{
+        display: none;
+    } 
+
+    /* Caja 2 */
+
+    header nav h1{
+        display: none;
+    }
+
+
+    /* Caja 3 */
+
+    header nav .caja-2 .logo-heart , .logo-search{
+        display: block;
+    }
+
+    header nav .caja-2{
+        width: 13.75rem;
+        margin-right: 4vw;
+        height: 4.375rem;
+        align-items: flex-end;
+    }
+
+    header nav .caja-2 img{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}

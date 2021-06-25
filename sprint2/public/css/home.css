@@ -1,0 +1,6 @@
+/* Main */
+
+.home main{
+    height: 18.75rem;
+    background-color: var(--color-gris-oscuro);
+}
