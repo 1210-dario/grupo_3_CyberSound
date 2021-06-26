@@ -1,0 +1,18 @@
+.productDetail main{
+    /* height: 18.75rem; */
+    /* background-color: var(--color-gris-oscuro); */
+}
+.productDetail main .caja-producto { 
+    text-align: center;
+
+
+ 
+}
+
+.productDetail main .caja-producto .imagen-producto{
+    height: 150px;
+    background-color: var(--color-violeta);
+    display: flex;
+
+}
+
