@@ -1,6 +1,18 @@
 .productDetail main{
     /* height: 18.75rem; */
-    /* background-color: var(--color-gris-oscuro); */
+ background-color: var(--color-gris-oscuro); 
+ color: var(--color-blanco);
+}
+
+
+h1{
+    font-size: 15px;
+    padding: 30px 0;
+    font-weight: 600;
+}
+s{
+    font-size: 10px;
+
 }
 .productDetail main .caja-producto { 
     text-align: center;
@@ -9,10 +21,75 @@
  
 }
 
-.productDetail main .caja-producto .imagen-producto{
-    height: 150px;
-    background-color: var(--color-violeta);
-    display: flex;
+.productDetail main .caja-producto .detalle-precio .caja-precio .precio{ 
+    font-size: 15px;
 
+
+ 
+}
+.productDetail main .caja-producto .detalle-precio .caja-precio .descuento{ 
+    font-size: 7px;
+    color: var(--color-verde);
+    font-family: 'Roboto', 'Orbitron';
+ 
 }
 
+.productDetail main .caja-producto .detalle-precio .cuotas{  
+    font-size: 5px;
+ 
+}
+.productDetail main .caja-producto .detalle-precio  .cuotas .cuotasverde{  
+    color: var(--color-verde);
+ 
+}
+.productDetail main .caja-producto .detalle-precio  .pagos {
+    font-size: 5px;
+}
+.productDetail main .caja-producto .detalle-precio  .pagos .mediospago{  
+    color: var(--color-blanco);
+    font-weight: 800;
+ 
+}
+.productDetail main .caja-producto .detalle-precio .truck-envio{
+    color: var(--color-verde);
+    font-size: 10px;
+}
+.productDetail main .caja-producto .detalle-precio .stock{
+    font-size: 7px;
+    font-weight:100 ;
+}
+.productDetail main .caja-producto .detalle-precio .stock .boton-stock{
+    font-size: 5px;
+    border-radius: 4px;
+    padding: 0.5px 7px;
+    border: 1px solid var(--color-blanco);
+    background-color: var(--color-gris);
+    color: var(--color-blanco);
+    text-align:left ;
+}
+
+.productDetail main .caja-producto .detalle-precio .comprar .boton-comprar{
+    width: 200px;
+    height: 26.13px;
+    left: 60px;
+    top: 439px;
+    
+    background: #FF6D00;
+    border-radius: 20px;
+    border: none;
+    color: var(--color-blanco);
+    font-size: 15px;
+    font-weight: 800;
+} 
+
+
+
+
+
+.productDetail main .caja-producto .caja1-imagenes .product-imagen img.principal-imagen{
+    height: 185px;
+    width: 200px;
+}
+.productDetail main .caja-producto .caja1-imagenes .product-imagen img.small-2, img.small-3, img.small-4{
+   display: none;
+}
