@@ -61,7 +61,7 @@
 
 .home main .main-home{
     width: 90.625vw;
-    margin-left: 4.6875vw;
+    margin: 0 auto;
 }
 
 .home main .main-home .categories ul{
@@ -76,6 +76,34 @@
 }
 
 /* Products */
+
+.home main .main-home .box .product-container .pro3{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .card-title{
+    display: none;
+} 
+
+.home main .main-home .box .product-container .producto .heart{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .precio-desc img{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .envio{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .especificaciones{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .masVendido{
+    display: none;
+}
 
 /* Mas Vendidos */
 
@@ -108,8 +136,6 @@
     width: 50%;
     height: 56.875vw;
 }
-
-/*56.875vw*/
 
 .home main .main-home article .product-container .top{
     border-right: 2px solid #212121;
@@ -186,3 +212,290 @@
 }
 
 /* Ofertas */
+
+
+
+/* Breakpints o Media Querys */
+
+@media (min-width:426px){
+
+    /* Carrousels */
+
+    .home main .carrousel{
+        height: 45.78vw;
+        position: relative;
+    }
+        /* Titulo Proximos Lanzamientos */
+        .home main h3{
+        font-size: 31.5px;
+        }
+        /*==============================*/
+
+    .home main .carrousel img{
+        height: 45.78vw;
+    }
+    
+    .home main .carrousel .arrows{
+        bottom: 20vw;
+    }
+    
+    .home main .carrousel .arrows i{
+        font-size: 55px;
+    }
+    
+    .home main .carrousel .dots{
+        bottom: 6vw;
+    }
+
+    /* Categorias */
+
+    .home main .main-home .categories ul li a img{
+        width: 102px;
+        height: 102px;
+    }
+
+    /* Productos */
+    
+    /* Mas Vendidos */
+
+    /* Titulo */
+    .home main .main-home .box h2{
+        font-size: 34px;
+        padding-top: 5px;
+    }
+
+    /* Contenedor de Tarjetas */
+
+    /* Tarjetas */
+    .home main .main-home article .product-container .producto{
+        width: 50%;
+        height: 56.875vw;
+    }
+
+    .home main .main-home article .product-container .producto .precio-desc h5{
+        font-size: 20px;
+    }
+
+    .home main .main-home article .product-container .producto .precio-desc p{
+        font-size: 13px;
+    }
+
+    .home main .main-home article .product-container .producto .subtitle h5{
+        font-size: 18px;
+    }
+
+    .home main .main-home article .product-container .producto .subtitle p{
+        font-size: 13px;
+    }
+
+    /* Subtitulo Ver más */
+
+    .home main .main-home .box .more{
+        padding: 0 5vw;
+    }
+
+    .home main .main-home .box .more .ver-mas{
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width:769px){
+
+    /* Categorias */
+
+    .home main .main-home .categories ul li a img{
+        width: 120px;
+        height: 110px;
+    }
+
+
+    /* Productos */
+    .home main .main-home .box .product-container .pro3{
+        display: initial;
+    }
+
+    .home main .main-home .box .product-container .producto .card-title{
+        display: block;
+        margin-top: 1.3vw;
+        margin-bottom: 0.65vw;
+    } 
+    
+    .home main .main-home .box .product-container .producto .heart{
+        display: inline-block;
+        position: absolute;
+        bottom: 44.36vw;
+        left: 21.06vw;
+    }
+
+    .home main .main-home .box .product-container .producto .heart img{
+        width: 30px;
+        height: 30px;
+        position: inherit;
+    }
+    
+    .home main .main-home .box .product-container .producto .envio{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 2.7vw;
+    }
+    
+    .home main .main-home .box .product-container .producto .especificaciones{
+        display: flex;
+        justify-content: center;
+        margin-top: 4.5vw;
+    }
+
+    .home main .main-home .box .product-container .producto .masVendido{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+    /* Mas Vendidos */
+
+
+
+/* Titulo */
+.home main .main-home .box h2{
+    font-size: 34px;
+    padding-top: 5px;
+    margin-left: 30px;
+}
+
+/* Contenedor de Tarjetas */
+
+.home main .main-home article .product-container{
+    justify-content: space-around;
+}
+/* Tarjetas */
+.home main .main-home article .product-container .producto{
+    width: 30%;
+    height: 49.66vw;
+    margin: 15px 0;
+    border: 2px solid #212121;
+    background: rgba(229, 229, 229, 0.05);
+    box-shadow: 6px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    position: relative;
+}
+
+.home main .main-home .box .product-container .producto .card-title h5{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-naranja);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.home main .main-home article .product-container .producto img{
+    width: 92%;
+    height: 24.41vw;
+    margin-left: 1.27vw;
+}
+
+.home main .main-home .box .product-container .producto .masVendido .cartel-vendido{
+    color: black;
+    background-color: var(--color-violeta);
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.home main .main-home .box .product-container .producto .masVendido .descuento{
+    color: var(--color-verde);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.home main .main-home article .product-container .producto .precio-desc{
+    justify-content: space-around;
+    height: auto;
+    align-items: center;
+}
+
+.home main .main-home article .product-container .producto .precio-desc h5{
+    font-size: 18px;
+}
+
+.home main .main-home .box .product-container .producto .precio-desc img{
+    display: initial;
+    width: 32px;
+    height: 32px;
+}
+
+.home main .main-home article .product-container .producto .precio-desc p{
+    display: none;
+}
+
+.home main .main-home article .product-container .producto .subtitle{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .envio i, .envio p{
+    color: var(--color-verde);
+}
+
+.home main .main-home .box .product-container .producto .envio i{
+    font-size: 18px;
+}
+
+.home main .main-home .box .product-container .producto .envio p{
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+
+.home main .main-home .box .product-container .producto .especificaciones a{
+    background-color: var(--color-naranja);
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 22.11vw;
+    text-align: center;
+    border-radius: 100px;
+    padding: 0.78vw 0;
+}
+
+/* Subtitulo Ver más */
+
+.home main .main-home .box .more{
+    padding: 0 5vw;
+}
+
+.home main .main-home .box .more .ver-mas{
+    font-size: 18px;
+}
+
+}
+
+@media (min-width:1024px){
+
+
+}
+
+
+
+/* Propiedad on hover para iconos svg */
+
+/* filter: hue-rotate(
+240deg
+); */
+
+/* Para los iconos del medio tal vez?*/
+
+/* filter: hue-rotate( 
+310deg
+ ); */
+
+ /* Para la imagen del carousel usar :
+ 
+ object-fit: cover;
+
+ me permite ajustar la imagen y que no se quede agrandada de 1 solo lado
+278.13px    100%
+252.19px  92%
+ */
