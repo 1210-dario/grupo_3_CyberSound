@@ -1,95 +1,273 @@
 .productDetail main{
-    /* height: 18.75rem; */
- background-color: var(--color-gris-oscuro); 
- color: var(--color-blanco);
-}
-
-
-h1{
-    font-size: 15px;
-    padding: 30px 0;
-    font-weight: 600;
-}
-s{
-    font-size: 10px;
-
-}
-.productDetail main .caja-producto { 
-    text-align: center;
-
-
- 
-}
-
-.productDetail main .caja-producto .detalle-precio .caja-precio .precio{ 
-    font-size: 15px;
-
-
- 
-}
-.productDetail main .caja-producto .detalle-precio .caja-precio .descuento{ 
-    font-size: 7px;
-    color: var(--color-verde);
-    font-family: 'Roboto', 'Orbitron';
- 
-}
-
-.productDetail main .caja-producto .detalle-precio .cuotas{  
-    font-size: 5px;
- 
-}
-.productDetail main .caja-producto .detalle-precio  .cuotas .cuotasverde{  
-    color: var(--color-verde);
- 
-}
-.productDetail main .caja-producto .detalle-precio  .pagos {
-    font-size: 5px;
-}
-.productDetail main .caja-producto .detalle-precio  .pagos .mediospago{  
+    background-color: var(--color-gris-oscuro); 
     color: var(--color-blanco);
-    font-weight: 800;
- 
+   }
+   
+   .productDetail main section .imagen-fondo{
+    display: none;
+     
+ }
+   .productDetail .caja-producto-titulo{
+       font-size: 20px;
+       padding: 30px 0;
+       font-weight: 600;
+   }
+   .productDetail s{
+       font-size: 15px;
+   
+   }
+   
+   .productDetail main .caja-producto { 
+       text-align: center;
+   }
+  .productDetail main .caja-producto .caja-desktop-titulo{
+      display: none;
+  }
+   .productDetail main .product-imagen{
+    width: 100vw;
+    position: relative;
+     
+   }
+   .productDetail main .caja-producto .caja1-imagenes .product-imagen img.principal-imagen{
+       /* height: 190px;
+       width: 100%;
+       max-width: 200px; */
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       width: 50%;
+       max-width:  516px;
+   }
+   .productDetail main .caja-producto .caja1-imagenes .product-imagen img.small-1, img.small-2, img.small-3{
+      display: none;
+   }
+
+   .productDetail main .caja-producto .caja1-imagenes  .icono-heart{
+    position: absolute;
+    bottom: 41vw;
+    left: 65vw;
+    height: 7vw;
 }
-.productDetail main .caja-producto .detalle-precio .truck-envio{
-    color: var(--color-verde);
-    font-size: 10px;
-}
-.productDetail main .caja-producto .detalle-precio .stock{
-    font-size: 7px;
-    font-weight:100 ;
-}
-.productDetail main .caja-producto .detalle-precio .stock .boton-stock{
-    font-size: 5px;
-    border-radius: 4px;
-    padding: 0.5px 7px;
-    border: 1px solid var(--color-blanco);
-    background-color: var(--color-gris);
-    color: var(--color-blanco);
-    text-align:left ;
+.productDetail main .caja-producto .caja1-imagenes  .numeroimagen{
+    width: 6.1vw;
+    height: 3.2vw;
+    left: 18vw;
+    font-size: 2.7vw;
+    position: absolute;
+    bottom: 49vw;
+    background-color: rgba(196, 196, 196, 1);
+    color: black;
+    border-radius: 20px;
+    font-family: roboto;
+    font-weight: 500;
 }
 
-.productDetail main .caja-producto .detalle-precio .comprar .boton-comprar{
-    width: 200px;
-    height: 26.13px;
+
+   .productDetail main .caja-producto .caja-imagen-precio{
+       display: flex; 
+       flex-wrap: wrap;
+       justify-content: center; 
+     
+   }
+   .productDetail main .caja-producto .detalle-precio{
+       margin: 10px;
+   }
+   .productDetail main .caja-producto .detalle-precio div{
+       padding: 7px;
+   }
+   .productDetail main .caja-producto .detalle-precio .caja-precio .precio{ 
+       font-size: 19px; 
+   }
+   .productDetail main .caja-producto .detalle-precio .caja-precio .descuento{ 
+       font-size: 12px;
+       color: var(--color-verde);
+       font-family: 'Roboto', 'Orbitron';
+    
+   }
+   
+   .productDetail main .caja-producto .detalle-precio .cuotas{  
+       font-size: 12px;
+    
+   }
+   .productDetail main .caja-producto .detalle-precio  .cuotas .cuotasverde{  
+       color: var(--color-verde);
+    
+   }
+   .productDetail main .caja-producto .detalle-precio  .pagos {
+       font-size: 10px;
+   }
+   .productDetail main .caja-producto .detalle-precio  .pagos .mediospago{  
+       color: var(--color-blanco);
+       font-weight: 800;
+    
+   }
+   .productDetail main .caja-producto .detalle-precio .truck-envio{
+       color: var(--color-verde);
+       font-size: 15px;
+   }
+   .productDetail main .caja-producto .detalle-precio .stock{
+       font-size: 10px;
+       font-weight:100 ;
+   }
+   .productDetail main .caja-producto .detalle-precio .stock .boton-stock{
+       font-size: 10px;
+       border-radius: 4px;
+       border: 1px solid var(--color-blanco);
+       background-color: var(--color-gris);
+       color: var(--color-blanco);
+       text-align: left ;
+   }
+   
+   .productDetail main .caja-producto .detalle-precio .comprar .boton-comprar{
+    width: 65vw;
+    height: 11vw;
     left: 60px;
     top: 439px;
-    
-    background: #FF6D00;
+    background: var(--color-naranja);
     border-radius: 20px;
-    border: none;
+    border: var(--color-naranja);
     color: var(--color-blanco);
-    font-size: 15px;
+    font-size: 6vw;
     font-weight: 800;
+   }  
+   .productDetail main section .description-product{
+    display: flex;
+    justify-content: center;
+   }
+   .productDetail main .caja-producto .description-product ul{
+       padding: 20px;
+      
+   }
+   
+   .productDetail main .caja-producto .description-product li{
+       padding: 10px 0;
+       font-size: 15px;
+   
+   }
+   
+   @media (min-width:426px){
+    .productDetail main .caja-producto .detalle-precio .comprar .boton-comprar{
+    width: 260px;
+    height: 55px;
+    font-size: 25px;
+
+}
+   }
+   @media (min-width:769px){
+   
+    /* .productDetail main .product-imagen{
+        width: 60vw;
+         
+       } */
+
+       .productDetail .caja-producto-titulo{
+        font-size: 25px;
+    }
+    .productDetail s{
+        font-size: 20px;
+    
+    }
+    .productDetail main .caja-producto .detalle-precio .caja-precio .precio{ 
+        font-size: 25px; 
+    }
+
+    .productDetail main .caja-producto .detalle-precio .caja-precio .descuento{ 
+        font-size: 15px;
+   }
+   .productDetail main .caja-producto .detalle-precio .cuotas{  
+    font-size: 16px; 
+}
+.productDetail main .caja-producto .detalle-precio  .pagos{  
+    font-size: 17px;
+ }
+    .productDetail main .caja-producto .detalle-precio .truck-envio{
+        font-size: 20px;
+    }
+    .productDetail main .caja-producto .detalle-precio .stock{
+        font-size: 15px;
+    }
+    .productDetail main .caja-producto .desciption-product li{
+        font-size: 20px;
+    }
+
+
+
+}
+   @media (min-width:1024px){
+
+
+    .productDetail .caja-producto-titulo{
+        display: none;       
+}
+.productDetail main section .imagen-fondo{
+    display: flex;
+    justify-content: center;
+   position: relative; 
+  
+}
+.productDetail main section  .imagen-fondo .fondo-img{
+    width: 100%;
+    max-width: 1440px;
+}
+.productDetail main .caja-producto {
+ display: flex;
+ justify-content: center;
+ position: relative;
+ bottom: 150px;
+ background-color: var(--color-gris-oscuro);
+ width: 73.24%;
+ margin: 0 auto;
+ max-width: 893px;
+}
+.productDetail main .caja-producto .caja-desktop-titulo{
+    display: flex;
+}
+.productDetail main .caja-producto .caja-desktop-titulo .titulo-producto2{
+    font-size: 20px;
+    margin: 0 30px;
+}
+.productDetail main .caja-producto .caja-desktop-titulo .icono-heart{
+    height: 30px;
+}
+.productDetail main .product-imagen{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  width: 40vw;
+     
+   }
+   .productDetail main .caja-producto .caja1-imagenes .product-imagen img.principal-imagen{
+  
+    display: block;
+    margin-left: 40px;
+    margin-right: 0;
+    width: 270px;
+    /* max-width:  400px;; */
+}
+.productDetail main .caja-producto .caja1-imagenes .product-imagen .small-imagen{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.productDetail main .caja-producto .caja1-imagenes .product-imagen img.small-1, img.small-2, img.small-3{
+    width: 80px;
+    display: flex;
+ }
+.productDetail main .caja-producto .caja1-imagenes  .icono-heart, .numeroimagen {
+    display: none;
+}
+
+.productDetail main .description-product{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 102px; 
+
+}
+
+
 } 
 
+ 
 
-
-
-
-.productDetail main .caja-producto .caja1-imagenes .product-imagen img.principal-imagen{
-    height: 185px;
-    width: 200px;
-}
-.productDetail main .caja-producto .caja1-imagenes .product-imagen img.small-2, img.small-3, img.small-4{
-   display: none;
-}
+   
