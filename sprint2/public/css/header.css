@@ -188,10 +188,14 @@ header nav .caja-2 .logo-heart , .logo-search{
 
     header{
         height: 6.9375rem;
+        display: flex;
+        justify-content: center;
     }
 
     header nav{
         height: 6.9375rem;
+        width: 100%;
+        max-width: 1950px;
     }
 
 
@@ -271,5 +275,9 @@ header nav .caja-2 .logo-heart , .logo-search{
     header nav .caja-2 img{
         width: 2.5rem;
         height: 2.5rem;
+    }
+
+    header nav .caja-2 img:hover{
+        filter: hue-rotate(240deg);
     }
 }

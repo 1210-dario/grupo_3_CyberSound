@@ -131,6 +131,12 @@
     border-top: 1px solid var(--color-violeta);
     border-bottom: 1px solid var(--color-violeta);
 }
+
+.home main .main-home article .product-container .product-container2{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
 /* Tarjetas */
 .home main .main-home article .product-container .producto{
     width: 50%;
@@ -187,12 +193,26 @@
     font-weight: 500;
     color: var(--color-naranja);
     text-transform: capitalize;
+    width: 60%;
 }
 
-.home main .main-home article .product-container .producto .subtitle p{
-    font-size: 9px;
-    font-weight: bold;
-    visibility: hidden;
+.home main .main-home article .product-container .producto .subtitle .info{
+    width: 15px;
+    height: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    background-color: rgba(24, 24, 24, 0.61);
+}
+
+.home main .main-home article .product-container .producto .subtitle .info a{
+    display: flex;    
+}
+
+.home main .main-home article .product-container .producto .subtitle .info a i{
+    color: var(--color-violeta);
+    font-size: 11px;
 }
 
 /* Subtitulo Ver más */
@@ -284,8 +304,13 @@
         font-size: 18px;
     }
 
-    .home main .main-home article .product-container .producto .subtitle p{
-        font-size: 13px;
+    .home main .main-home article .product-container .producto .subtitle .info{
+        width: 38px;
+        height: 38px;
+    }
+    
+    .home main .main-home article .product-container .producto .subtitle .info a i{
+        font-size: 20px;
     }
 
     /* Subtitulo Ver más */
@@ -321,7 +346,7 @@
         margin-bottom: 0.65vw;
     } 
     
-    .home main .main-home .box .product-container .producto .heart{
+    .home main .main-home .box .product-container .product-container2 .producto .heart{
         display: inline-block;
         position: absolute;
         bottom: 44.36vw;
@@ -474,6 +499,107 @@
 
 @media (min-width:1024px){
 
+    /* Carrousels */
+
+    .home main .carrousel{
+        max-height: 468px;
+        justify-content: center;
+        display: flex;
+    }
+    
+    .home main .carrousel img{
+        max-height: 468px;
+        max-width: 1440px;
+    }
+    
+    .home main .carrousel .arrows{
+        bottom: 205px;
+        max-width: 1440px;
+    }
+    
+    .home main .carrousel .arrows i{
+        color: var(--color-violeta);
+        font-size: 60px;
+    }
+    
+    .home main .carrousel .dots{
+        bottom: 61.45px;
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 432px;        
+    }
+    
+    .home main .carrousel .dots li i{
+        font-size: 18px;
+    }
+
+    /* Contenedor de Categorias + productos */
+
+    .home main .main-home{
+        width: 91.875vw;
+        max-width: 1323px;
+    }
+
+    /* Categorias */
+
+    .home main .main-home .categories{
+        display: flex;
+        justify-content: center;
+    }
+
+    .home main .main-home .categories ul{
+        max-width: 1440px;
+    }
+
+    .home main .main-home .categories ul li a img{
+        width: 120px;
+        height: 110px;
+        margin: 0 16px;
+    }
+
+    /* Productos */
+
+    /* Tarjetas */
+    .home main .main-home article .product-container .producto{
+        width: 275px;
+        height: 508px;
+    }
+
+    .home main .main-home article .product-container .producto img{
+        width: 250px;
+        height: 250px;
+        margin-left: 10.5px;
+    }
+
+    .home main .main-home .box .product-container .product-container2 .producto .heart{
+        bottom: 455px;
+        left: 218px;
+    }
+
+    .home main .main-home article .product-container .producto .envio{
+        padding-left: 33px;
+    }
+
+    .home main .main-home .box .product-container .producto .especificaciones {
+        margin-top: 50px;
+    }
+
+    .home main .main-home .box .product-container .producto .especificaciones a{
+        width: 226px;
+        padding: 8px 0;
+    }
+
+    .home main h3 {
+        font-size: 40px;
+    }
+
+    .home main .main-home .box h2 {
+        font-size: 40px;
+    }
+
+    .home main .main-home .box .more .ver-mas {
+        font-size: 20px;
+    }
 
 }
 
