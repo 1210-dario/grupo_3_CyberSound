@@ -1,7 +1,11 @@
 /* Main */
+.productList{
+background-color: var(--color-gris-oscuro);
+}
 
 .productList main{
     background-color: var(--color-gris-oscuro);
+    margin: 0px auto;
 }
 
 /* Carrousels */
