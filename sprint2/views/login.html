@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,30 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <title>Login</title>
 </head>
+
 <body class="login">
-    
+    <section>
+        <div class="button-volver-nombre">
+            <a href="/"><i class="fas fa-angle-left"></i></a>
+            <a class="Cybersound" href="/">CyberSound</a>
+        </div>
+        <h1 class="h1-ingresar">Ingresar</h1>
+        <button class="google"><a href="/"><i class="fab fa-google"></i>Ingresar con google</a></button>
+        <span>o</span>
+        <form action="/login" method="">
+            <div>
+                <input type="email" name="Mail-User" placeholder="Email" class="input-naranja">
+            </div>
+            <div>
+                <input type="password" name="Password" placeholder="Contraseña" class="input-naranja">
+            </div>
+            <p>olvidaste tu <a href="">usuario</a> o <a href="">Contraseña </a> ?</p>
+            <a href="/"><button>
+                    Ingresar
+                </button></a>
+        </form>
+        <p>eres nuevo? <a href="/register">REGISTRATE</a></p>
+    </section>
 </body>
+
 </html>

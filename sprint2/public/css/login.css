@@ -1,0 +1,61 @@
+.login{
+    background-color: var(--color-gris-oscuro);
+}
+.login section{
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+}
+.login .button-volver-nombre{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.login .button-volver-nombre .fas{
+    font-size: 40px;
+}
+.login .button-volver-nombre .Cybersound{
+    font-weight: 900;
+    font-size: 15px;
+}
+.login .button-volver-nombre .h1-ingresar{
+
+}
+
+.login .button-volver-nombre .fas, .Cybersound, .h1-ingresar{ 
+    color:var(--color-violeta);   
+}
+.login button.google{
+    background-color: var(--color-naranja);
+    border-radius: 24px;
+    border: none;
+    
+}
+
+.login button.google a{
+    height: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 10px;
+    color: var(--color-blanco);
+    border: none;
+}
+.login button .fab{
+    font-size: 30px;
+}
+
+.login .input-naranja{
+    background-color: var(--color-naranja);
+    border-radius: 24px;
+    height: 40px;
+    width: 170px;
+    border: none;
+}
+.login .input-naranja::placeholder {
+    color:var(--color-blanco);
+    font-size: 1.5em;
+    font-family: Orbitron;
+  }
