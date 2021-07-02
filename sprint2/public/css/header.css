@@ -55,6 +55,29 @@ header nav .caja-2{
     justify-content: space-between;
 }
 
+header nav .caja-2 .logo-user ul{
+    display: none;
+}
+
+header nav .caja-2 .logo-user:hover ul{
+    display: flex;
+    position: absolute;
+    right: 60px;
+}
+
+header nav .caja-2 .logo-user ul li{
+    width: 88px;
+}
+
+header nav .caja-2 .logo-user ul li a{
+    color: var(--color-naranja);
+    font-size: 16px;
+}
+
+header nav .caja-2 .logo-user ul li a:hover{
+    color: var(--color-violeta);
+}
+
 header nav .caja-2 .logo-heart , .logo-search{
     display: none;
 }
@@ -235,6 +258,14 @@ header nav .caja-2 .logo-heart , .logo-search{
         font-size: 1.375rem;
         color: var(--color-naranja);
         text-transform: capitalize;
+    }
+
+    header nav .caja-1-desktop .barra-inicio ul>li>ul{
+        display: none;
+    }
+    header nav .caja-1-desktop .barra-inicio ul>li:hover>ul {
+        display: flex;
+        position: absolute;
     }
 
     header nav .caja-1-desktop .barra-inicio ul li a:hover{
