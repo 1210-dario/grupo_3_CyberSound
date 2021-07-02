@@ -3,17 +3,17 @@
 }
 
 .login section{
-    width: 90vw;
-    margin: 0 auto;
+    width: 100vw;
     text-align: center;
-}
-.login div.button-volver-nombre{
-    max-width: 850px;
+    margin-bottom: 20px;
 }
 .login .button-volver-nombre{
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
+    width: 90%;
+    margin: 12px auto;
+    align-items: center;
      
     
 }
@@ -49,10 +49,10 @@
     border: none;
 }
 .login button .fab{
-    font-size: 30px;
+    font-size: 40px;
 }
 .login h2{
-    font-size: 24px;
+    font-size: 20px;
     color: var(--color-naranja);
     font-weight: 400;
     margin: 30px 0;
@@ -66,19 +66,25 @@
     margin: 10px auto;
     padding-left: 10px;
     display: block;
-    font-weight: 700;
+    font-weight: bold;
+    color: var(--color-blanco);
 }
+.login section form input:focus{
+    background-color: var(--color-violeta);
+    outline: thin dotted;
+}
+
 .login section form input::placeholder{
     color: var(--color-blanco);
 
 }
 .login section form input.boton-ingresar{
-    width: 80px;
+    width: 100px;
     height: 30px;
     background-color: var(--color-violeta);
     padding-left: 0;
     margin: 15px auto;
-    color: var(--color-blanco);
+    
 }    
 .login p, h6{
     font-size: 10px;
@@ -88,12 +94,24 @@
 .login section a.naranja{
     font-size: 10px;
     color: var(--color-naranja);
-    font-weight: 900;
+    font-weight: bold;
+
 }
+.login section a.violet{
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--color-violeta)
+}
+.login section a.naranja:hover{
+    color: var(--color-violeta);
+ }
   /* media querys* */
 
 
 @media (min-width:426px){
+    .login section .button-volver-nombre{
+        max-width: 438px;
+    }
     
     .login .button-volver-nombre .fa-angle-left{
         font-size: 50px;
@@ -103,13 +121,14 @@
     }
     
     .login  .h1-ingresar{ 
-        font-size: 30px;  
+        font-size: 35px;
+        font-weight: 400;  
     }
     
     .login button.google a{
-        height: 50px;
-        width: 220px;
-        font-size: 15px;
+        height: 40px;
+        width: 205px;
+        font-size: 13px;
     }
     .login button .fab{
         font-size: 40px;
@@ -119,35 +138,63 @@
          
     }
     .login section form input{
-        width: 195px;
-        height: 45px;
+        width: 225px;
+        height: 42px;
 
     }
     .login section form input.boton-ingresar{
         width: 80px;
         height: 30px;
-        background-color: var(--color-violeta);
-        padding-left: 0;
-        margin: 15px auto;
-        color: var(--color-blanco);
     }    
     .login p, h6{
-        font-size: 10px;
-        color: var(--color-naranja);
-        font-weight: 400;
+        font-size: 15px;
     }
     .login section a.naranja{
-        font-size: 10px;
-        color: var(--color-naranja);
-        font-weight: 900;
+        font-size: 15px;
     }
-
+    .login section a.violet{
+        font-size: 15px;
+  
+    }
 }
 
 
 @media (min-width:769px){
+    .login section .button-volver-nombre{
+        max-width: 850px;
+    }
+    .login .button-volver-nombre .fa-angle-left{
+        font-size: 50px;
+    }
+    
+    .login button.google a{
+        height: 44px;
+        width: 245px;
+        font-size: 15px;
+    }
+
+    .login section form input{
+        width: 265px;
+        height: 44px;
+
+    }
+    .login section form input.boton-ingresar{
+        width: 180px;
+        height: 37px;
+    }    
+    .login p, h6{
+        font-size: 18px;
+    }
+    .login section a.naranja{
+        font-size: 18px;
+    }
+    .login section a.violet{
+        font-size: 18px;
+  
+    }
 
 }
+
 @media (min-width:1024px){
   
 }
