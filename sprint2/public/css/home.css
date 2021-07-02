@@ -602,26 +602,3 @@
     }
 
 }
-
-
-
-/* Propiedad on hover para iconos svg */
-
-/* filter: hue-rotate(
-240deg
-); */
-
-/* Para los iconos del medio tal vez?*/
-
-/* filter: hue-rotate( 
-310deg
- ); */
-
- /* Para la imagen del carousel usar :
- 
- object-fit: cover;
-
- me permite ajustar la imagen y que no se quede agrandada de 1 solo lado
-278.13px    100%
-252.19px  92%
- */
