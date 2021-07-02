@@ -1,16 +1,24 @@
 .login{
     background-color: var(--color-gris-oscuro);
 }
+
 .login section{
     width: 90vw;
     margin: 0 auto;
     text-align: center;
 }
+.login div.button-volver-nombre{
+    max-width: 850px;
+}
 .login .button-volver-nombre{
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
+     
     
+}
+.login .caja-login{
+          margin-top: 30px;
 }
 .login .button-volver-nombre .fas{
     font-size: 40px;
@@ -19,14 +27,11 @@
     font-weight: 900;
     font-size: 15px;
 }
-.login .button-volver-nombre .h1-ingresar{
-
-}
 
 .login .button-volver-nombre .fas, .Cybersound, .h1-ingresar{ 
     color:var(--color-violeta);   
 }
-.login button.google{
+.login .google{
     background-color: var(--color-naranja);
     border-radius: 24px;
     border: none;
@@ -46,16 +51,103 @@
 .login button .fab{
     font-size: 30px;
 }
-
-.login .input-naranja{
-    background-color: var(--color-naranja);
-    border-radius: 24px;
-    height: 40px;
-    width: 170px;
-    border: none;
+.login h2{
+    font-size: 24px;
+    color: var(--color-naranja);
+    font-weight: 400;
+    margin: 30px 0;
 }
-.login .input-naranja::placeholder {
-    color:var(--color-blanco);
-    font-size: 1.5em;
-    font-family: Orbitron;
-  }
+.login section form input{
+    background-color: var(--color-naranja);
+    border-radius: 10px;
+    border: none;
+    width: 185px;
+    height: 38px;
+    margin: 10px auto;
+    padding-left: 10px;
+    display: block;
+    font-weight: 700;
+}
+.login section form input::placeholder{
+    color: var(--color-blanco);
+
+}
+.login section form input.boton-ingresar{
+    width: 80px;
+    height: 30px;
+    background-color: var(--color-violeta);
+    padding-left: 0;
+    margin: 15px auto;
+    color: var(--color-blanco);
+}    
+.login p, h6{
+    font-size: 10px;
+    color: var(--color-naranja);
+    font-weight: 400;
+}
+.login section a.naranja{
+    font-size: 10px;
+    color: var(--color-naranja);
+    font-weight: 900;
+}
+  /* media querys* */
+
+
+@media (min-width:426px){
+    
+    .login .button-volver-nombre .fa-angle-left{
+        font-size: 50px;
+    }
+    .login .button-volver-nombre .Cybersound{
+        font-size: 20px;
+    }
+    
+    .login  .h1-ingresar{ 
+        font-size: 30px;  
+    }
+    
+    .login button.google a{
+        height: 50px;
+        width: 220px;
+        font-size: 15px;
+    }
+    .login button .fab{
+        font-size: 40px;
+    }
+    .login h2{
+        font-size: 35px;
+         
+    }
+    .login section form input{
+        width: 195px;
+        height: 45px;
+
+    }
+    .login section form input.boton-ingresar{
+        width: 80px;
+        height: 30px;
+        background-color: var(--color-violeta);
+        padding-left: 0;
+        margin: 15px auto;
+        color: var(--color-blanco);
+    }    
+    .login p, h6{
+        font-size: 10px;
+        color: var(--color-naranja);
+        font-weight: 400;
+    }
+    .login section a.naranja{
+        font-size: 10px;
+        color: var(--color-naranja);
+        font-weight: 900;
+    }
+
+}
+
+
+@media (min-width:769px){
+
+}
+@media (min-width:1024px){
+  
+}

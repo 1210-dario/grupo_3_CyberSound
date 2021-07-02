@@ -11,27 +11,82 @@
 </head>
 
 <body class="login">
+    <header>
+        <nav>
+            <div class="caja-1-desktop">
+                <div class="logo-desktop">
+                    <a href="/">
+                        <img src="/images/icons/Logo-con-Frase.svg" alt="Logo-con-Frase">
+                    </a>
+                </div>
+                <div class="barra-inicio">
+                    <ul>
+                        <li><a href="/">inicio</a></li>
+                        <li><a href="#">categoriasv</a></li>
+                        <li><a href="#">ofertas</a></li>
+                        <li><a href="#">ayuda</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="caja-1">
+                <div class="menu">
+                    <button class="burguer-menu">
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </button>
+                </div>
+                <div class="logo-cybersound">
+                    <a href="/">
+                        <img src="/images/icons/Logo-sin-Frase.svg" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <h1>CyberSound</h1>
+            <div class="caja-2">
+                <div class="logo-heart">
+                    <a href="#">
+                        <img src="/images/icons/logo-heart.svg" alt="logo-heart">
+                    </a>
+                </div>
+                <div class="logo-search">
+                    <a href="#">
+                        <img src="/images/icons/logo-search.svg" alt="logo-search">
+                    </a>
+                </div>
+                <div class="logo-user">
+                    <a href="/login">
+                        <img src="/images/icons/logo-user.svg" alt="logo-user">
+                    </a>
+                </div>
+                <div class="logo-cart">
+                    <a href="/cart">
+                        <img src="/images/icons/logo-cart.svg" alt="logo-cart">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
     <section>
         <div class="button-volver-nombre">
             <a href="/"><i class="fas fa-angle-left"></i></a>
             <a class="Cybersound" href="/">CyberSound</a>
         </div>
         <h1 class="h1-ingresar">Ingresar</h1>
+        <div class="caja-login"> 
         <button class="google"><a href="/"><i class="fab fa-google"></i>Ingresar con google</a></button>
-        <span>o</span>
+        <h2>o</h2>
         <form action="/login" method="">
             <div>
                 <input type="email" name="Mail-User" placeholder="Email" class="input-naranja">
-            </div>
-            <div>
+           
                 <input type="password" name="Password" placeholder="Contraseña" class="input-naranja">
             </div>
-            <p>olvidaste tu <a href="">usuario</a> o <a href="">Contraseña </a> ?</p>
-            <a href="/"><button>
-                    Ingresar
-                </button></a>
+            <p>olvidaste tu <a class="naranja" href="">usuario</a> o <a class="naranja"  href="">Contraseña </a> ?</p>
+            <input type="submit" value="Ingresar" class="boton-ingresar">
         </form>
-        <p>eres nuevo? <a href="/register">REGISTRATE</a></p>
+        <h6>eres nuevo? <a class="naranja" href="/register">Registrate</a></h6>
+        </div>
     </section>
 </body>
 
