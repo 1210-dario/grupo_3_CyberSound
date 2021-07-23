@@ -1,0 +1,604 @@
+/* Main */
+
+.home main{
+    background-color: var(--color-gris-oscuro);
+}
+
+/* Carrousels */
+.home main .carrousel{
+    width: 100vw;
+    height: 195px;
+    position: relative;
+}
+
+.home main h3{
+    color: var(--color-naranja);
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.home main .carrousel img{
+    width: 100vw;
+    height: 195px;
+}
+
+.home main .carrousel .arrows{
+    position: absolute;
+    width: 100vw;
+    bottom: 5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home main .carrousel .arrows button{
+    background-color: rgba(0,0,0, 0);
+    border: none;
+    margin: 0 10px;
+}
+
+.home main .carrousel .arrows i{
+    color: var(--color-violeta);
+    font-size: 40px;
+}
+
+.home main .carrousel .dots{
+    position: absolute;
+    width: 100vw;
+    bottom: 1.5em;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30vw 0 30vw;
+}
+
+.home main .carrousel .dots li i{
+    color: var(--color-violeta);
+    font-size: 15px;
+}
+
+/* Categories and Products */
+
+.home main .main-home{
+    width: 90.625vw;
+    margin: 0 auto;
+}
+
+.home main .main-home .categories ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+}
+
+.home main .main-home .categories ul li a img{
+    width: 96.5px;
+    height: 48px;
+}
+
+/* Products */
+
+.home main .main-home .box .product-container .pro3{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .card-title{
+    display: none;
+} 
+
+.home main .main-home .box .product-container .producto .heart{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .precio-desc img{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .envio{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .especificaciones{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .masVendido{
+    display: none;
+}
+
+/* Mas Vendidos */
+
+.home main .main-home .box{
+    background-color: rgba(196, 196, 196, 0.05);
+    border-radius: 3%;
+    margin-bottom: 17px;
+}
+
+/* Titulo */
+.home main .main-home .box h2{
+    color: var(--color-naranja);
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 0.5em;
+    padding-top: 3px;
+}
+
+/* Contenedor de Tarjetas */
+
+.home main .main-home article .product-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(196, 196, 196, 0.05);
+    border-top: 1px solid var(--color-violeta);
+    border-bottom: 1px solid var(--color-violeta);
+}
+
+.home main .main-home article .product-container .product-container2{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+/* Tarjetas */
+.home main .main-home article .product-container .producto{
+    width: 50%;
+    height: 56.875vw;
+}
+
+.home main .main-home article .product-container .top{
+    border-right: 2px solid #212121;
+    border-bottom: 2px solid #212121;
+    border-left: 2px solid #212121;
+}
+
+.home main .main-home article .product-container .bot{
+    border-top: 2px solid #212121;
+    border-right: 2px solid #212121;
+    border-left: 2px solid #212121;
+}
+
+.home main .main-home article .product-container .producto img{
+    width: 97%;
+    height: 37.125vw;
+}
+
+.home main .main-home article .product-container .producto .precio-desc{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 6.7vw;
+    align-items: flex-end;
+}
+
+.home main .main-home article .product-container .producto .precio-desc h5{
+    color: var(--color-blanco);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.home main .main-home article .product-container .producto .precio-desc p{
+    color: var(--color-verde);
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.home main .main-home article .product-container .producto .subtitle{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 10.4vw;
+    align-items: center;
+}
+
+.home main .main-home article .product-container .producto .subtitle h5{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-naranja);
+    text-transform: capitalize;
+    width: 60%;
+}
+
+.home main .main-home article .product-container .producto .subtitle .info{
+    width: 15px;
+    height: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    background-color: rgba(24, 24, 24, 0.61);
+}
+
+.home main .main-home article .product-container .producto .subtitle .info a{
+    display: flex;    
+}
+
+.home main .main-home article .product-container .producto .subtitle .info a i{
+    color: var(--color-violeta);
+    font-size: 11px;
+}
+
+/* Subtitulo Ver más */
+
+.home main .main-home .box .more{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.home main .main-home .box .more .ver-mas{
+    color: var(--color-naranja);
+    font-size: 10px;
+    font-weight:900;
+    margin-top: 15px;
+    padding-bottom: 8px;
+}
+
+/* Ofertas */
+
+
+
+/* Breakpints o Media Querys */
+
+@media (min-width:426px){
+
+    /* Carrousels */
+
+    .home main .carrousel{
+        height: 45.78vw;
+        position: relative;
+    }
+        /* Titulo Proximos Lanzamientos */
+        .home main h3{
+        font-size: 31.5px;
+        }
+        /*==============================*/
+
+    .home main .carrousel img{
+        height: 45.78vw;
+    }
+    
+    .home main .carrousel .arrows{
+        bottom: 20vw;
+    }
+    
+    .home main .carrousel .arrows i{
+        font-size: 55px;
+    }
+    
+    .home main .carrousel .dots{
+        bottom: 6vw;
+    }
+
+    /* Categorias */
+
+    .home main .main-home .categories ul li a img{
+        width: 102px;
+        height: 102px;
+    }
+
+    /* Productos */
+    
+    /* Mas Vendidos */
+
+    /* Titulo */
+    .home main .main-home .box h2{
+        font-size: 34px;
+        padding-top: 5px;
+    }
+
+    /* Contenedor de Tarjetas */
+
+    /* Tarjetas */
+    .home main .main-home article .product-container .producto{
+        width: 50%;
+        height: 56.875vw;
+    }
+
+    .home main .main-home article .product-container .producto .precio-desc h5{
+        font-size: 20px;
+    }
+
+    .home main .main-home article .product-container .producto .precio-desc p{
+        font-size: 13px;
+    }
+
+    .home main .main-home article .product-container .producto .subtitle h5{
+        font-size: 18px;
+    }
+
+    .home main .main-home article .product-container .producto .subtitle .info{
+        width: 38px;
+        height: 38px;
+    }
+    
+    .home main .main-home article .product-container .producto .subtitle .info a i{
+        font-size: 20px;
+    }
+
+    /* Subtitulo Ver más */
+
+    .home main .main-home .box .more{
+        padding: 0 5vw;
+    }
+
+    .home main .main-home .box .more .ver-mas{
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width:769px){
+
+    /* Categorias */
+
+    .home main .main-home .categories ul li a img{
+        width: 120px;
+        height: 110px;
+    }
+
+
+    /* Productos */
+    .home main .main-home .box .product-container .pro3{
+        display: initial;
+    }
+
+    .home main .main-home .box .product-container .producto .card-title{
+        display: block;
+        margin-top: 1.3vw;
+        margin-bottom: 0.65vw;
+    } 
+    
+    .home main .main-home .box .product-container .product-container2 .producto .heart{
+        display: inline-block;
+        position: absolute;
+        bottom: 44.36vw;
+        left: 21.06vw;
+    }
+
+    .home main .main-home .box .product-container .producto .heart img{
+        width: 30px;
+        height: 30px;
+        position: inherit;
+    }
+    
+    .home main .main-home .box .product-container .producto .envio{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 2.7vw;
+    }
+    
+    .home main .main-home .box .product-container .producto .especificaciones{
+        display: flex;
+        justify-content: center;
+        margin-top: 4.5vw;
+    }
+
+    .home main .main-home .box .product-container .producto .masVendido{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+    /* Mas Vendidos */
+
+
+
+/* Titulo */
+.home main .main-home .box h2{
+    font-size: 34px;
+    padding-top: 5px;
+    margin-left: 30px;
+}
+
+/* Contenedor de Tarjetas */
+
+.home main .main-home article .product-container{
+    justify-content: space-around;
+}
+/* Tarjetas */
+.home main .main-home article .product-container .producto{
+    width: 30%;
+    height: 49.66vw;
+    margin: 15px 0;
+    border: 2px solid #212121;
+    background: rgba(229, 229, 229, 0.05);
+    box-shadow: 6px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    position: relative;
+}
+
+.home main .main-home .box .product-container .producto .card-title h5{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-naranja);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.home main .main-home article .product-container .producto img{
+    width: 92%;
+    height: 24.41vw;
+    margin-left: 1.27vw;
+}
+
+.home main .main-home .box .product-container .producto .masVendido .cartel-vendido{
+    color: black;
+    background-color: var(--color-violeta);
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.home main .main-home .box .product-container .producto .masVendido .descuento{
+    color: var(--color-verde);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.home main .main-home article .product-container .producto .precio-desc{
+    justify-content: space-around;
+    height: auto;
+    align-items: center;
+}
+
+.home main .main-home article .product-container .producto .precio-desc h5{
+    font-size: 18px;
+}
+
+.home main .main-home .box .product-container .producto .precio-desc img{
+    display: initial;
+    width: 32px;
+    height: 32px;
+}
+
+.home main .main-home article .product-container .producto .precio-desc p{
+    display: none;
+}
+
+.home main .main-home article .product-container .producto .subtitle{
+    display: none;
+}
+
+.home main .main-home .box .product-container .producto .envio i, .envio p{
+    color: var(--color-verde);
+}
+
+.home main .main-home .box .product-container .producto .envio i{
+    font-size: 18px;
+}
+
+.home main .main-home .box .product-container .producto .envio p{
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+
+.home main .main-home .box .product-container .producto .especificaciones a{
+    background-color: var(--color-naranja);
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 22.11vw;
+    text-align: center;
+    border-radius: 100px;
+    padding: 0.78vw 0;
+}
+
+/* Subtitulo Ver más */
+
+.home main .main-home .box .more{
+    padding: 0 5vw;
+}
+
+.home main .main-home .box .more .ver-mas{
+    font-size: 18px;
+}
+
+}
+
+@media (min-width:1024px){
+
+    /* Carrousels */
+
+    .home main .carrousel{
+        max-height: 468px;
+        justify-content: center;
+        display: flex;
+    }
+    
+    .home main .carrousel img{
+        max-height: 468px;
+        max-width: 1440px;
+    }
+    
+    .home main .carrousel .arrows{
+        bottom: 205px;
+        max-width: 1440px;
+    }
+    
+    .home main .carrousel .arrows i{
+        color: var(--color-violeta);
+        font-size: 60px;
+    }
+    
+    .home main .carrousel .dots{
+        bottom: 61.45px;
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 432px;        
+    }
+    
+    .home main .carrousel .dots li i{
+        font-size: 18px;
+    }
+
+    /* Contenedor de Categorias + productos */
+
+    .home main .main-home{
+        width: 91.875vw;
+        max-width: 1323px;
+    }
+
+    /* Categorias */
+
+    .home main .main-home .categories{
+        display: flex;
+        justify-content: center;
+    }
+
+    .home main .main-home .categories ul{
+        max-width: 1440px;
+    }
+
+    .home main .main-home .categories ul li a img{
+        width: 120px;
+        height: 110px;
+        margin: 0 16px;
+    }
+
+    /* Productos */
+
+    /* Tarjetas */
+    .home main .main-home article .product-container .producto{
+        width: 275px;
+        height: 508px;
+    }
+
+    .home main .main-home article .product-container .producto img{
+        width: 250px;
+        height: 250px;
+        margin-left: 10.5px;
+    }
+
+    .home main .main-home .box .product-container .product-container2 .producto .heart{
+        bottom: 455px;
+        left: 218px;
+    }
+
+    .home main .main-home article .product-container .producto .envio{
+        padding-left: 33px;
+    }
+
+    .home main .main-home .box .product-container .producto .especificaciones {
+        margin-top: 50px;
+    }
+
+    .home main .main-home .box .product-container .producto .especificaciones a{
+        width: 226px;
+        padding: 8px 0;
+    }
+
+    .home main h3 {
+        font-size: 40px;
+    }
+
+    .home main .main-home .box h2 {
+        font-size: 40px;
+    }
+
+    .home main .main-home .box .more .ver-mas {
+        font-size: 20px;
+    }
+
+}
