@@ -1,85 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="/images/icons/Logo-sin-Frase.svg">
-    <title>Product List</title>
-</head>
+    <%- include('../partials/head.ejs') %>
 
 <body class="productList">
-    <header>
-        <nav>
-            <div class="caja-1-desktop">
-                <div class="logo-desktop">
-                    <a href="/">
-                        <img src="/images/icons/Logo-con-Frase.svg" alt="Logo-con-Frase">
-                    </a>
-                </div>
-                <div class="barra-inicio">
-                    <ul>
-                        <li><a href="/">inicio</a></li>
-                        <li><a href="#">categoriasv</a>
-                            <ul>
-                                <li><a href="/productList">Teclados</a></li>
-                                <li><a href="/productList">Mouse</a></li>
-                                <li><a href="/productList">Headphones</a></li>
-                                <li><a href="/productList">Parlantes</a></li>
-                                <li><a href="/productList">Streaming</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">ofertas</a></li>
-                        <li><a href="#">ayuda</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="caja-1">
-                <div class="menu">
-                    <button class="burguer-menu">
-                        <a href="#">
-                            <i class="fas fa-bars"></i>
-                        </a>
-                    </button>
-                </div>
-                <div class="logo-cybersound">
-                    <a href="/">
-                        <img src="/images/icons/Logo-sin-Frase.svg" alt="logo">
-                    </a>
-                </div>
-            </div>
-            <h1>CyberSound</h1>
-            <div class="caja-2">
-                <div class="logo-heart">
-                    <a href="#">
-                        <img src="/images/icons/logo-heart.svg" alt="logo-heart">
-                    </a>
-                </div>
-                <div class="logo-search">
-                    <a href="#">
-                        <img src="/images/icons/logo-search.svg" alt="logo-search">
-                    </a>
-                </div>
-                <div class="logo-user">
-                    <a href="#">
-                        <img src="/images/icons/logo-user.svg" alt="logo-user">
-                        <ul>
-                            <li><a href="/login">Ingresar</a></li>
-                            <li><a href="/register">Registrarse</a></li>
-                        </ul>
-                    </a>
-                </div>
-                <div class="logo-cart">
-                    <a href="/cart">
-                        <img src="/images/icons/logo-cart.svg" alt="logo-cart">
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <%- include('../partials/header.ejs') %>
     <main>
         <article class="box">
             <h2>Listado de Productos</h2>
@@ -105,7 +30,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -115,7 +40,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                     <div class="producto top">
@@ -138,7 +63,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -148,7 +73,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                     <div class="producto top pro3">
@@ -171,7 +96,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -181,7 +106,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                 </div>
@@ -206,7 +131,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -216,7 +141,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                     <div class="producto bot">
@@ -239,7 +164,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -249,7 +174,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                     <div class="producto bot pro3">
@@ -272,7 +197,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -282,7 +207,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                 </div>
@@ -307,7 +232,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -317,7 +242,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                     <div class="producto top">
@@ -340,7 +265,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -350,7 +275,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                     <div class="producto top pro3">
@@ -373,7 +298,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -383,7 +308,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                 </div>
@@ -408,7 +333,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -418,7 +343,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                     <div class="producto bot">
@@ -441,7 +366,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -451,7 +376,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                     <div class="producto bot pro3">
@@ -474,7 +399,7 @@
                         <div class="subtitle">
                             <h5>nombre producto</h5>
                             <div class="info">
-                                <a href="/productDetail">
+                                <a href="/products/productDetail">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -484,7 +409,7 @@
                             <p>envio gratis</p>
                         </div>
                         <div class="especificaciones">
-                            <a href="/productDetail">especificaciones</a>
+                            <a href="/products/productDetail">especificaciones</a>
                         </div>
                     </div>
                 </div>
@@ -510,32 +435,6 @@
             <li><i class="far fa-circle"></i></li>
         </ul>
     </section>
-    <footer>
-        <nav class="lista1">
-            <ul>
-                <li><a href="#">ubicación</a></li>
-                <li><a href="#">sobre nosotros</a></li>
-                <li><a href="/">home</a></li>
-                <li><a href="#" class="lista-contact">contacto</a></li>
-            </ul>
-        </nav>
-        <div>
-            <h5>por gamers, para gamers.™</h5>
-            <nav class="lista2">
-                <ul>
-                    <li><a href="#"><i class="fab fa-google"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="footer-image">
-            <img src="/images/icons/Logo-sin-Frase.svg" alt="logo">
-        </div>
-        <div class="footer-p">
-            <p>Copyright © 2021 CyberSound Inc. All rights reserved.</p>
-        </div>
-    </footer>
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>
