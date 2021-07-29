@@ -1,0 +1,324 @@
+.productAdd{
+    background-color: var(--color-gris-oscuro);
+}
+
+.productAdd section{
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.productAdd section .button-volver-nombre{
+    display:flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 12px auto;
+    align-items: center;
+}
+
+.productAdd section .button-volver-nombre a{
+    color: var(--color-violeta);
+    font-size: 15px;
+}
+
+.productAdd section .button-volver-nombre a .fa-angle-left{
+    color: var(--color-violeta);
+    font-size: 40px;
+}
+
+
+.productAdd section h1{
+    color: var(--color-violeta);
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+
+.productAdd section .button-google{
+    background-color: var(--color-naranja);
+    border-radius: 24px;
+    border: none;
+    
+}
+
+.productAdd section .button-google a{
+    height: 36px;
+    width: 165px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 10px;
+    color: var(--color-blanco);
+    border: none;
+}
+
+.productAdd section .button-google .fab{
+    font-size: 24px;
+}
+
+.productAdd section p{
+    color: var(--color-naranja);
+    font-size: 24px;
+    margin: 25px auto;
+}
+
+.productAdd section form{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto 15px;
+}
+
+.productAdd section form input{
+    background-color: var(--color-naranja);
+    border-radius: 10px;
+    border: none;
+    width: 60vw;
+    height: 38px;
+    margin: 10px auto;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.div-image{
+    display: flex;
+    vertical-align:auto;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    margin: 10px auto;
+    height: 38px;
+    width: 60vw;
+    background-color: var(--color-naranja);
+}
+.productAdd section form label.image{
+    justify-content: center;
+    text-align: initial;
+    align-self: center;
+    padding-left: 5px;
+    color: var(--color-blanco);
+    font-size: 13.33px;
+    background-color: var(--color-naranja);
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+}
+.productAdd section form input.file{
+    position: absolute;
+    left: 38%;
+    width: 130px;
+    height: auto;
+    border-radius: 3px;
+    padding-left: 0px;
+    opacity: 0;
+}
+.productAdd section form select{
+    width: 265px;
+    margin: 10px auto;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding-left: 10px;
+    color: var(--color-violeta);
+    font-weight: bold;
+    background-color: #e5e5e5;
+}
+.productAdd section form input:focus{
+    background-color: var(--color-violeta);
+    outline: thin dotted;
+}
+
+.productAdd section form input::placeholder{
+    color: var(--color-blanco);
+}
+.productAdd section form label.description-lab{
+    font-weight: bold;
+    color: var(--color-violeta);
+    font-size: 18px;
+}
+.description-text{
+    width: 265px;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: #e5e5e5;
+}
+
+.productAdd section form label{
+    color: var(--color-naranja);
+    font-size: 10px;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.productAdd section form .checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 14px auto;
+}
+
+.productAdd section form .checkbox input{
+    border-radius: 0%;
+    padding-left: 0px;
+    width: auto;
+    height: auto;
+    margin: 0 0;
+}
+.productAdd section form .checkbox label{
+    color: var(--color-violeta);
+}
+
+.productAdd section form .button-continuar{
+    padding-left: 0px;
+    color: var(--color-blanco);
+    background-color: var(--color-violeta);
+    width: 150px;
+    height: 30px;
+}
+
+.productAdd section h6{
+    color: var(--color-naranja);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.productAdd section a{
+    color: var(--color-violeta);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.productAdd section a:hover{
+    color: var(--color-violeta);
+}
+
+/* Breakpoints o MediaQuerys */
+
+@media (min-width:426px){
+    
+    .productAdd section .button-volver-nombre{
+        max-width: 438px;
+    }
+    
+    .productAdd section .button-volver-nombre a{
+        font-size: 20px;
+    }    
+    
+    .productAdd section h1{
+        font-size: 35px;
+        font-weight: 400;
+    }
+    
+    .productAdd section .button-google a{
+        height: 40px;
+        width: 205px;
+        font-size: 13px;
+    }
+    
+    .productAdd section p{
+        font-size: 30px;
+    }
+    
+    .productAdd section form input{
+        width: 225px;
+        height: 42px;
+    }
+    
+    .productAdd section form label{
+        font-size: 13px;
+    }
+    .div-image{
+        width: 225px;
+        height: 42px;
+    }
+    
+    .productAdd section form .button-continuar{
+        width: 140px;
+        height: 35px;
+    }
+    
+    .productAdd section h6{
+        font-size: 15px;
+    }
+    
+    .productAdd section a{
+        font-size: 19px;
+    }
+    
+    .productAdd section a:hover{
+        color: var(--color-violeta);
+    }
+
+}
+
+@media (min-width:769px){
+    
+    .productAdd section .button-volver-nombre{
+        max-width: 850px;
+    }
+    
+    .productAdd section .button-volver-nombre a{
+        font-size: 23px;
+        width: 50%;
+    }
+
+    .productAdd section .button-volver-nombre a .fa-angle-left{
+        font-size: 46px;
+    }
+    
+    
+    .productAdd section h1{
+        font-size: 40px;
+        font-weight: 400;
+    }
+    
+    .productAdd section .button-google a{
+        height: 44px;
+        width: 245px;
+        font-size: 15px;
+    }
+    
+    .productAdd section .button-google .fab{
+        font-size: 26px;
+    }
+    
+    .productAdd section p{
+        font-size: 35px;
+    }
+    
+    .productAdd section form input{
+        width: 265px;
+        height: 44px;
+        padding-left: 15px;
+    }
+    
+    .productAdd section form label{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .div-image{
+        width: 265px;
+        height: 44px;
+        padding-left: 10px;
+    }
+    
+    .productAdd section form .button-continuar{
+        width: 180px;
+        height: 37px;
+    }
+    
+    .productAdd section h6{
+        font-size: 17px;
+        font-weight: 500;
+    }
+    
+    .productAdd section a{
+        font-size: 22px;
+    }
+    
+    .productAdd section a:hover{
+        color: var(--color-violeta);
+    }
+
+}
