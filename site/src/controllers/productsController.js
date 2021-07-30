@@ -19,4 +19,9 @@ module.exports = {
             title: 'Product Add',
         })
     },
+    productEdit: (req, res) => {
+        res.render('./products/productEdit', {
+            title: 'Product Add',
+        })
+    },
 }
