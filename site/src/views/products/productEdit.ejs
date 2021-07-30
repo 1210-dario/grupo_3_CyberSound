@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head.ejs', {title : 'ProductEdit'}) %>
+
+<body class="productAdd">
+    <%- include('../partials/header.ejs') %>
+    <section>
+        <div class="button-volver-nombre">
+            <a href="/"><i class="fas fa-angle-left"></i></a>
+            <a class="Cybersound" href="/">CyberSound</a>
+        </div>
+        <h1>Edición de productos</h1>
+        <form action="post">
+            <input type="text" name="name" id="" placeholder="Nombre del Producto" required>
+            <label class="description-lab" for="description">Descripción</label>
+            <textarea class="description-text" name="description" cols="10" rows="5"></textarea>
+            <div class="div-image">
+            <label class="image" for="image">Elegir Imagen Principal</label>
+            <input class="file" type="file" name="image" id="image" required>
+            </div>
+            <div class="div-image">
+                <label class="image" for="image">Elegir Imagen Prod 2</label>
+                <input class="file" type="file" name="image" id="image" required>
+            </div>
+            <div class="div-image">
+                <label class="image" for="image">Elegir Imagen Prod 3</label>
+                <input class="file" type="file" name="image" id="image" required>
+            </div>
+            <div class="div-image">
+                <label class="image" for="image">Elegir Imagen Prod 4</label>
+                <input class="file" type="file" name="image" id="image" required>
+            </div>
+            <select name="category" id="category" value=Categorias>
+            <option value="category">Categorias</option>
+            <option value="category">Teclados</option>
+            <option value="category">Mouses</option>
+            <option value="category">Headphones</option>
+            <option value="category">Parlantes</option>
+            <option value="category">Streaming</option>
+            </select>
+            <input type="number" name="price" placeholder="Precio">
+            <div class="checkbox">
+                <input type="checkbox" name="discount" id="">
+                <label for="discount">Con Descuento</label>
+            </div>
+            <input type="number" name="discount" placeholder="Porcentaje a Descontar">
+            <div class="checkbox">
+            <input type="checkbox" name="deliveryFree" id="">
+            <label for="deliveryFree">Envio Gratis</label>
+            </div>
+            <input type="submit" value="Guardar Cambios" class="button-continuar">
+        </form>
+         
+    </section>
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+
+</html>
