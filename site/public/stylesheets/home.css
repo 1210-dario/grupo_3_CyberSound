@@ -80,7 +80,11 @@
 .home main .main-home .box .product-container .pro3{
     display: none;
 }
-
+.product-container2{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 10px; */
+}   
 .home main .main-home .box .product-container .producto .card-title{
     display: none;
 } 
@@ -144,9 +148,9 @@
 }
 
 .home main .main-home article .product-container .top{
-    border-right: 2px solid #212121;
+    border-right: 1px solid #212121;
     border-bottom: 2px solid #212121;
-    border-left: 2px solid #212121;
+    border-left: 1px solid #212121;
 }
 
 .home main .main-home article .product-container .bot{
