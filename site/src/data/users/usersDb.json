@@ -1,1 +1,38 @@
-[]
+[
+    {
+        "id": 1,
+        "nombre": "Dario",
+        "apellido": "Ayarde",
+        "password": "piernanegra",
+        "email": "sanji123@gmail.com",
+        "role": "admin",
+        "image": "avatar-default.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Sebas",
+        "apellido": "Ayarde",
+        "password": "einstein76",
+        "email": "relatividad7676@gmail.com",
+        "role": "admin",
+        "image": "avatar-default.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Matias",
+        "apellido": "Ayarde",
+        "password": "ayudanoentendi",
+        "email": "malasuerte123@gmail.com",
+        "role": "admin",
+        "image": "avatar-default.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Máximo",
+        "apellido": "Cozzetti",
+        "password": "tortugamaritima",
+        "email": "fuegotiene123@gmail.com",
+        "role": "user",
+        "image": "https://pbs.twimg.com/profile_images/1300939860166008832/7SfK6dhq_400x400.jpg"
+    }
+]
