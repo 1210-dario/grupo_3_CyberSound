@@ -83,8 +83,29 @@
 .product-container2{
     display: flex;
     flex-wrap: wrap;
-    /* border: 10px; */
-}   
+}
+.product-but-edit-del{
+    display: flex;
+    justify-content: space-around;
+    height: 49px;
+}
+.product-but-edit-del button{
+    display: none;
+    font-size: 18px;
+    padding: 4px;
+    margin: 15px 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: aliceblue;
+}
+.product-but-edit{
+    background-color:#007BFF;
+    width: 105px; 
+}
+.product-but-del{
+    background-color: #DC3545;
+    width: 105px;
+}
 .home main .main-home .box .product-container .producto .card-title{
     display: none;
 } 
@@ -144,7 +165,8 @@
 /* Tarjetas */
 .home main .main-home article .product-container .producto{
     width: 50%;
-    height: 56.875vw;
+/*     height: 56.875vw; */
+height: 57vw;
 }
 
 .home main .main-home article .product-container .top{
@@ -372,7 +394,7 @@
     .home main .main-home .box .product-container .producto .especificaciones{
         display: flex;
         justify-content: center;
-        margin-top: 4.5vw;
+        margin-top: 10px;
     }
 
     .home main .main-home .box .product-container .producto .masVendido{
@@ -400,7 +422,8 @@
 /* Tarjetas */
 .home main .main-home article .product-container .producto{
     width: 30%;
-    height: 49.66vw;
+    /* height: 49.66vw; */
+    height: 52vw;
     margin: 15px 0;
     border: 2px solid #212121;
     background: rgba(229, 229, 229, 0.05);
@@ -474,6 +497,10 @@
     text-transform: capitalize;
     font-weight: bold;
     padding-left: 10px;
+}
+.product-but-edit-del button{
+    display: initial;
+    margin-bottom: 0px;
 }
 
 
@@ -585,7 +612,7 @@
     }
 
     .home main .main-home .box .product-container .producto .especificaciones {
-        margin-top: 50px;
+        margin-top: 15px;
     }
 
     .home main .main-home .box .product-container .producto .especificaciones a{
