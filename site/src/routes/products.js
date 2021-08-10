@@ -6,7 +6,7 @@ const { productList, productDetail, cart, productAdd, productEdit, } = require('
 /* GET Products  */
 
 router.get('/productList', productList);
-router.get('/productDetail', productDetail);
+router.get('/productDetail/:id', productDetail);
 router.get('/cart', cart);
 router.get('/productAdd', productAdd);
 router.get('/productEdit', productEdit);
