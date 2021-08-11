@@ -10,11 +10,17 @@
             <a href="/"><i class="fas fa-angle-left"></i></a>
             <a class="Cybersound" href="/">CyberSound</a>
         </div>
-        <h1>carga y edición de productos</h1>
+        <h1>edición de productos</h1>
         <form action="" method="POST">
+            <div class="checkbox">
+                <label for="discount">NOMBRE</label>
+            </div>
             <input type="text" name="name" id="" placeholder="Nombre del Producto" required>
             <label class="description-lab" for="description">Descripción</label>
             <textarea class="description-text" name="description" cols="10" rows="5"></textarea>
+            <div class="checkbox">
+                <label for="discount">IMAGEN</label>
+            </div>
             <div class="div-image">
                 <label class="image" for="image">Elegir Imagen Principal</label>
                 <input class="file" type="file" name="images" multiple id="image" accept=".png, .jpeg, .jpg" required>
@@ -38,6 +44,9 @@
                 <label for="stock">Stock Disponible</label>
             </div>
             <input type="number" name="stock" value="" placeholder="Stock Disponible">
+            <div class="checkbox">
+                <label for="discount">PRECIO</label>
+            </div>
 
             <input type="number" name="price" placeholder="Precio">
             <div class="checkbox">
@@ -61,12 +70,12 @@
                 <label for="cuota">Mostrar en Home</label>
             </div>
             <select name="category" id="category" value=Categorias>
-                <option disabled selected value="categorias">Categorias</option>
-                <option value="teclados">Teclados</option>
-                <option value="mouses">Mouses</option>
-                <option value="headphones">Headphones</option>
-                <option value="parlantes">Parlantes</option>
-                <option value="streaming">Streaming</option>
+                <option required name="category" value="categorias">Categorias</option>
+                <option name="category" value="teclados">Teclados</option>
+                <option name="category" value="mouses">Mouses</option>
+                <option name="category" value="headphones">Headphones</option>
+                <option name="category" value="parlantes">Parlantes</option>
+                <option name="category" value="streaming">Streaming</option>
             </select>
             <input type="submit" value="Guardar Cambios" class="button-continuar">
         </form>
