@@ -97,6 +97,12 @@
     border-radius: 10px;
     font-weight: bold;
     color: aliceblue;
+    border: none;
+    overflow: hidden;
+    transition: 300ms;    
+}
+.product-but-edit-del button:hover{
+    box-shadow: 0 0 8px rgba(83, 255, 4, 0.5)
 }
 .product-but-edit{
     background-color:#007BFF;
