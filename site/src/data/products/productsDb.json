@@ -1,22 +1,465 @@
 [
-    {"id":1,"name":"Andalax","description":"Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.","images": ["img1","img2","img3","img4"],"stock":53,"price":8271,"discount":10,"envioFree":false,"masVendido":false,"oferta":false,"show":false,"category":"mouses"},
-    {"id":2,"name":"Duobam","description":"Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.","images": ["img1","img2","img3","img4"],"stock":79,"price":1433,"discount":43,"envioFree":true,"masVendido":false,"oferta":false,"show":false,"category":"teclados"},
-    {"id":3,"name":"Lotstring","description":"Donec dapibus.","images": ["img1","img2","img3","img4"],"stock":6,"price":1257,"discount":16,"envioFree":true,"masVendido":false,"oferta":true,"show":true,"category":"mouses"},
-    {"id":4,"name":"Cookley","description":"Pellentesque eget nunc.","images": ["img1","img2","img3","img4"],"stock":99,"price":2834,"discount":72,"envioFree":false,"masVendido":false,"oferta":true,"show":true,"category":"streaming"},
-    {"id":5,"name":"Sub-Ex","description":"Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.","images": ["img1","img2","img3","img4"],"stock":23,"price":7842,"discount":81,"envioFree":true,"masVendido":false,"oferta":false,"show":false,"category":"auriculares"},
-    {"id":6,"name":"Treeflex","description":"Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.","images": ["img1","img2","img3","img4"],"stock":26,"price":8669,"discount":2,"envioFree":true,"masVendido":false,"oferta":false,"show":false,"category":"parlantes"},
-    {"id":7,"name":"Alpha","description":"Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.","images": ["img1","img2","img3","img4"],"stock":46,"price":1586,"discount":69,"envioFree":true,"masVendido":false,"oferta":true,"show":true,"category":"parlantes"},
-    {"id":8,"name":"Latlux","description":"Aliquam non mauris.","images": ["img1","img2","img3","img4"],"stock":69,"price":1911,"discount":94,"envioFree":false,"masVendido":false,"oferta":true,"show":true,"category":"streaming"},
-    {"id":9,"name":"Trippledex","description":"In hac habitasse platea dictumst.","images": ["img1","img2","img3","img4"],"stock":86,"price":4827,"discount":77,"envioFree":true,"masVendido":false,"oferta":false,"show":false,"category":"mouses"},
-    {"id":10,"name":"It","description":"Phasellus sit amet erat. Nulla tempus.","images": ["img1","img2","img3","img4"],"stock":68,"price":6121,"discount":75,"envioFree":false,"masVendido":false,"oferta":true,"show":true,"category":"teclados"},
-    {"id":11,"name":"Solarbreeze","description":"Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.","images": ["img1","img2","img3","img4"],"stock":28,"price":9343,"discount":56,"envioFree":true,"masVendido":true,"oferta":false,"show":true,"category":"teclados"},
-    {"id":12,"name":"Y-find","description":"In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.","images": ["img1","img2","img3","img4"],"stock":3,"price":9670,"discount":40,"envioFree":false,"masVendido":false,"oferta":true,"show":true,"category":"parlantes"},
-    {"id":13,"name":"Y-find","description":"Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.","images": ["img1","img2","img3","img4"],"stock":10,"price":604,"discount":100,"envioFree":true,"masVendido":false,"oferta":true,"show":true,"category":"auriculares"},
-    {"id":14,"name":"Fixflex","description":"Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.","images": ["img1","img2","img3","img4"],"stock":37,"price":538,"discount":86,"envioFree":false,"masVendido":true,"oferta":false,"show":true,"category":"auriculares"},
-    {"id":15,"name":"Latlux","description":"Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.","images": ["img1","img2","img3","img4"],"stock":98,"price":6918,"discount":47,"envioFree":false,"masVendido":false,"oferta":true,"show":true,"category":"parlantes"},
-    {"id":16,"name":"Voyatouch","description":"Cras non velit nec nisi vulputate nonummy.","images": ["img1","img2","img3","img4"],"stock":25,"price":1098,"discount":57,"envioFree":true,"masVendido":false,"oferta":true,"show":true,"category":"mouses"},
-    {"id":17,"name":"Aerified","description":"Quisque porta volutpat erat.","images": ["img1","img2","img3","img4"],"stock":49,"price":6775,"discount":32,"envioFree":false,"masVendido":false,"oferta":true,"show":true,"category":"streaming"},
-    {"id":18,"name":"Aerified","description":"Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros.","images": ["img1","img2","img3","img4"],"stock":61,"price":6529,"discount":97,"envioFree":false,"masVendido":true,"oferta":false,"show":true,"category":"teclados"},
-    {"id":19,"name":"Y-Solowarm","description":"Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis.","images": ["img1","img2","img3","img4"],"stock":98,"price":1487,"discount":40,"envioFree":false,"masVendido":true,"oferta":false,"show":true,"category":"streaming"},
-    {"id":20,"name":"Wrapsafe","description":"Proin leo odio, porttitor id, consequat in, consequat ut, nulla.","images": ["img1","img2","img3","img4"],"stock":58,"price":6890,"discount":4,"envioFree":false,"masVendido":true,"oferta":false,"show":true,"category":"mouses"}
+    {
+        "id": 1,
+        "name": "Andalax",
+        "description": "Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            6,
+            12
+        ],
+        "stock": 0,
+        "price": 8271,
+        "discount": 0,
+        "envioFree": false,
+        "masVendido": false,
+        "oferta": false,
+        "show": false,
+        "category": "mouses"
+    },
+    {
+        "id": 2,
+        "name": "Duobam",
+        "description": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            6
+        ],
+        "stock": 79,
+        "price": 1433,
+        "discount": 43,
+        "envioFree": true,
+        "masVendido": false,
+        "oferta": false,
+        "show": false,
+        "category": "teclados"
+    },
+    {
+        "id": 3,
+        "name": "Lotstring",
+        "description": "Donec dapibus.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            12
+        ],
+        "stock": 6,
+        "price": 1257,
+        "discount": 0,
+        "envioFree": true,
+        "masVendido": false,
+        "oferta": true,
+        "show": true,
+        "category": "mouses"
+    },
+    {
+        "id": 4,
+        "name": "Cookley",
+        "description": "Pellentesque eget nunc.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3
+        ],
+        "stock": 99,
+        "price": 2834,
+        "discount": 72,
+        "envioFree": false,
+        "masVendido": false,
+        "oferta": true,
+        "show": true,
+        "category": "streaming"
+    },
+    {
+        "id": 5,
+        "name": "Sub-Ex",
+        "description": "Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            12
+        ],
+        "stock": 23,
+        "price": 7842,
+        "discount": 81,
+        "envioFree": true,
+        "masVendido": false,
+        "oferta": false,
+        "show": false,
+        "category": "auriculares"
+    },
+    {
+        "id": 6,
+        "name": "Treeflex",
+        "description": "Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            6,
+            12
+        ],
+        "stock": 26,
+        "price": 8669,
+        "discount": 2,
+        "envioFree": true,
+        "masVendido": false,
+        "oferta": false,
+        "show": false,
+        "category": "parlantes"
+    },
+    {
+        "id": 7,
+        "name": "Alpha",
+        "description": "Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            6
+        ],
+        "stock": 46,
+        "price": 1586,
+        "discount": 69,
+        "envioFree": true,
+        "masVendido": false,
+        "oferta": true,
+        "show": true,
+        "category": "parlantes"
+    },
+    {
+        "id": 8,
+        "name": "Latlux",
+        "description": "Aliquam non mauris.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            6,
+            12
+        ],
+        "stock": 69,
+        "price": 1911,
+        "discount": 94,
+        "envioFree": false,
+        "masVendido": false,
+        "oferta": true,
+        "show": true,
+        "category": "streaming"
+    },
+    {
+        "id": 9,
+        "name": "Trippledex",
+        "description": "In hac habitasse platea dictumst.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            12
+        ],
+        "stock": 86,
+        "price": 4827,
+        "discount": 77,
+        "envioFree": true,
+        "masVendido": false,
+        "oferta": false,
+        "show": false,
+        "category": "mouses"
+    },
+    {
+        "id": 10,
+        "name": "It",
+        "description": "Phasellus sit amet erat. Nulla tempus.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            12
+        ],
+        "stock": 68,
+        "price": 6121,
+        "discount": 75,
+        "envioFree": false,
+        "masVendido": false,
+        "oferta": true,
+        "show": true,
+        "category": "teclados"
+    },
+    {
+        "id": 11,
+        "name": "Solarbreeze",
+        "description": "Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            6
+        ],
+        "stock": 28,
+        "price": 9343,
+        "discount": 56,
+        "envioFree": true,
+        "masVendido": true,
+        "oferta": false,
+        "show": true,
+        "category": "teclados"
+    },
+    {
+        "id": 12,
+        "name": "Y-find",
+        "description": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            6,
+            12
+        ],
+        "stock": 3,
+        "price": 9670,
+        "discount": 40,
+        "envioFree": false,
+        "masVendido": false,
+        "oferta": true,
+        "show": true,
+        "category": "parlantes"
+    },
+    {
+        "id": 13,
+        "name": "Y-find",
+        "description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            6
+        ],
+        "stock": 10,
+        "price": 604,
+        "discount": 100,
+        "envioFree": true,
+        "masVendido": false,
+        "oferta": true,
+        "show": true,
+        "category": "auriculares"
+    },
+    {
+        "id": 14,
+        "name": "Fixflex",
+        "description": "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            6
+        ],
+        "stock": 37,
+        "price": 538,
+        "discount": 86,
+        "envioFree": false,
+        "masVendido": true,
+        "oferta": false,
+        "show": true,
+        "category": "auriculares"
+    },
+    {
+        "id": 15,
+        "name": "Latlux",
+        "description": "Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            6,
+            12
+        ],
+        "stock": 98,
+        "price": 6918,
+        "discount": 47,
+        "envioFree": false,
+        "masVendido": false,
+        "oferta": true,
+        "show": true,
+        "category": "parlantes"
+    },
+    {
+        "id": 16,
+        "name": "Voyatouch",
+        "description": "Cras non velit nec nisi vulputate nonummy.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            6,
+            12
+        ],
+        "stock": 25,
+        "price": 1098,
+        "discount": 57,
+        "envioFree": true,
+        "masVendido": false,
+        "oferta": true,
+        "show": true,
+        "category": "mouses"
+    },
+    {
+        "id": 17,
+        "name": "Aerified",
+        "description": "Quisque porta volutpat erat.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            6,
+            12
+        ],
+        "stock": 49,
+        "price": 6775,
+        "discount": 32,
+        "envioFree": false,
+        "masVendido": false,
+        "oferta": true,
+        "show": true,
+        "category": "streaming"
+    },
+    {
+        "id": 18,
+        "name": "Aerified",
+        "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            6,
+            12
+        ],
+        "stock": 61,
+        "price": 6529,
+        "discount": 97,
+        "envioFree": false,
+        "masVendido": true,
+        "oferta": false,
+        "show": true,
+        "category": "teclados"
+    },
+    {
+        "id": 19,
+        "name": "Y-Solowarm",
+        "description": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            6,
+            12
+        ],
+        "stock": 98,
+        "price": 1487,
+        "discount": 40,
+        "envioFree": false,
+        "masVendido": true,
+        "oferta": false,
+        "show": true,
+        "category": "streaming"
+    },
+    {
+        "id": 20,
+        "name": "Wrapsafe",
+        "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla.",
+        "images": [
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png",
+            "H510-1.png"
+        ],
+        "cuotas": [
+            3,
+            6,
+            12
+        ],
+        "stock": 58,
+        "price": 6890,
+        "discount": 4,
+        "envioFree": false,
+        "masVendido": true,
+        "oferta": false,
+        "show": true,
+        "category": "mouses"
+    }
 ]
