@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const { productList, productDetail, cart, productAdd, productEdit, crear } = require('../controllers/productsController');
+const { productList, productDetail, cart, productAdd, productEdit, crear, actualizar, eliminar } = require('../controllers/productsController');
 
 
 /* GET Products  */
@@ -8,8 +8,13 @@ const { productList, productDetail, cart, productAdd, productEdit, crear } = req
 router.get('/productList', productList);
 router.get('/productDetail/:id', productDetail);
 router.get('/cart', cart);
+
 router.get('/productAdd', productAdd);
 router.post('/productAdd', crear);
-router.get('/productEdit/:id', productEdit);
 router.post('/productEdit/:id', productEdit);
+router.get('/productEdit/:id', productEdit);
+router.put('/productEdit/:id', actualizar)
+router.delete('/productDelete/:id', eliminar)
+
+
 module.exports = router;
