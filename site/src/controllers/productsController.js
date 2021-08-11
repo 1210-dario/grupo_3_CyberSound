@@ -1,4 +1,4 @@
-const productos = require('../data/products/products');
+const {productos,guardar} = require('../data/products/products');
 const toThousand = require('../utils/toThounsand');
 const conDescuento = require('../utils/conDescuento');
 const cuotas = require('../utils/cuotas');
@@ -33,22 +33,27 @@ module.exports = {
             productos,
         })
     },
-    guardar: (req,res) => {
-      const {name,description,category,price,discount,image,envioFree} = req.body;
+    crear: (req,res) => {
+      const {name,description,images, cuotas,stock,price,discount,envioFree,oferta,show,category,} = req.body;
      
       let producto = {
           id: productos[productos.length - 1].id + 1,
           name,
           description,
-          category,
+          images: ["teclado-cart.jpg","teclado-cart.jpg","teclado-cart.jpg","teclado-cart.jpg"],
+          cuotas,
+          stock,
           price,
           discount,
-          image : ['teclado-cart.jpg','teclado-cart.jpg','teclado-cart.jpg','teclado-cart.jpg'],
           envioFree : envioFree != undefined ? true : false ,
+          oferta,
+          show,
+          category,
       }
       
       productos.push(producto)
-      return res.send(productos)
+      guardar(productos)
+      return res.redirect('/products/productList')
     },
 
     productEdit: (req, res) => {

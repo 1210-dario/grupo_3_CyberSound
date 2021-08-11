@@ -1,4 +1,4 @@
-const productos = require('../data/products/products');
+const {productos} = require('../data/products/products');
 const toThousand = require('../utils/toThounsand'); 
 
 module.exports = {
