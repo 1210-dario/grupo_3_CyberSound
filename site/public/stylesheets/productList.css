@@ -316,7 +316,7 @@ background-color: var(--color-gris-oscuro);
     .productList main .box .product-container .producto .especificaciones{
         display: flex;
         justify-content: center;
-        margin-top: 4.5vw;
+        margin-top: 10px;
     }
 
     .productList main .box .product-container .producto .masVendido{
@@ -333,7 +333,7 @@ background-color: var(--color-gris-oscuro);
 /* Tarjetas */
 .productList main article .product-container .producto{
     width: 30%;
-    height: 49.66vw;
+    height: 52vw;
     margin: 15px 0;
     border: 2px solid #212121;
     background: rgba(229, 229, 229, 0.05);
@@ -491,7 +491,7 @@ background-color: var(--color-gris-oscuro);
     }
 
     .productList main .box .product-container .producto .especificaciones {
-        margin-top: 50px;
+        margin-top: 15px;
     }
 
     .productList main .box .product-container .producto .especificaciones a{
