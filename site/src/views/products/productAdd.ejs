@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('../partials/head.ejs') %>
+    <%- include('../partials/head.ejs', {title : 'ProductAdd'}) %>
 
 <body class="productAdd">
     <%- include('../partials/header.ejs') %>
@@ -11,7 +11,7 @@
             <a class="Cybersound" href="/">CyberSound</a>
         </div>
         <h1>carga y edición de productos</h1>
-        <form action="post">
+        <form action="" method="POST">
             <input type="text" name="name" id="" placeholder="Nombre del Producto" required>
             <label class="description-lab" for="description">Descripción</label>
             <textarea class="description-text" name="description" cols="10" rows="5"></textarea>
@@ -32,12 +32,12 @@
                 <input class="file" type="file" name="image" id="image" required>
             </div>
             <select name="category" id="category" value=Categorias>
-            <option value="category">Categorias</option>
-            <option value="category">Teclados</option>
-            <option value="category">Mouses</option>
-            <option value="category">Headphones</option>
-            <option value="category">Parlantes</option>
-            <option value="category">Streaming</option>
+            <option disabled selected value="categorias">Categorias</option>
+            <option value="teclados">Teclados</option>
+            <option value="mouses">Mouses</option>
+            <option value="headphones">Headphones</option>
+            <option value="parlantes">Parlantes</option>
+            <option value="streaming">Streaming</option>
             </select>
             <input type="number" name="price" placeholder="Precio">
             <div class="checkbox">
@@ -46,8 +46,8 @@
             </div>
             <input type="number" name="discount" placeholder="Porcentaje a Descontar">
             <div class="checkbox">
-            <input type="checkbox" name="deliveryFree" id="">
-            <label for="deliveryFree">Envio Gratis</label>
+            <input type="checkbox" name="envioFree" id="">
+            <label for="envioFree">Envio Gratis</label>
             </div>
             <input type="submit" value="Guardar Cambios" class="button-continuar">
         </form>

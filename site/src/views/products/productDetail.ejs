@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('../partials/head.ejs') %>
+    <%- include('../partials/head.ejs', {title : 'ProductDetail'}) %>
 
     <body class="productDetail">
         <%- include('../partials/header.ejs') %>
@@ -43,7 +43,7 @@
                                     <img src="/images/icons/logo-heart.svg" alt="icon-heart" class="icono-heart">
                                 </a>
                             </div>
-                            <% if (producto.discount> 0) { %>
+                            <% if (producto.discount > 0) { %>
                                 <s>$ <%= toThousand(producto.price)%></s>
                                 <% } %>
                                     <div class="caja-precio">
