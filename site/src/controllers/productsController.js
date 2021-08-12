@@ -3,6 +3,7 @@ const toThousand = require('../utils/toThounsand');
 const conDescuento = require('../utils/conDescuento');
 const cuotas = require('../utils/cuotas');
 
+
 module.exports = {
     productList: (req, res) => {
         res.render('./products/productList', {
@@ -60,37 +61,32 @@ module.exports = {
         let producto = productos.find(producto => producto.id === +req.params.id);
         res.render('./products/productEdit', {
             producto,
-
         })
     },
     actualizar: (req, res) => {
         let id = req.params.id;
         let { name, description, images, cuotas, stock, price, discount, envioFree, masVendido, oferta, show, category } = req.body;
         let productUpdated = {
-            id,
+            id: +id,
             name,
             description,
-            images: ["teclado-cart.jpg", "teclado-cart.jpg", "teclado-cart.jpg", "teclado-cart.jpg"],
-            cuotas,
-            stock,
-            price,
-            discount,
+            images: ["H510-1.png", "H510-1.png", "H510-1.png", "H510-1.png"],
+            cuotas: cuotas == undefined ? [1] : typeof(cuotas) === "string" ? this.cuotas = [Number(cuotas)] : cuotas ,
+            stock: stock != undefined ? +stock : 0,
+            price: price != undefined ? +price : 0,
+            discount: discount != undefined ? +discount : 0,
             envioFree: envioFree != undefined ? true : false,
-            masVendido,
-            oferta,
-            show,
+            masVendido: masVendido != undefined ? true : false,
+            oferta: oferta != undefined ? true : false,
+            show: show != undefined ? true : false,
             category
         }
-
-        let productosUpdated = productos.forEach(producto => {
-            if (id === producto.id) {
-                producto = productUpdated
-            }
-        })
-        guardar(productosUpdated);
+        let productosModificados = productos.map(producto => producto.id === +id ? productUpdated : producto)
+        guardar(productosModificados);
         res.redirect('/products/productList');
     },
-    eliminar: (req, res) => {
+    
+    eliminar: (req,res) => {
         let id = req.params.id;
 
         let productosNew = productos.filter(producto => producto.id != id);
