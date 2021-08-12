@@ -15,7 +15,7 @@
                         <div class="card-title">
                             <h5><%= producto.name %></h5>
                         </div>
-                        <img src="/images/products/H510-1.png" alt="producto">
+                        <img src="/images/products/<%= producto.images[0]%>" alt="producto">
                         <div class="heart">
                             <img src="/images/icons/logo-heart.svg" alt="corazon">
                         </div> 
@@ -44,8 +44,8 @@
 
                         <% } %>
                         <div class="precio-desc">
-                            <h5>$1324,56</h5>
-                            <p>33%OFF</p>
+                            <h5>$ <%= producto.price.toFixed(2) %></h5>
+                            <p><%= producto.discount%>% OFF</p>
                             <img src="/images/icons/carrito-comprar.svg" alt="">
                         </div>
                         <div class="subtitle">
@@ -53,7 +53,7 @@
 
                             
                             <div class="info">
-                                <a href="/products/productDetail">
+                                <a href="/products/productDetail/<%= producto.id %>">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </div>
@@ -64,13 +64,14 @@
                                 <p>envio gratis</p>
                             </div>
                         <% } %>
-                        
-                        <div class="product-but-edit-del">
-                            <button class="product-but-edit">Editar</button>
-                            <button class="product-but-del">Eliminar</button>
+                        <div class="product-but-edit-del"> 
+                            <a href="/products/productEdit/<%= producto.id %>"><button class="product-but-edit">Editar</button></a>
+                            <form action="/products/productDelete/<%=producto.id %>?_method=DELETE" method="POST">
+                               <button class="product-but-del">Eliminar</button>
+                            </form>
                         </div>
                         <div class="especificaciones">
-                            <a href="/products/productDetail">especificaciones</a>
+                            <a href="/products/productDetail/<%= producto.id %>">especificaciones</a>
                         </div>                            
                     </div>                   
                     <% }) %>

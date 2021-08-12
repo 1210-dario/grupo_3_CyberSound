@@ -91,6 +91,6 @@ module.exports = {
 
         let productosNew = productos.filter(producto => producto.id != id);
         guardar(productosNew);
-        res.redirect('/productList');
+        res.redirect('/products/productList');
     }
 }

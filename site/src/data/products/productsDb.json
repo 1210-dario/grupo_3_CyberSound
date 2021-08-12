@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Andalax",
-    "description": "Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+    "name": "Duobam",
+    "description": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.",
     "images": [
       "H510-1.png",
       "H510-1.png",
@@ -10,18 +10,16 @@
       "H510-1.png"
     ],
     "cuotas": [
-      3,
-      6,
-      12
+      3
     ],
-    "stock": 0,
-    "price": 8271,
-    "discount": 0,
-    "envioFree": false,
-    "masVendido": true,
+    "stock": 79,
+    "price": 1433,
+    "discount": 43,
+    "envioFree": true,
+    "masVendido": false,
     "oferta": false,
     "show": false,
-    "category": "mouses"
+    "category": "teclados"
   },
   {
     "id": 2,
