@@ -43,45 +43,70 @@
                 <div class="product-container">
                     <div class="product-container2">
                         <% productos.forEach(producto => { %>
-
                         <div class="producto top">
                             <div class="card-title">
-                                <h5><%= producto.name %> </h5>
+                                <h5><%= producto.name %></h5>
                             </div>
                             <img src="/images/products/<%= producto.images[0]%>" alt="producto">
                             <div class="heart">
                                 <img src="/images/icons/logo-heart.svg" alt="corazon">
-                            </div>
+                            </div> 
+                            <% if (producto.discount > 0) { %>
+                                
+                                <div class="masVendido">
+                                    <% if (producto.masVendido === true) { %>
+                                     
+                                        <p class="cartel-vendido">mas vendido</p>
+                                        <p class="descuento"><%= producto.discount %>%OFF</p>
+                                    </div>
+                                    <% }else {  %>
+                                    <p class="descuento"><%= producto.discount %>%OFF</p>
+                                </div>
+                            <% } %>
+                           <% } else  {%>
                             <div class="masVendido">
-                                <p class="cartel-vendido">mas vendido</p>
-                                <p class="descuento"> <%= producto.discount %>% OFF</p>
+                                <% if (producto.masVendido === true) { %>
+                                 
+                                    <p class="cartel-vendido">mas vendido</p>
+                                </div>
+                                <% }else {  %>
                             </div>
+    
+                            <% } %>
+    
+                            <% } %>
                             <div class="precio-desc">
                                 <h5>$ <%= producto.price.toFixed(2) %></h5>
                                 <p><%= producto.discount%>% OFF</p>
                                 <img src="/images/icons/carrito-comprar.svg" alt="">
                             </div>
                             <div class="subtitle">
-                                <h5>nombre producto</h5>
+                                <h5><%= producto.name %></h5>
+    
+                                
                                 <div class="info">
                                     <a href="/products/productDetail/<%= producto.id %>">
                                         <i class="fas fa-plus"></i>
                                     </a>
                                 </div>
                             </div>
-                            <div class="envio">
-                                <i class="fas fa-truck"></i>
-                                <p>envio gratis</p>
-                            </div>
+                            <% if (producto.envioFree === true) { %>
+                                <div class="envio">
+                                    <i class="fas fa-truck"></i>
+                                    <p>envio gratis</p>
+                                </div>
+                            <% } %>
                             <div class="product-but-edit-del"> 
                                 <a href="/products/productEdit/<%= producto.id %>"><button class="product-but-edit">Editar</button></a>
-                                <button class="product-but-del">Eliminar</button>
+                                <form action="/products/productDelete/<%=producto.id %>?_method=DELETE" method="POST">
+                                   <button class="product-but-del">Eliminar</button>
+                                </form>
                             </div>
                             <div class="especificaciones">
                                 <a href="/products/productDetail/<%= producto.id %>">especificaciones</a>
-                            </div>
-                        </div> 
-                        <% }) %>                                               
+                            </div>                            
+                        </div>                   
+                        <% }) %>
                     </div>
                 </div>
                 <div class="more">
@@ -93,43 +118,71 @@
                 <h2>Ofertas</h2>
                 <div class="product-container">
                     <div class="product-container2">
+                        <% productos.forEach(producto => { %>
                         <div class="producto top">
                             <div class="card-title">
-                                <h5>nombre producto</h5>
+                                <h5><%= producto.name %></h5>
                             </div>
-                            <img src="/images/products/H510-1.png" alt="producto">
+                            <img src="/images/products/<%= producto.images[0]%>" alt="producto">
                             <div class="heart">
                                 <img src="/images/icons/logo-heart.svg" alt="corazon">
-                            </div>
+                            </div> 
+                            <% if (producto.discount > 0) { %>
+                                
+                                <div class="masVendido">
+                                    <% if (producto.masVendido === true) { %>
+                                     
+                                        <p class="cartel-vendido">mas vendido</p>
+                                        <p class="descuento"><%= producto.discount %>%OFF</p>
+                                    </div>
+                                    <% }else {  %>
+                                    <p class="descuento"><%= producto.discount %>%OFF</p>
+                                </div>
+                            <% } %>
+                           <% } else  {%>
                             <div class="masVendido">
-                                <p class="cartel-vendido">mas vendido</p>
-                                <p class="descuento">33%OFF</p>
+                                <% if (producto.masVendido === true) { %>
+                                 
+                                    <p class="cartel-vendido">mas vendido</p>
+                                </div>
+                                <% }else {  %>
                             </div>
+    
+                            <% } %>
+    
+                            <% } %>
                             <div class="precio-desc">
-                                <h5>$1324,56</h5>
-                                <p>33%OFF</p>
+                                <h5>$ <%= producto.price.toFixed(2) %></h5>
+                                <p><%= producto.discount%>% OFF</p>
                                 <img src="/images/icons/carrito-comprar.svg" alt="">
                             </div>
                             <div class="subtitle">
-                                <h5>nombre producto</h5>
+                                <h5><%= producto.name %></h5>
+    
+                                
                                 <div class="info">
-                                    <a href="/products/productDetail">
+                                    <a href="/products/productDetail/<%= producto.id %>">
                                         <i class="fas fa-plus"></i>
                                     </a>
                                 </div>
                             </div>
-                            <div class="envio">
-                                <i class="fas fa-truck"></i>
-                                <p>envio gratis</p>
-                            </div>
-                            <div class="product-but-edit-del">
-                                <button class="product-but-edit">Editar</button>
-                                <button class="product-but-del">Eliminar</button>
+                            <% if (producto.envioFree === true) { %>
+                                <div class="envio">
+                                    <i class="fas fa-truck"></i>
+                                    <p>envio gratis</p>
+                                </div>
+                            <% } %>
+                            <div class="product-but-edit-del"> 
+                                <a href="/products/productEdit/<%= producto.id %>"><button class="product-but-edit">Editar</button></a>
+                                <form action="/products/productDelete/<%=producto.id %>?_method=DELETE" method="POST">
+                                   <button class="product-but-del">Eliminar</button>
+                                </form>
                             </div>
                             <div class="especificaciones">
-                                <a href="/products/productDetail">especificaciones</a>
+                                <a href="/products/productDetail/<%= producto.id %>">especificaciones</a>
                             </div>                            
-                        </div>                                              
+                        </div>                   
+                        <% }) %>
                     </div>
                 </div>
                 <div class="more">

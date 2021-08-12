@@ -1,4 +1,4 @@
-const {productos,guardar} = require('../data/products/products');
+const { productos, guardar } = require('../data/products/products');
 const toThousand = require('../utils/toThounsand');
 const conDescuento = require('../utils/conDescuento');
 const cuotas = require('../utils/cuotas');
@@ -33,27 +33,28 @@ module.exports = {
             productos,
         })
     },
-    crear: (req,res) => {
-      const {name,description,images, cuotas,stock,price,discount,envioFree,oferta,show,category,} = req.body;
-     
-      let producto = {
-          id: productos[productos.length - 1].id + 1,
-          name,
-          description,
-          images: ["teclado-cart.jpg","teclado-cart.jpg","teclado-cart.jpg","teclado-cart.jpg"],
-          cuotas,
-          stock,
-          price,
-          discount,
-          envioFree : envioFree != undefined ? true : false ,
-          oferta,
-          show,
-          category,
-      }
-      
-      productos.push(producto)
-      guardar(productos)
-      return res.redirect('/products/productList')
+    crear: (req, res) => {
+        const { name, description, images, cuotas, stock, price, discount, envioFree, masVendido, oferta, show, category, } = req.body;
+
+        let producto = {
+            id: productos[productos.length - 1].id + 1,
+            name,
+            description,
+            images: ["H510-1.png", "H510-1.png", "H510-1.png", "H510-1.png"],
+            cuotas: cuotas == undefined ? [1] : typeof(cuotas) === "string" ? this.cuotas = [Number(cuotas)] : cuotas ,
+            stock: stock != undefined ? +stock : 0,
+            price: price != undefined ? +price : 0,
+            discount: discount != undefined ? +discount : 0,
+            envioFree: envioFree != undefined ? true : false,
+            masVendido: masVendido != undefined ? true : false,
+            oferta: oferta != undefined ? true : false,
+            show: show != undefined ? true : false,
+            category,
+        }
+
+        productos.push(producto)
+        guardar(productos)
+        return res.redirect('/products/productList')
     },
 
     productEdit: (req, res) => {
@@ -63,8 +64,8 @@ module.exports = {
         })
     },
     actualizar: (req, res) => {
-        let id = req.params.id ;
-        let {name, description, images, cuotas, stock, price, discount, envioFree, masVendido, oferta, show, category} = req.body ;
+        let id = req.params.id;
+        let { name, description, images, cuotas, stock, price, discount, envioFree, masVendido, oferta, show, category } = req.body;
         let productUpdated = {
             id: +id,
             name,
@@ -88,8 +89,8 @@ module.exports = {
     eliminar: (req,res) => {
         let id = req.params.id;
 
-        let productosNew = productos.filter(producto=>producto.id != id);
+        let productosNew = productos.filter(producto => producto.id != id);
         guardar(productosNew);
-        res.redirect('/productList');
+        res.redirect('/products/productList');
     }
 }

@@ -496,7 +496,7 @@ font-size: 17px;
 /* Tarjetas */
 .productDetail main article .product-container .producto{
     width: 30%;
-    height: 49.66vw;
+    height: 52vw;
     margin: 15px 0;
     border: 2px solid #212121;
     background: rgba(229, 229, 229, 0.05);
@@ -694,7 +694,7 @@ font-size: 17px;
     }
 
     .productDetail main .box .product-container .producto .especificaciones {
-        margin-top: 50px;
+        margin-top: 15px;
     }
 
     .productDetail main .box .product-container .producto .especificaciones a{

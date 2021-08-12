@@ -7,4 +7,3 @@ module.exports = {
 
      guardar : data => fs.writeFileSync(path.join(__dirname,'productsDb.json'),JSON.stringify(data,null,2),'utf-8')
 } 
-
