@@ -10,11 +10,11 @@
             <a href="/"><i class="fas fa-angle-left"></i></a>
             <a class="Cybersound" href="/">CyberSound</a>
         </div>
-        <h1>carga y edición de productos</h1>
-        <form action="" method="POST">
-            <input type="text" name="name" id="" placeholder="Nombre del Producto" required>
+        <h1>Edición de producto</h1>
+        <form action="/products/productEdit/<%=producto.id%>?_method=PUT" method="POST">
+            <input type="text" name="name" id="" placeholder="Nombre del Producto" required value="<%= producto.name %> ">
             <label class="description-lab" for="description">Descripción</label>
-            <textarea class="description-text" name="description" cols="10" rows="5"></textarea>
+            <textarea class="description-text" name="description" cols="10" rows="5"><%= producto.description %></textarea>
             <div class="div-image">
                 <label class="image" for="image">Elegir Imagen Principal</label>
                 <input class="file" type="file" name="images" multiple id="image" accept=".png, .jpeg, .jpg" required>
@@ -22,51 +22,75 @@
             <label for="cuota">Elegir Cuotas</label>
             <div class="form-div-cuotas">
                 <div class="checkbox">
-                    <input type="checkbox" name="cuota" value=3 id="cuota">
+                    <input type="checkbox" name="cuotas" value=3 id="cuota" <% if (producto.cuotas[0] == 3) { %>
+                     checked
+                    <% } %> >
                     <label for="cuota">3</label>
                 </div>
                 <div class="checkbox checkbox2">
-                    <input type="checkbox" name="cuota" value=6 id="cuota">
+                    <input type="checkbox" name="cuotas" value=6 id="cuota" <% if (producto.cuotas[1] == 6) { %>
+                    checked
+                    <% } %> >
                     <label for="cuota">6</label>
                 </div>
                 <div class="checkbox">
-                    <input type="checkbox" name="cuota" value=12 id="cuota">
+                    <input type="checkbox" name="cuotas" value=12 id="cuota" <% if (producto.cuotas[2] == 12) { %>
+                     checked
+                    <% } %> >
                     <label for="cuota">12</label>
                 </div>
             </div>
             <div class="checkbox">
                 <label for="stock">Stock Disponible</label>
             </div>
-            <input type="number" name="stock" value="" placeholder="Stock Disponible">
+            <input type="number" name="stock" value="<%= producto.stock %>" placeholder="Stock Disponible">
 
-            <input type="number" name="price" placeholder="Precio">
+            <input type="number" name="price" placeholder="Precio" value="<%= producto.price %>">
             <div class="checkbox">
                 <label for="discount">Descuento</label>
             </div>
-            <input type="number" name="discount" placeholder="Porcentaje de Descuento">
+            <input type="number" name="discount" placeholder="Porcentaje de Descuento" value="<%= producto.discount %>">
             <div class="checkbox">
-                <input type="checkbox" name="deliveryFree" id="">
-                <label for="deliveryFree">Envio Gratis</label>
+                <input type="checkbox" name="envioFree" id="" <% if (producto.envioFree === true) { %>
+                 checked
+                <% } %> >
+                <label for="envioFree">Envio Gratis</label>
             </div>
             <div class="checkbox">
-                <input type="checkbox" name="masVendido" value=true id="masVendido">
+                <input type="checkbox" name="masVendido" value=true id="masVendido" <% if (producto.masVendido === true) { %>
+                 checked
+                <% } %> >
                 <label for="masVendido">Mas Vendido</label>
             </div>
             <div class="checkbox">
-                <input type="checkbox" name="oferta" value=true id="oferta">
+                <input type="checkbox" name="oferta" value=true id="oferta" <% if (producto.oferta === true) { %>
+                 checked
+                <% } %> >
                 <label for="cuota">Oferta</label>
             </div>
             <div class="checkbox">
-                <input type="checkbox" name="show" value=true id="show">
+                <input type="checkbox" name="show" value=true id="show" <% if (producto.show === true) { %>
+                 checked
+                <% } %> >
                 <label for="cuota">Mostrar en Home</label>
             </div>
             <select name="category" id="category" value=Categorias>
                 <option disabled selected value="categorias">Categorias</option>
-                <option value="teclados">Teclados</option>
-                <option value="mouses">Mouses</option>
-                <option value="headphones">Headphones</option>
-                <option value="parlantes">Parlantes</option>
-                <option value="streaming">Streaming</option>
+                <option value="teclados" <% if (producto.category === "teclados") { %>
+                 selected
+                <% } %> >Teclados</option>
+                <option value="mouses" <% if (producto.category === "mouses") { %>
+                    selected
+                   <% } %>>Mouses</option>
+                <option value="headphones" <% if (producto.category === "auriculares") { %>
+                    selected
+                   <% } %>>Headphones</option>
+                <option value="parlantes" <% if (producto.category === "parlantes") { %>
+                    selected
+                   <% } %>>Parlantes</option>
+                <option value="streaming" <% if (producto.category === "streaming") { %>
+                    selected
+                   <% } %>>Streaming</option>
             </select>
             <input type="submit" value="Guardar Cambios" class="button-continuar">
         </form>
