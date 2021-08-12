@@ -12,11 +12,17 @@
         </div>
         <h1>Edición de producto</h1>
         <form action="/products/productEdit/<%=producto.id%>?_method=PUT" method="POST">
+            <div class="checkbox">
+                <label for="discount">NOMBRE</label>
+            </div>
             <input type="text" name="name" id="" placeholder="Nombre del Producto" required value="<%= producto.name %> ">
             <label class="description-lab" for="description">Descripción</label>
             <textarea class="description-text" name="description" cols="10" rows="5"><%= producto.description %></textarea>
+            <div class="checkbox">
+                <label for="images">IMAGEN</label>
+            </div>
             <div class="div-image">
-                <label class="image" for="image">Elegir Imagen Principal</label>
+                <label class="image" for="images">Elegir Imagen Principal</label>
                 <input class="file" type="file" name="images" multiple id="image" accept=".png, .jpeg, .jpg" required>
             </div>
             <label for="cuota">Elegir Cuotas</label>
@@ -44,7 +50,9 @@
                 <label for="stock">Stock Disponible</label>
             </div>
             <input type="number" name="stock" value="<%= producto.stock %>" placeholder="Stock Disponible">
-
+            <div class="checkbox">
+                <label for="price">PRECIO</label>
+            </div>
             <input type="number" name="price" placeholder="Precio" value="<%= producto.price %>">
             <div class="checkbox">
                 <label for="discount">Descuento</label>
