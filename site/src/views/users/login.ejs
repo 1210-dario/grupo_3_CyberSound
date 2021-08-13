@@ -14,16 +14,16 @@
         <div class="caja-login"> 
         <button class="google"><a href="/"><i class="fab fa-google"></i>Ingresar con google</a></button>
         <h2>o</h2>
-        <form action="/login" method="">
+        <form action="/users/login" method="PUT">
             <div>
                 <input type="email" name="Mail-User" placeholder="Email" class="input-naranja">
            
                 <input type="password" name="Password" placeholder="Contraseña" class="input-naranja">
             </div>
-            <p>olvidaste tu <a class="naranja" href="">usuario</a> o <a class="naranja"  href="">Contraseña </a> ?</p>
+            <p><a class="naranja"  href="">Olvidé mi contraseña </a></p>
             <input type="submit" value="Ingresar" class="boton-ingresar">
         </form>
-        <h6>eres nuevo? <a class="violet" href="/register">Registrate</a></h6>
+        <h6>eres nuevo? <a class="violet" href="/users/register"> Registrarme</a></h6>
         </div>
     </section>
     <%- include('../partials/footer.ejs') %>

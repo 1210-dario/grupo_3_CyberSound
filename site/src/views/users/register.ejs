@@ -13,12 +13,12 @@
         <h1>registro</h1>
         <button type="button" class="button-google"><a href="#"><i class="fab fa-google"></i> continuar con google</a></button>
         <p>o</p>
-        <form action="post">
+        <form action="/users/register" method="POST">
             <input type="text" name="nombre" id="" placeholder="Nombre" required>
             <input type="text" name="apellido" id="" placeholder="Apellido" required>
-            <input type="text" name="dni" id="" placeholder="DNI" required>
-            <input type="email" name="email" id="" placeholder="Email" required>
-            <input type="password" name="password" id="" placeholder="Clave" required>
+            <input type="email" name="email" id="" placeholder="Email" required>            
+            <input type="password" name="password" id="" placeholder="Contraseña" required>
+            <input type="password" name="password2" id="" placeholder="Repetir Contraseña" required>
             <div class="checkbox">
                 <input type="checkbox" name="condiciones" id="">
                 <label for="condiciones">acepto terminos y condiciones</label>
@@ -26,7 +26,7 @@
             <input type="submit" value="Continuar" class="button-continuar">
         </form>
         <h6>Tenes una cuenta?</h6>
-        <a href="/login">Ingresá</a>
+        <a href="/users/login">Ingresar</a>
     </section>
     <%- include('../partials/footer.ejs') %>
 
