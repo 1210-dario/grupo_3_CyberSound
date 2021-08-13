@@ -11,7 +11,6 @@ router.get('/cart', cart);
 
 router.get('/productAdd', productAdd);
 router.post('/productAdd', crear);
-router.post('/productEdit/:id', productEdit);
 router.get('/productEdit/:id', productEdit);
 router.put('/productEdit/:id', actualizar);
 router.delete('/productDelete/:id', eliminar);
