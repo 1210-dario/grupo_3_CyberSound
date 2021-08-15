@@ -2,13 +2,14 @@ const { productos, guardar } = require('../data/products/products');
 const toThousand = require('../utils/toThounsand');
 const conDescuento = require('../utils/conDescuento');
 const cuotas = require('../utils/cuotas');
-
+const fs = require('fs');
+const path = require('path');
 
 module.exports = {
     productList: (req, res) => {
         res.render('./products/productList', {
             title: 'Product List',
-            productos,
+            productos : JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products','productsDb.json'),'utf-8')),
         })
     },
     productDetail: (req, res) => {
