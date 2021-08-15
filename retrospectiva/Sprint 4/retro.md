@@ -1,4 +1,4 @@
-# Retrospectiva Sprint 3
+# Retrospectiva Sprint 4
  Hicimos una reflexión del sprint pasado y utilizamos *Starfish retrospective*, la cual se puede visualizar en esta carpeta.
 
  ### Conclusión: 
@@ -6,38 +6,34 @@
   - Seguir haciendo:
 
     - Participacion colaborativa.
-    - Darle continuidad a las Daily y el feedBack del Equipo.
     - Mantener la Comunicación.
     - Reuniones Lunes - Miercoles - Viernes.
-    - Darle mas importancia al trello.
+    - Darle importancia al trello.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - Hacer más: 
        
-    - Armar Itinerario o Calendario con Tiempos Disponibles.
-    - comunicar en las Dailys el estado actual de cada uno.
+    - Coordinar actividades del Playground (dudas)
+    - Tener el PlayGround al día
+    - Organizar mejor los tiempos
+    - No Confiarse en el tiempo que puede llegar a tomarnos el Sprint
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - Empezar a hacer: 
+- comunicar en las Dailys el estado actual de cada uno.-
+- Armar nuestro propio Trello individual para tener presentes los tiempos libres de cada uno y poder coordinar mejor las reuniones.- 
 
-- Coordinar actividades del Playground(Dudas).
-- Tener el PlayGround al dia 
-    
    
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - Hacer menos: 
     
-- Reuniones de larga duracion.
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - Dejar de hacer: 
     
 - Dejar muchas tareas para el final.
-   
-
-
-    
