@@ -34,14 +34,16 @@ module.exports = {
             productos,
         })
     },
-    crear: (req, res) => {
+    crear: (req, res) => {      
+        
+      let multiImages = req.files.map(image => image.filename )
         const { name, description, images, cuotas, stock, price, discount, envioFree, masVendido, oferta, show, category, } = req.body;
-
+         
         let producto = {
             id: productos[productos.length - 1].id + 1,
             name,
             description,
-            images: ["H510-1.png", "H510-1.png", "H510-1.png", "H510-1.png"],
+            images: req.files.length != 0 ? multiImages : ["H510-1.png", "H510-1.png", "H510-1.png", "H510-1.png"],
             cuotas: cuotas == undefined ? [1] : typeof(cuotas) === "string" ? this.cuotas = [Number(cuotas)] : cuotas ,
             stock: stock != undefined ? +stock : 0,
             price: price != undefined ? +price : 0,
