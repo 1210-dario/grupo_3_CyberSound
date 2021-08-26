@@ -56,7 +56,11 @@
             </div>
             <div class="logo-user">
                 <a href="#">
-                    <img src="/images/icons/logo-user.svg" alt="logo-user">
+                    <% if (locals.userLogin) { %>
+                        <img src="/images/userAvatar/<%=locals.userLogin.image%>" alt="logo-user">                        
+                    <% }else{ %>
+                        <img src="/images/icons/logo-user.svg" alt="logo-user">
+                    <% }%>
                     <ul>
                         <li><a href="/users/login">Ingresar</a></li>
                         <li><a href="/users/register">Registrarse</a></li>

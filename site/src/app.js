@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
 const session = require('express-session');
+const localsUserCheck = require('./middlewares/localsUserCheck');
+const cookieAuthMiddleware = require('./middlewares/cookieAuthMiddleware');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -29,6 +31,11 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   cookie: { secure: true }}))
+
+//Cookies
+app.use(cookieAuthMiddleware)
+app.use(localsUserCheck)
+  
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
