@@ -44,6 +44,6 @@
     "password2": "123456",
     "condiciones": true,
     "role": "user",
-    "image": "default.png"
+    "image": "avatar.svg"
   }
 ]
