@@ -39,7 +39,7 @@ module.exports = {
         return users.find(user=>user.email === email)
     },
 
-    userLogin: async  (req,res)=>{
+    userLogin: (req,res)=>{
         const userLogin = users.find(user=>user.email === req.body.email && bcrypt.compareSync(req.body.password, user.password))
         if(!userLogin){
             //Aca se debe redireccionar al Login con el error('Credenciales incorrectas o usuario/password incorrectas')
@@ -55,9 +55,8 @@ module.exports = {
         if (req.body.remember != undefined){
         /* Aplicacion de Cookie */
         res.cookie('usuario',req.session.userLogin,{ maxAge: 60000 });    
-        }    
+        }  
         // A donde debe redirigir ? al home o a las config de usuario?
-        // Se manda la informacion osea la info del usuario logueado, como lo mostramos en la vista?   
-        res.redirect('../')
+        return res.redirect('../')
     }
 }
