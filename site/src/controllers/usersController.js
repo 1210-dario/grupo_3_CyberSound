@@ -31,6 +31,13 @@ module.exports = {
         users.push(usuario)
 
         guardar(users);
+        req.session.userLogin = {
+            nombre : usuario.nombre,
+            id : usuario.id,
+            role : usuario.role,
+            image : usuario.image,
+            email : usuario.email
+        }
         // A donde debe redirigir ? al home o a las config de usuario?
         res.redirect('../')
     },
@@ -57,6 +64,11 @@ module.exports = {
         res.cookie('usuario',req.session.userLogin,{ maxAge: 60000 });    
         }  
         // A donde debe redirigir ? al home o a las config de usuario?
+        return res.redirect('../')
+    },
+    logout : (req,res) =>{
+        req.session.destroy();
+        res.cookie('usuario',null,{maxAge : -1})
         return res.redirect('../')
     }
 }

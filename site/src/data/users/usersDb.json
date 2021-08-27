@@ -45,5 +45,15 @@
     "condiciones": true,
     "role": "user",
     "image": "avatar.svg"
+  },
+  {
+    "id": 6,
+    "nombre": "Roberto",
+    "apellido": "Roberto",
+    "email": "Roberto@roberto.com",
+    "password": "$2a$10$qjaq6U6U3NDHxDdtip4PsuWvSxfm.rIIMGubF6rf88PEzIeYQgqYC",
+    "condiciones": true,
+    "role": "admin",
+    "image": "avatar.svg"
   }
 ]

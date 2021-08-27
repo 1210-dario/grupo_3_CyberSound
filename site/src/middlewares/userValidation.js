@@ -29,7 +29,6 @@ const _passwordValidation = body('password2')
     }).withMessage('Las contraseñas no coinciden')
 
 const validResult = (req, res, next) =>{
-
     const errors = validationResult(req);
     if(!errors.isEmpty()){
         console.log(errors);
