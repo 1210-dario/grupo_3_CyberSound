@@ -302,6 +302,9 @@ header nav .caja-2 .logo-heart , .logo-search{
         height: 4.375rem;
         align-items: flex-end;
     }
+    header nav .spectator{
+        width: 6rem;
+    }
 
     header nav .caja-2 img{
         width: 2.5rem;

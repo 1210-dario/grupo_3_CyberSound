@@ -20,12 +20,17 @@
                     </li>
                     <li><a href="#">ofertas</a></li>
                     <li><a href="#">ayuda</a></li>
-                    <li><a href="#">Adminv</a>
-                        <ul>
-                            <li><a href="/products/productAdmin">Listado</a></li>
-                            <li><a href="/products/productAdd">Cargar</a></li>
-                        </ul>
-                    </li>                   
+                    <% if (locals.userLogin) { %>
+                                 <% if (locals.userLogin.role === "admin") { %>
+                                  
+                                    <li><a href="#">Admin</a>
+                                        <ul>
+                                            <li><a href="/products/productAdmin">Listado</a></li>
+                                            <li><a href="/products/productAdd">Cargar</a></li>
+                                        </ul>
+                                    </li>                   
+                                 <% } %>
+                    <% } %>
                 </ul>
             </div>
         </div>
@@ -44,7 +49,8 @@
             </div>
         </div>
         <h1>CyberSound</h1>
-        <div class="caja-2">
+        <% if (locals.userLogin) { %>
+            <div class="caja-2">
             <div class="logo-heart">
                 <a href="#">
                     <img src="/images/icons/logo-heart.svg" alt="logo-heart">
@@ -57,22 +63,36 @@
             </div>
             <div class="logo-user">
                 <a href="#">
-                    <% if (locals.userLogin) { %>
-                        <img src="/images/userAvatar/<%=locals.userLogin.image%>" alt="logo-user">                        
+                        <img src="/images/userAvatar/<%=locals.userLogin.image%>" alt="logo-user">
+                        <ul>
+                            <li><a href="/">Mi perfil</a></li>
+                            <li><a href="/users/logout">Salir</a></li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="logo-cart">
+                    <a href="/products/cart">
+                        <img src="/images/icons/logo-cart.svg" alt="logo-cart">
+                    </a>
+                </div>                        
                     <% }else{ %>
+                        <div class="caja-2 spectator">
+                         <div class="logo-search">
+                <a href="#">
+                    <img src="/images/icons/logo-search.svg" alt="logo-search">
+                </a>
+            </div>
+                        <div class="logo-user">
+                            <a href="#">
                         <img src="/images/icons/logo-user.svg" alt="logo-user">
+                        <ul>
+                            <li><a href="/users/login">Ingresar</a></li>
+                            <li><a href="/users/register">Registrarse</a></li>
+                        </ul>
+                    </a>
+                      </div>     
                     <% }%>
-                    <ul>
-                        <li><a href="/users/login">Ingresar</a></li>
-                        <li><a href="/users/register">Registrarse</a></li>
-                    </ul>
-                </a>
-            </div>
-            <div class="logo-cart">
-                <a href="/products/cart">
-                    <img src="/images/icons/logo-cart.svg" alt="logo-cart">
-                </a>
-            </div>
+              
         </div>
     </nav>
 </header>
