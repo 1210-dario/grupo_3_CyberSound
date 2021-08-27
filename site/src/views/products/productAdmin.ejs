@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/head.ejs', {title : 'productAdmin'}) %> 
+
+    <body class="productAdmin">
+        <%- include('../partials/header.ejs') %>
+        
+        <div class="tabla-admin">
+
+            <h1 class="h1-admin">Lista Productos</h1>
+
+            <table>
+        <tr class="fijo-admin">
+          <td class="naranja-table">ID</td>
+          <td class="naranja-table">Nombre</td>
+          <td class="naranja-table">Cuotas</td>
+          <td class="naranja-table">Stock</td>
+          <td class="naranja-table">Precio</td>
+          <td class="naranja-table">Descuento</td>
+          <td class="naranja-table">Envio</td>
+          <td class="naranja-table">Mas vendido</td>
+          <td class="naranja-table">Oferta</td>
+          <td class="naranja-table">Show</td>
+          <td class="naranja-table">Categoria</td>
+          <td class="naranja-table">Descripcion</td>
+          <td class="naranja-table">Vista</td>
+          <td class="naranja-table">Editar</td>
+          <td class="naranja-table">Borrar</td>
+        </tr>
+        <% productos.forEach(producto => { %>
+            <tr>
+                <td class="violeta-table"><%= producto.id %></td>
+                <td class="gris-table"><%= producto.name %></td>
+                <td class="violeta-table"><%= producto.cuotas %></td>
+                <td class="gris-table"><%= producto.stock %></td>
+                <td class="violeta-table">$<%= producto.price %></td>
+                <td class="gris-table"><%= producto.discount %>%</td>
+                <td class="violeta-table"><%= producto.envioFree %></td>
+                <td class="gris-table"><%= producto.masVendido %></td>
+                <td class="violeta-table"><%= producto.oferta %></td>
+                <td class="gris-table"><%= producto.show %></td>
+                <td class="violeta-table"><%= producto.category %></td>
+                <td ><textarea class="description-text-admin" name="description" cols="10" rows="3"><%= producto.description %></textarea></td> 
+                <td><a class="boton-admin admin-detail" href="/products/productDetail/<%= producto.id %>">Ver</a></td>
+                <td><a class="boton-admin admin-edit" href="/products/productEdit/<%= producto.id %>">Editar</a></td>
+                <td><form action="/products/productDelete/<%=producto.id %>?_method=DELETE" method="POST">
+                    <button class="boton-admin admin-delete">Borrar</button>
+                 </form></td>
+                           
+              </tr>
+            <% }) %>      
+        </table>
+        </div>
+        <%- include('../partials/footer.ejs') %>
+        
+    </body>
+
+</html>
