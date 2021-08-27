@@ -9,6 +9,8 @@ module.exports = {
     productList: (req, res) => {
         res.render('./products/productList', {
             title: 'Product List',
+            toThousand,
+            conDescuento,
             productos : JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products','productsDb.json'),'utf-8')),
         })
     },
