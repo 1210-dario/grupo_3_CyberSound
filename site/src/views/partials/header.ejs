@@ -49,8 +49,8 @@
             </div>
         </div>
         <h1>CyberSound</h1>
-        <div class="caja-2">
-            <% if (locals.userLogin) { %>
+        <% if (locals.userLogin) { %>
+            <div class="caja-2">
             <div class="logo-heart">
                 <a href="#">
                     <img src="/images/icons/logo-heart.svg" alt="logo-heart">
@@ -76,6 +76,7 @@
                     </a>
                 </div>                        
                     <% }else{ %>
+                        <div class="caja-2 spectator">
                          <div class="logo-search">
                 <a href="#">
                     <img src="/images/icons/logo-search.svg" alt="logo-search">
