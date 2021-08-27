@@ -95,5 +95,12 @@ module.exports = {
         let productosNew = productos.filter(producto => producto.id != id);
         guardar(productosNew);
         res.redirect('/products/productList');
+    },
+    productAdmin : (req,res) => {
+        
+        res.render('./products/productAdmin', {
+            productos : JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products','productsDb.json'),'utf-8')),
+        
+        })
     }
 }

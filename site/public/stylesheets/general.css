@@ -16,6 +16,10 @@ a{
     text-decoration: none;
 }
 
+textarea{
+    resize: none;
+  }
+
 :root{
     --color-naranja: #FF6D00;
     --color-blanco: #FFFFFF;

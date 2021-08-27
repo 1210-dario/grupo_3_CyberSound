@@ -1,7 +1,7 @@
 var express = require('express');
 const path = require('path')
 var router = express.Router();
-const { productList, productDetail, cart, productAdd, productEdit, crear, actualizar, eliminar } = require('../controllers/productsController');
+const { productList, productDetail, cart, productAdd, productEdit, crear, actualizar, eliminar, productAdmin } = require('../controllers/productsController');
 
 /*     Multer     */
 
@@ -14,6 +14,9 @@ router.get('/productList', productList);
 router.get('/productDetail/:id', productDetail);
 router.get('/cart', cart);
 
+/*     Routes Admin   */
+
+router.get('/productAdmin',productAdmin)
 router.get('/productAdd', productAdd);
 router.post('/productAdd',upload.array('images'), crear);
 router.get('/productEdit/:id', productEdit);

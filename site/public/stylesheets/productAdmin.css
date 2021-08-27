@@ -1,0 +1,66 @@
+.productAdmin {
+    
+    background-color: var(--color-gris-medio);
+    color: var(--color-blanco3);
+    font-weight: 500;
+    font-family: Verdana;
+}
+.productAdmin .h1-admin{
+     padding-bottom: 10px;
+}
+.productAdmin .td{
+    max-height: 20px;
+}
+.productAdmin .violeta-table{
+    background-color: var(--color-violeta);
+    
+}
+.productAdmin .gris-table{
+    background-color: grey;
+}
+.productAdmin .naranja-table{
+    background-color: var(--color-naranja);
+   
+}
+.productAdmin .tabla-admin{
+ width: 95vw;
+ text-align: center;
+ margin: 40px auto;
+
+}
+ .violeta-table , .gris-table, .naranja-table{
+    border: 1px solid black;
+  }
+
+.description-text-admin{
+    width: 200px;
+    background-color: #e5e5e5;
+}
+.fijo-admin{
+ position:sticky;
+ top: 0;
+}
+.productAdmin .boton-admin{
+        font-size: 18px;
+        padding: 4px;
+        margin: 15px 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        color: aliceblue;
+        border: none;
+        overflow: hidden;
+        transition: 300ms;    
+    }
+.productAdmin .boton-admin:hover{
+        box-shadow: 0 0 8px rgba(83, 255, 4, 0.5)
+    }
+
+.admin-detail{
+    background-color: var(--color-verde);
+}
+.admin-edit{
+    background-color:#007BFF;
+}
+.admin-delete{
+    background-color: #DC3545;
+}
