@@ -82,6 +82,11 @@ header nav .caja-2 .logo-heart , .logo-search{
     display: none;
 }
 
+header nav .caja-2 img{
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
 /* Media Querys */
 
 @media (min-width:426px){

@@ -70,5 +70,12 @@ module.exports = {
         req.session.destroy();
         res.cookie('usuario',null,{maxAge : -1})
         return res.redirect('../')
+    },
+    userUpdate: (req,res)=>{
+        let id = req.params.id;
+        let userUpdated =  req.body;
+        let userDbModified = users.map(user => user.id === +id ? userUpdated : user)
+        guardar(userDbModified);
+        res.redirect('./users/profile');
     }
 }
