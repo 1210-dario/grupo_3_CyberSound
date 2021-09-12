@@ -1,0 +1,125 @@
+.userProfile {
+    background-color: var(--color-gris-oscuro);
+}
+
+
+/* Formulario */
+.userProfile .form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.userProfile .profile-title{
+    text-align: center;
+    /* color: var(--color-naranja); */
+    background: linear-gradient(to right, #159957, #155799);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.userProfile .form h3{
+    color: var(--color-violeta);
+}
+
+.userProfile .form label{
+    color: var(--color-violeta);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Avatar actual */
+.userProfile .avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userProfile .avatar img{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/* Eleccion de avatar */
+.userProfile .avatar-election{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.userProfile .avatar-election label img{
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.userProfile .avatar-election label{
+    width: 25%;
+    height: 25%;
+    margin: 10px auto;
+}
+
+.userProfile .avatar-election label input{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.userProfile .avatar-election label input:checked + img{
+    outline: 2px solid var(--color-violeta);
+}
+
+/* El resto de inputs */
+
+.userProfile .form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.userProfile .form .inputBox label{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.userProfile .form .inputBox input{
+    width: 100%;
+    margin: 10px auto;
+    width: 185px;
+    height: 38px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.userProfile .form .inputBox .file{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    left: 37%;
+    padding-left: 0px;
+}
+
+.userProfile .form .boton-actualizar{
+    width: 100px;
+    height: 30px;
+    background: linear-gradient(to right, #159957, #155799);
+    /* background-color: var(--color-violeta); */
+    padding-left: 0;
+    margin: 15px auto;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: bold;
+    font-size: 15px;
+    cursor: pointer;
+}

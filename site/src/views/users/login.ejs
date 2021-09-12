@@ -17,8 +17,10 @@
         <form action="/users/login" method="POST">
             <div>
                 <input type="email" name="email" placeholder="Email" class="input-naranja">
+                <span class="text-danger small"><%= locals.errores && locals.errores.email && errores.email.msg != 'credenciales inválidas' ? errores.email.msg : null %> </span>
            
                 <input type="password" name="password" placeholder="Contraseña" class="input-naranja">
+                <span class="text-danger small"><%= locals.errores && locals.errores.password ? errores.password.msg : null %> </span>
             </div>
 
             <div class="remember">
@@ -28,6 +30,7 @@
 
             <p><a class="naranja"  href="">Olvidé mi contraseña </a></p>
             <input type="submit" value="Ingresar" class="boton-ingresar">
+            <span class="text-danger"><%= locals.errores && errores.email && errores.email.msg != 'El email es obligatorio' ? errores.email.msg : null%> </span>
         </form>
         <h6>eres nuevo? <a class="violet" href="/users/register"> Registrarme</a></h6>
         </div>

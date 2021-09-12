@@ -103,7 +103,7 @@
     background-color: var(--color-violeta);
     padding-left: 0;
     margin: 15px auto;
-    
+    cursor: pointer;
 }    
 .login p, h6{
     font-size: 10px;
@@ -124,6 +124,11 @@
 .login section a.naranja:hover{
     color: var(--color-violeta);
  }
+
+ .login section form span {
+    color: red;
+}
+
   /* media querys* */
 
 

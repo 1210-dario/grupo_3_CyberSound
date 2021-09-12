@@ -117,6 +117,7 @@
     background-color: var(--color-violeta);
     width: 100px;
     height: 30px;
+    cursor: pointer;
 }
 
 .register section h6{
@@ -133,6 +134,10 @@
 
 .register section a:hover{
     color: var(--color-violeta);
+}
+
+.register section form span {
+    color: red;
 }
 
 /* Breakpoints o MediaQuerys */

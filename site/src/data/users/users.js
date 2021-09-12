@@ -5,5 +5,7 @@ module.exports = {
     
     users : JSON.parse(fs.readFileSync(path.join(__dirname,'usersDb.json'),'utf-8')),
 
-    guardar : data => fs.writeFileSync(path.join(__dirname,'usersDb.json'),JSON.stringify(data,null,2),'utf-8')
+    guardar : (data) => fs.writeFileSync(path.join(__dirname,'usersDb.json'),JSON.stringify(data,null,2),'utf-8'),
+
+    avatars: JSON.parse(fs.readFileSync(path.join(__dirname,'usersAvatarDb.json'), 'utf-8'))
 } 

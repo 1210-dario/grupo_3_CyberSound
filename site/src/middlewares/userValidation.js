@@ -1,5 +1,7 @@
-const { check , validationResult, body } = require('express-validator');
-const { findByEmail } = require('../controllers/usersController')
+const { check , body } = require('express-validator');
+const { findByEmail } = require('../controllers/usersController');
+const { users } = require('../data/users/users');
+const bcrypt = require('bcryptjs');
 
 const _nameRequired = check('nombre').not().isEmpty().withMessage('El nombre es obligatorio');
 const _nameType = check('nombre').isAlpha().withMessage('El nombre solo debe contener letras');
@@ -12,13 +14,13 @@ const _emailExist = check('email').custom(
     async (email = '') => {
         const userFound = await findByEmail(email);
         if(userFound){
-            throw new Error('El email ya esta registrado')
+            throw new Error('El email ya se encuentra registrado')
         }
     }
 );
 
 const _passwordRequired = check('password').not().isEmpty().withMessage('La contraseña es obligatoria').isLength({min:6,max:15}).withMessage('La contraseña debe tener entre 6 y 12 caracteres');
-const _password2Required = check('password2').not().isEmpty().withMessage('La contraseña2 es obligatoria');
+const _password2Required = check('password2').not().isEmpty().withMessage('Debe volver a ingresar su contraseña');
 
 const _passwordValidation = body('password2')
     .custom((value,{req}) => {
@@ -26,20 +28,20 @@ const _passwordValidation = body('password2')
             return false
         }
         return true
-    }).withMessage('Las contraseñas no coinciden')
+    }).withMessage('Las contraseñas deben coincidir')
 
-const validResult = (req, res, next) =>{
-    const errors = validationResult(req);
-    if(!errors.isEmpty()){
-        console.log(errors);
-        return res.render('./users/register',{
-            title: 'Register',
-            old : req.body,
-            errores : errors.mapped()
-        })    
-    }   
-    next();
-};
+const _condicionsRequired = check('condiciones')
+.isString('on').withMessage('Debes aceptar los términos y condiciones')
+
+const _credentialsValidation = body('email')
+.custom((value,{req}) => {
+    let usuario = users.find(user => user.email === value && bcrypt.compareSync(req.body.password,user.password));
+    if (usuario){
+        return true
+    }else{
+        return false
+    }
+}).withMessage('credenciales inválidas')
 
 
 const postRegisterRequestValidations = [
@@ -53,14 +55,14 @@ const postRegisterRequestValidations = [
     _passwordRequired,
     _password2Required,
     _passwordValidation,
-    validResult
+    _condicionsRequired
 ]
 
 const postLoginRequestValidations = [
     _emailRequired,
     _emailValid,
     _passwordRequired,
-    validResult
+    _credentialsValidation
 ]
 
 
