@@ -14,15 +14,21 @@
         <button type="button" class="button-google"><a href="#"><i class="fab fa-google"></i> continuar con google</a></button>
         <p>o</p>
         <form action="/users/register" method="POST">
-            <input type="text" name="nombre" id="" placeholder="Nombre" required>
-            <input type="text" name="apellido" id="" placeholder="Apellido" required>
-            <input type="email" name="email" id="" placeholder="Email" required>            
-            <input type="password" name="password" id="" placeholder="Contraseña" required>
-            <input type="password" name="password2" id="" placeholder="Repetir Contraseña" required>
+            <input type="text" name="nombre" id="" placeholder="Nombre" value="<%= locals.old && locals.old.nombre ? old.nombre : null%>">
+            <span class="text-danger small"><%= locals.errores && locals.errores.nombre ? errores.nombre.msg : null %> </span>
+            <input type="text" name="apellido" id="" placeholder="Apellido" value="<%= locals.old && locals.old.apellido ? old.apellido : null%>">
+            <span class="text-danger small"><%= locals.errores && locals.errores.apellido ? errores.apellido.msg : null %> </span>
+            <input type="email" name="email" id="" placeholder="Email" value="<%= locals.old && locals.old.email ? old.email : null%>">
+            <span class="text-danger small"><%= locals.errores && locals.errores.email ? errores.email.msg : null %> </span>            
+            <input type="password" name="password" id="" placeholder="Contraseña" value="">
+            <span class="text-danger small"><%= locals.errores && locals.errores.password ? errores.password.msg : null %> </span>
+            <input type="password" name="password2" id="" placeholder="Repetir Contraseña" value="">
+            <span class="text-danger small"><%= locals.errores && locals.errores.password2 ? errores.password2.msg : null %> </span>
             <div class="checkbox">
                 <input type="checkbox" name="condiciones" id="">
                 <label for="condiciones">acepto terminos y condiciones</label>
             </div>
+            <span class="text-danger small my-2"><%= locals.errores && locals.errores.condiciones ? errores.condiciones.msg : null %> </span>
             <input type="submit" value="Continuar" class="button-continuar">
         </form>
         <h6>Tenes una cuenta?</h6>

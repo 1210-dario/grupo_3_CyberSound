@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head.ejs', {title : 'UserProfile'}) %>
+
+<body class="userProfile">
+    <%- include('../partials/header.ejs') %>
+    <h2 class="profile-title">Bienvenido a tu perfil <%=locals.userLogin.nombre%></h2>
+
+    <form action="/users/userProfile/<%=locals.userLogin.id%>?_method=PUT" method="POST" class="form">
+        
+        <h3>Icono actual:</h3>
+        <div class="avatar">
+            <img src="/images/userAvatar/<%=locals.userLogin.image%>" alt="userAvatar">
+        </div>
+        <h3>Elegí tu avatar:</h3>
+        <div class="avatar-election">
+            <% avatars.forEach(avatar => { %>
+                <label>
+                    <input type="radio" name="image" value="<%=avatar.imageUrl%>">
+                    <img src="/images/userAvatar/<%=avatar.imageUrl%>"  alt="avatar">
+                </label>
+            <% }) %>
+        </div>
+        </div>
+        <div class="inputBox">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="" placeholder="Nombre" value="<%=locals.userLogin.nombre%>">
+        </div>
+
+        <div class="inputBox">
+        <label for="nombre">Apellido</label>
+        <input type="text" name="apellido" id="" placeholder="Apellido" value="<%=locals.userLogin.apellido%>">
+        </div>
+
+        <div class="inputBox">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="" placeholder="Email" value="<%=locals.userLogin.email%>">  
+        </div>
+        <input type="submit" value="Actualizar" class="boton-actualizar">
+    </form>
+
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+
+</html>

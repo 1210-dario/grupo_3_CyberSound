@@ -43,8 +43,8 @@
     "password": "$2a$10$wa5D6sgp78wPYcaPsWxvx.Nz8rn4AYBqy55F/62cJIEmn0t/k.Xva",
     "password2": "123456",
     "condiciones": true,
-    "role": "user",
-    "image": "avatar.svg"
+    "role": "admin",
+    "image": "bullbasaur.svg"
   },
   {
     "id": 6,
