@@ -7,6 +7,7 @@ var methodOverride = require('method-override');
 const session = require('express-session');
 const cookieAuthMiddleware = require('./middlewares/cookieAuthMiddleware');
 const localsUserCheck = require('./middlewares/localsUserCheck');
+require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
