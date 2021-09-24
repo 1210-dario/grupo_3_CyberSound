@@ -11,9 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Banner.hasMany(models.BannerImage,{
-        foreignKey: 'bannerId'
+      Banner.belongsToMany(models.Category,{
+        as :'categories',
+        through :'bannerimages',
+        foreignKey :'bannerId',
+        otherKey :'categoryId'
       })
+
     }
   };
   Banner.init({

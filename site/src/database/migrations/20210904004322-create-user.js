@@ -43,17 +43,6 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL'
       },
-      couponId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: {
-            tableName : 'Coupons'
-          },
-          key: 'id',
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL'
-      },
       password: {
         type: Sequelize.STRING(500),
         allowNull: false,
