@@ -25,7 +25,6 @@ module.exports = {
       password:  `${await password()}`,
       roleId: 1,
       avatarId: 1,
-      couponId: 1,
       createdAt: new Date,
       updatedAt: new Date
     },
@@ -37,7 +36,6 @@ module.exports = {
       password:  `${await password()}`,
       roleId: 2,
       avatarId: 1,
-      couponId: 1,
       createdAt: new Date,
       updatedAt: new Date
     },
