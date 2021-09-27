@@ -11,7 +11,7 @@
             <a class="Cybersound" href="/">CyberSound</a>
         </div>
         <h1>Edición de producto</h1>
-        <form action="/products/productEdit/<%=producto.id%>?_method=PUT" method="POST">
+        <form action="/products/productEdit/<%= producto.id %>?_method=PUT" method="POST">
             <div class="checkbox">
                 <label for="discount">NOMBRE</label>
             </div>
@@ -28,19 +28,19 @@
             <label for="cuota">Elegir Cuotas</label>
             <div class="form-div-cuotas">
                 <div class="checkbox">
-                    <input type="checkbox" name="cuotas" value=3 id="cuota" <% if (producto.cuotas[0] == 3) { %>
+                    <input type="checkbox" name="cuotas" value=3 id="cuota" <% if (producto.quotas[0] === "3") { %>
                      checked
                     <% } %> >
                     <label for="cuota">3</label>
                 </div>
                 <div class="checkbox checkbox2">
-                    <input type="checkbox" name="cuotas" value=6 id="cuota" <% if (producto.cuotas[1] == 6) { %>
+                    <input type="checkbox" name="cuotas" value=6 id="cuota" <% if (producto.quotas[1] == "6") { %>
                     checked
                     <% } %> >
                     <label for="cuota">6</label>
                 </div>
                 <div class="checkbox">
-                    <input type="checkbox" name="cuotas" value=12 id="cuota" <% if (producto.cuotas[2] == 12) { %>
+                    <input type="checkbox" name="cuotas" value=12 id="cuota" <% if (producto.quotas[2] == 12) { %>
                      checked
                     <% } %> >
                     <label for="cuota">12</label>
@@ -59,46 +59,33 @@
             </div>
             <input type="number" name="discount" placeholder="Porcentaje de Descuento" value="<%= producto.discount %>">
             <div class="checkbox">
-                <input type="checkbox" name="envioFree" id="" <% if (producto.envioFree === true) { %>
+                <input type="checkbox" name="envioFree" id="" <% if (producto.shipping === true) { %>
                  checked
                 <% } %> >
                 <label for="envioFree">Envio Gratis</label>
             </div>
             <div class="checkbox">
-                <input type="checkbox" name="masVendido" value=true id="masVendido" <% if (producto.masVendido === true) { %>
+                <input type="checkbox" name="masVendido" value=true id="masVendido" <% if (producto.bestSeller === true) { %>
                  checked
                 <% } %> >
                 <label for="masVendido">Mas Vendido</label>
             </div>
             <div class="checkbox">
-                <input type="checkbox" name="oferta" value=true id="oferta" <% if (producto.oferta === true) { %>
+                <input type="checkbox" name="oferta" value=true id="oferta" <% if (producto.offer === true) { %>
                  checked
                 <% } %> >
                 <label for="cuota">Oferta</label>
             </div>
             <div class="checkbox">
-                <input type="checkbox" name="show" value=true id="show" <% if (producto.show === true) { %>
+                <input type="checkbox" name="show" value=true id="show" <% if (producto.showMenu === true) { %>
                  checked
                 <% } %> >
                 <label for="cuota">Mostrar en Home</label>
             </div>
-            <select name="category" id="category" value=Categorias>
-                <option disabled selected value="categorias">Categorias</option>
-                <option value="teclados" <% if (producto.category === "teclados") { %>
-                 selected
-                <% } %> >Teclados</option>
-                <option value="mouses" <% if (producto.category === "mouses") { %>
-                    selected
-                   <% } %>>Mouses</option>
-                <option value="headphones" <% if (producto.category === "auriculares") { %>
-                    selected
-                   <% } %>>Headphones</option>
-                <option value="parlantes" <% if (producto.category === "parlantes") { %>
-                    selected
-                   <% } %>>Parlantes</option>
-                <option value="streaming" <% if (producto.category === "streaming") { %>
-                    selected
-                   <% } %>>Streaming</option>
+            <select name="categoryId" id="category" value=Categorias>
+                   <% categorias.forEach(categoria => { %>
+                         <option value="<%= categoria.id %>" <%= categoria.id == producto.categoryId ? 'selected' : null %> ><%= categoria.name %></option>
+                        <% }) %>
             </select>
             <input type="submit" value="Guardar Cambios" class="button-continuar">
         </form>

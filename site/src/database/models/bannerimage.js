@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      BannerImage.belongsTo(models.Banner,{as:'banner'})
-      BannerImage.belongsTo(models.Category,{as:'category'})
+      // BannerImage.belongsTo(models.Banner,{as:'banner'})
+      // BannerImage.belongsTo(models.Category,{as:'category'})
     }
   };
   BannerImage.init({

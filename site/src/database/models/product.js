@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Product.hasMany(models.Image,{
+        as : 'images',
         foreignKey: 'productId'
       })
       Product.hasMany(models.OrderDetail,{
@@ -28,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     price: DataTypes.DECIMAL,
     discount: DataTypes.INTEGER,
-    quotas: DataTypes.INTEGER,
+    quotas: DataTypes.STRING,
     stock: DataTypes.INTEGER,
     shipping: DataTypes.BOOLEAN,
     offer: DataTypes.BOOLEAN,
