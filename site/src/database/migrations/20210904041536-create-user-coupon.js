@@ -1,34 +1,26 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('userCoupons', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
-      },
+    await queryInterface.createTable('UserCoupons', {
       userId: {
         type: Sequelize.INTEGER,
+        primaryKey: true,
         references: {
           model: {
             tableName : 'Users'
           },
           key: 'id',
         },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL'
       },
       couponId: {
         type: Sequelize.INTEGER,
+        primaryKey: true,
         references: {
           model: {
             tableName : 'Coupons'
           },
           key: 'id',
         },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL'
       },
       createdAt: {
         allowNull: false,
@@ -41,6 +33,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('userCoupons');
+    await queryInterface.dropTable('UserCoupons');
   }
 };

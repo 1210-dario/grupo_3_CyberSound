@@ -1,7 +1,7 @@
 'use strict';
 const bcrypt = require('bcryptjs');
 const password = async ()=> {
-  let pass = await bcrypt.hash('1234', 10)
+  let pass = await bcrypt.hash('123456', 10)
   return pass;
 }
 
