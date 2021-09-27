@@ -19,8 +19,8 @@ module.exports = (sequelize, DataTypes) => {
       User.hasMany(models.Favourite,{
         foreignKey: 'userId'
       })
-      User.hasMany(models.userCoupon,{
-        foreignKey: 'userId'
+      User.belongsToMany(models.Coupon,{
+        through: 'UserCoupons'
       })
     }
   };

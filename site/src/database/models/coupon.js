@@ -11,11 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Coupon.hasMany(models.User,{
-        foreignKey: 'couponId'
-      })
-      Coupon.hasMany(models.userCoupon,{
-        foreignKey: 'couponId'
+      Coupon.belongsToMany(models.User,{
+        through: 'UserCoupons'
       })
     }
   };
