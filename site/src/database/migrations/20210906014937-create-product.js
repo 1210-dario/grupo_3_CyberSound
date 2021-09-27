@@ -25,7 +25,7 @@ module.exports = {
         allowNull: false
       },
       quotas: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: true
       },
       stock: {

@@ -17,11 +17,11 @@ router.get('/cart', cart);
 
 /*     Routes Admin   */
 
-router.get('/productAdmin',checkRole,productAdmin)
-router.get('/productAdd',checkRole, productAdd);
-router.post('/productAdd',upload.array('images'), checkRole, crear);
-router.get('/productEdit/:id', checkRole, productEdit);
-router.put('/productEdit/:id',checkRole, actualizar);
+router.get('/productAdmin',productAdmin) // checkRole
+router.get('/productAdd', productAdd);  // checkRole
+router.post('/productAdd',upload.array('images'), crear); // checkRole
+router.get('/productEdit/:id',productEdit); //checkRole
+router.put('/productEdit/:id',actualizar);   //checkRole
 router.delete('/productDelete/:id',checkRole, eliminar);
 
 
