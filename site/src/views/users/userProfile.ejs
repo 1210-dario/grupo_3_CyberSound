@@ -17,8 +17,8 @@
         <div class="avatar-election">
             <% avatars.forEach(avatar => { %>
                 <label>
-                    <input type="radio" name="image" value="<%=avatar.imageUrl%>">
-                    <img src="/images/userAvatar/<%=avatar.imageUrl%>"  alt="avatar">
+                    <input type="radio" name="avatarId" value="<%=avatar.id%>">
+                    <img src="/images/userAvatar/<%=avatar.name%>"  alt="avatar">
                 </label>
             <% }) %>
         </div>

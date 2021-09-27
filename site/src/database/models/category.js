@@ -14,7 +14,13 @@ module.exports = (sequelize, DataTypes) => {
       Category.hasMany(models.Product,{
         foreignKey: 'categoryId',
         as : 'products'
-      })  
+      })
+      /* Category.belongsToMany(models.Banner,{
+        as :'banners',
+        through :'bannerimages',
+        foreignKey :'categoryId',
+        otherKey :'bannerId'
+      })   */
     }
   };
   Category.init({
