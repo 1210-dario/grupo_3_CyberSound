@@ -17,14 +17,5 @@ module.exports = {
         }))
         
     }
-       
-        
-    //     return res.render('./index/index',{
-            
-    //         productos,
-    //         toThousand,
-    //         conDescuento,
-    //     })
-    // },
     
 }

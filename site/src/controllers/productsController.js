@@ -50,16 +50,6 @@ module.exports = {
                 })
             })
         }).catch(error => console.log(error))
-
-        // let producto = productos.find(producto => producto.id === +req.params.id);
-
-        // res.render('./products/productDetail', {
-        //     producto,
-        //     productos,
-        //     toThousand,
-        //     conDescuento,
-        //     cuotas,
-        // })
     },
     cart: (req, res) => {
         res.render('./products/cart', {
@@ -120,11 +110,7 @@ module.exports = {
                 categorias,
                 producto
             })
-        })
-        // let producto = productos.find(producto => producto.id === +req.params.id);
-        // res.render('./products/productEdit', {
-        //     producto,
-        // })
+        })       
     },
     actualizar: (req, res) => {
 
@@ -151,27 +137,6 @@ module.exports = {
             }
         ).then( () =>   res.redirect('/'))
         .catch(error => console.log(error))
-          
-        // let id = req.params.id;
-        // let { name, description, images, cuotas, stock, price, discount, envioFree, masVendido, oferta, show, category } = req.body;
-        // let productUpdated = {
-        //     id: +id,
-        //     name,
-        //     description,
-        //     images: ["H510-1.png", "H510-1.png", "H510-1.png", "H510-1.png"],
-        //     cuotas: cuotas == undefined ? [1] : typeof(cuotas) === "string" ? this.cuotas = [Number(cuotas)] : cuotas ,
-        //     stock: stock != undefined ? +stock : 0,
-        //     price: price != undefined ? +price : 0,
-        //     discount: discount != undefined ? +discount : 0,
-        //     envioFree: envioFree != undefined ? true : false,
-        //     masVendido: masVendido != undefined ? true : false,
-        //     oferta: oferta != undefined ? true : false,
-        //     show: show != undefined ? true : false,
-        //     category
-        // }
-        // let productosModificados = productos.map(producto => producto.id === +id ? productUpdated : producto)
-        // guardar(productosModificados);
-        // res.redirect('/products/productList');
     },
     
     eliminar: (req,res) => {
