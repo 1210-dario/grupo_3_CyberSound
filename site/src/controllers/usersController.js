@@ -1,6 +1,6 @@
-const { users, guardar, avatars } = require('../data/users/users');
 const { validationResult } = require('express-validator')
 let bcrypt = require('bcryptjs');
+const {User, Coupon, Role, Avatar} = require('../database/models');
 
 module.exports = {
 
@@ -16,33 +16,39 @@ module.exports = {
         })
     },
 
-    userRegister: (req, res) => {
-
+    userRegister: async (req, res) => {
+        
         const errors = validationResult(req);
-
-        const { nombre, apellido, email, password, condiciones } = req.body;
+        
+        const { nombre, apellido, email, password } = req.body;
 
         if (errors.isEmpty()) {
-
-            const usuario = {
-                id: users[users.length - 1].id + 1,
-                nombre,
-                apellido,
+            
+            const usuario = await User.create({
+                firstName: nombre.trim(),
+                lastName: apellido.trim(),
                 email,
                 password: bcrypt.hashSync(password, 10),
-                condiciones: condiciones != undefined ? true : false,
-                role: 'user',
-                image: 'avatar.svg'
-            }
-            users.push(usuario)
+                roleId: 2,
+                avatarId: 1,
+                coupon: [
+                    {id: 1}
+                ]
+            }, {
+                include: Coupon
+            });
 
-            guardar(users);
+            const result = await User.findByPk(usuario.id,{
+                include: { all: true }
+            });
+            
             req.session.userLogin = {
-                nombre: usuario.nombre,
-                id: usuario.id,
-                role: usuario.role,
-                image: usuario.image,
-                email: usuario.email
+                nombre: result.firstName,
+                apellido: result.lastName,
+                id: result.id,
+                role: result.role.dataValues.name.toLowerCase(),
+                image: result.avatar.dataValues.name,
+                email: result.email
             }
             return res.redirect('../');
         }else{
@@ -56,11 +62,11 @@ module.exports = {
 
     },
 
-    findByEmail: (email) => {
-        return users.find(user => user.email === email)
+    findByEmail: async (email) => {
+        return await User.findOne({where: { email: email}})
     },
 
-    userLogin: (req, res) => {
+    userLogin: async (req, res) => {
 
         const errors = validationResult(req);
 
@@ -68,14 +74,16 @@ module.exports = {
 
         if (errors.isEmpty()) {
 
-            const userLogin = users.find(user => user.email === email);
+            const userLogin = await User.findOne({where: { email: email},
+                    include: { all: true }
+            });
 
             req.session.userLogin = {
-                nombre: userLogin.nombre,
-                apellido: userLogin.apellido,
+                nombre: userLogin.firstName,
+                apellido: userLogin.lastName,
                 id: userLogin.id,
-                role: userLogin.role,
-                image: userLogin.image,
+                role: userLogin.role.dataValues.name.toLowerCase(),
+                image: userLogin.avatar.dataValues.name,
                 email: userLogin.email
             }
 
@@ -100,34 +108,71 @@ module.exports = {
         res.cookie('usuario', null, { maxAge: -1 })
         return res.redirect('../')
     },
-    userProfile: (req, res) => {
+    userProfile: async(req, res) => {
+        const avatars = await Avatar.findAll();
+        
         res.render('./users/userProfile',
             {
                 title: 'User Profile', avatars
             });
     },
-    userUpdate: (req, res) => {
+    userUpdate: async (req, res) => {
         let id = req.params.id;
-        let { nombre, apellido, email, image } = req.body;
-        let userUpdated = users.find(user => user.id === +id);
-        userUpdated.nombre = nombre;
-        userUpdated.apellido = apellido;
-        userUpdated.email = email;
-        userUpdated.image = image;
+        let { nombre, apellido, email, avatarId } = req.body;
 
-        let userDbModified = users.map(user => user.id === +id ? userUpdated : user)
-        console.log('Entre al update de User');
-        guardar(userDbModified);
+        const userUpdated = await User.update({
+            firstName: nombre.trim(),
+            lastName: apellido.trim(),
+            email,
+            avatarId
+        },{
+            where: {id: id}
+        });
+
+        const userLogin = await User.findOne({where: { email: email},
+            include: { all: true }
+        });
 
         req.session.userLogin = {
-            nombre: userUpdated.nombre,
-            apellido: userUpdated.apellido,
-            id: userUpdated.id,
-            role: userUpdated.role,
-            image: userUpdated.image,
-            email: userUpdated.email
+            nombre: userLogin.firstName,
+            apellido: userLogin.lastName,
+            id: userLogin.id,
+            role: userLogin.role.dataValues.name.toLowerCase(),
+            image: userLogin.avatar.dataValues.name,
+            email: userLogin.email
         }
 
         return res.redirect('/users/userProfile');
+    },
+    getAllUsers: async(req,res,next) => {
+        try {
+            const users = await User.findAll(); 
+            return users;   
+        } catch (err) {
+            next(err)
+        }
+            
+    },
+    getOneUser: async(req,res,next) => {
+        try{
+            const userFound = await User.findByPk(req.params.id,{
+                include: { all: true }
+            });
+            return userFound;
+        } catch(err) {
+            next(err)
+        }  
+    },
+    deleteUser: async(req,res,next) => {
+        try{
+            const userDeleted = await User.destroy({
+                where: {
+                  id: req.params.id
+                }
+              });
+              return userDeleted;
+        } catch(err){
+            next(err);
+        }
     }
 }

@@ -1,6 +1,6 @@
 const { check , body } = require('express-validator');
 const { findByEmail } = require('../controllers/usersController');
-const { users } = require('../data/users/users');
+const {User} = require('../database/models');
 const bcrypt = require('bcryptjs');
 
 const _nameRequired = check('nombre').not().isEmpty().withMessage('El nombre es obligatorio');
@@ -34,9 +34,10 @@ const _condicionsRequired = check('condiciones')
 .isString('on').withMessage('Debes aceptar los términos y condiciones')
 
 const _credentialsValidation = body('email')
-.custom((value,{req}) => {
-    let usuario = users.find(user => user.email === value && bcrypt.compareSync(req.body.password,user.password));
-    if (usuario){
+.custom(async (value,{req}) => {
+    let usuario = await User.findOne({where: { email: value}});
+
+    if (bcrypt.compareSync(req.body.password,usuario.password)){
         return true
     }else{
         return false
