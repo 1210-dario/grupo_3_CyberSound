@@ -45,7 +45,7 @@
                     </div>
                     <input type="number" name="discount" placeholder="Porcentaje de Descuento">
                     <div class="checkbox">
-                        <input type="checkbox" name="envioFree" id="">
+                        <input type="checkbox" value=true name="envioFree" id="">
                         <label for="envioFree">Envio Gratis</label>
                     </div>
                     <div class="checkbox">
@@ -61,12 +61,10 @@
                         <label for="cuota">Mostrar en Home</label>
                     </div>
                     <select name="category" id="category" value=Categorias >
-                        <option selected value="categorias">Categorias</option > 
-                        <option value="teclados">Teclados</option>
-                        <option value="mouses">Mouses</option>
-                        <option value="headphones">Headphones</option>
-                        <option value="parlantes">Parlantes</option>
-                        <option value="streaming">Streaming</option>
+                        <option value="" selected hidden>Categoria</option>
+                        <% categorias.forEach(categoria => { %>
+                        <option value="<%= categoria.id %>" <%= locals.old && old.categoryId === categoria.id ? 'selected' : null%> ><%= categoria.name %></option>
+                        <% }) %>
                     </select>
                     <input type="submit" value="Guardar Cambios" class="button-continuar">
                 </form>

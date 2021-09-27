@@ -4,3 +4,4 @@ site/node_modules
 site/package-lock.json
 site/.env
 .vscode
+site/.env

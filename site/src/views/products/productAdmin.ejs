@@ -32,16 +32,16 @@
             <tr>
                 <td class="violeta-table"><%= producto.id %></td>
                 <td class="gris-table"><%= producto.name %></td>
-                <td class="violeta-table"><%= producto.cuotas %></td>
+                <td class="violeta-table"><%= producto.quotas %></td>
                 <td class="gris-table"><%= producto.stock %></td>
                 <td class="violeta-table">$<%= producto.price %></td>
                 <td class="gris-table"><%= producto.discount %>%</td>
-                <td class="violeta-table"><%= producto.envioFree %></td>
-                <td class="gris-table"><%= producto.masVendido %></td>
-                <td class="violeta-table"><%= producto.oferta %></td>
-                <td class="gris-table"><%= producto.show %></td>
-                <td class="violeta-table"><%= producto.category %></td>
-                <td ><textarea class="description-text-admin" name="description" cols="10" rows="3"><%= producto.description %></textarea></td> 
+                <td class="violeta-table"><%= producto.shipping != false ? 'si' : 'no' %></td>
+                <td class="gris-table"><%= producto.bestSeller != false ? 'si' : 'no' %></td>
+                <td class="violeta-table"><%= producto.offer != false ? 'si' : 'no' %></td>
+                <td class="gris-table"><%= producto.showMenu != false ? 'si' : 'no' %></td>
+                <td class="violeta-table"><%= producto.category.name %></td>
+                <td ><textarea class="description-text-admin" name="description" cols="10" rows="3"><%= producto.description%></textarea></td> 
                 <td><a class="boton-admin admin-detail" href="/products/productDetail/<%= producto.id %>">Ver</a></td>
                 <td><a class="boton-admin admin-edit" href="/products/productEdit/<%= producto.id %>">Editar</a></td>
                 <td><form action="/products/productDelete/<%=producto.id %>?_method=DELETE" method="POST">

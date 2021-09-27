@@ -43,19 +43,19 @@
                 <div class="product-container">
                     <div class="product-container2">
                         <% productos.forEach(producto => { %>
-                        <% if ((producto.masVendido == true) && (producto.show == true)) { %>
+                        <% if ((producto.bestSeller == true) && (producto.showMenu == true)) { %>
                         <div class="producto top">
                             <div class="card-title">
                                 <h5><%= producto.name %></h5>
                             </div>
-                            <img src="/images/products/<%= producto.images[0]%>" alt="producto">
+                            <img src="/images/products/<%= producto.images[0].fileName %>" alt="producto">
                             <div class="heart">
                                 <img src="/images/icons/logo-heart.svg" alt="corazon">
                             </div> 
                             <% if (producto.discount > 0) { %>
                                 
                                 <div class="masVendido">
-                                    <% if (producto.masVendido === true) { %>
+                                    <% if (producto.bestSeller === true) { %>
                                      
                                         <p class="cartel-vendido">mas vendido</p>
                                         <p class="descuento"><%= producto.discount %>%OFF</p>
@@ -66,7 +66,7 @@
                             <% } %>
                            <% } else  {%>
                             <div class="masVendido">
-                                <% if (producto.masVendido === true) { %>
+                                <% if (producto.bestSeller === true) { %>
                                  
                                     <p class="cartel-vendido">mas vendido</p>
                                 </div>
@@ -81,7 +81,7 @@
                                 <% if (producto.discount > 0) { %>
                                     <s>$ <%= toThousand(producto.price)%></s>
                                     <% } else{ %>
-                                        <span>$ <%= toThousand(producto.price.toFixed(2))%></span>
+                                        <span>$ <%= toThousand(producto.price)%></span>
                                         <% } %>    
                                 <p><%= producto.discount%>% OFF</p>
                                 <% if (producto.discount> 0) { %>
@@ -99,7 +99,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <% if (producto.envioFree === true) { %>
+                            <% if (producto.shipping === true) { %>
                                 <div class="envio">
                                     <i class="fas fa-truck"></i>
                                     <p>envio gratis</p>
@@ -128,19 +128,19 @@
                 <div class="product-container">
                     <div class="product-container2">
                         <% productos.forEach(producto => { %>
-                        <% if ((producto.oferta == true) && (producto.show == true)) { %>
+                        <% if ((producto.offer == true) && (producto.showMenu == true)) { %>
                         <div class="producto top">
                             <div class="card-title">
                                 <h5><%= producto.name %></h5>
                             </div>
-                            <img src="/images/products/<%= producto.images[0]%>" alt="producto">
+                            <img src="/images/products/<%= producto.images[0].fileName %>" alt="producto">
                             <div class="heart">
                                 <img src="/images/icons/logo-heart.svg" alt="corazon">
                             </div> 
                             <% if (producto.discount > 0) { %>
                                 
                                 <div class="masVendido">
-                                    <% if (producto.masVendido === true) { %>
+                                    <% if (producto.bestSeller === true) { %>
                                      
                                         <p class="cartel-vendido">mas vendido</p>
                                         <p class="descuento"><%= producto.discount %>%OFF</p>
@@ -151,7 +151,7 @@
                             <% } %>
                            <% } else  {%>
                             <div class="masVendido">
-                                <% if (producto.masVendido === true) { %>
+                                <% if (producto.bestSeller === true) { %>
                                  
                                     <p class="cartel-vendido">mas vendido</p>
                                 </div>
@@ -166,7 +166,7 @@
                                 <% if (producto.discount > 0) { %>
                                     <s>$ <%= toThousand(producto.price)%></s>
                                     <% } else{ %>
-                                        <span>$ <%= toThousand(producto.price.toFixed(2))%></span>
+                                        <span>$ <%= toThousand(producto.price)%></span>
                                         <% } %>    
                                 <p><%= producto.discount%>% OFF</p>
                                 <% if (producto.discount> 0) { %>
@@ -184,7 +184,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <% if (producto.envioFree === true) { %>
+                            <% if (producto.shipping === true) { %>
                                 <div class="envio">
                                     <i class="fas fa-truck"></i>
                                     <p>envio gratis</p>
