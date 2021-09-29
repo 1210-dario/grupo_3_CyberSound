@@ -11,6 +11,10 @@ header nav{
     height: 2.1875rem;
 }
 
+header .box-3{
+    display: none;
+}
+
 /* Caja 1 desktop */
 
 header nav .caja-1-desktop{
@@ -215,9 +219,9 @@ header nav .caja-2 img{
     /* Header */
 
     header{
-        height: 6.9375rem;
-        display: flex;
-        justify-content: center;
+        height: 9.9375rem;
+        /* display: flex;
+        justify-content: center; */
     }
 
     header nav{
@@ -226,6 +230,34 @@ header nav .caja-2 img{
         max-width: 1950px;
     }
 
+    /* Search Bar */
+
+    header .box-3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .box-3 form input{
+        width: 185px;
+        height: 38px;
+        margin: auto;
+        font-weight: bold;
+    }
+
+    header .box-3 form button{
+        width: 100px;
+        height: 38px;
+        background: linear-gradient(to right, #159957, #155799);
+        padding-left: 0;
+        margin: auto;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-size: bold;
+        font-size: 15px;
+        cursor: pointer;
+    }
 
     /* Caja 1 desktop */
 

@@ -5,15 +5,38 @@ const cuotas = require('../utils/cuotas');
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
-const { log } = require('console');
+const {Op} = require('sequelize');
 
 module.exports = {
-    productList: (req, res) => {
-        res.render('./products/productList', {
+    productList: async (req, res) => {
+        let productos;
+        if(req.params.categoryId == 7){
+            productos = await db.Product.findAll({
+                where : {
+                    bestSeller : true
+                },
+                include: { all: true }
+            })
+        }else if(req.params.categoryId == 8) {
+            productos = await db.Product.findAll({
+                where : {
+                    offer : true
+                },
+                include: { all: true }
+            })
+        }else {
+            productos = await db.Product.findAll({
+                where : {
+                    categoryId : req.params.categoryId
+                },
+                include: { all: true }
+            })
+        }
+        res.render(`./products/productList`, {
             title: 'Product List',
             toThousand,
             conDescuento,
-            productos : JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products','productsDb.json'),'utf-8')),
+            productos,
         })
     },
     productDetail: (req, res) => {
@@ -155,5 +178,34 @@ module.exports = {
         }).then(productos => res.render('./products/productAdmin',{
             productos
         }))
-    }
+    },
+    search : async (req,res) => {
+
+        const result = await db.Product.findAll({
+            where : {
+                [Op.or] : [
+                    {
+                        name :  {
+                            [Op.substring] : req.query.keywords
+                        }
+                    },
+                    {
+                        description : {
+                            [Op.substring] : req.query.keywords
+                        }
+                    }
+                ]
+            },
+            include: { all: true }
+        })
+
+        console.log(result),
+        res.render('./products/resultSearch',{
+            title: 'Busqueda',
+            result,
+            toThousand,
+            conDescuento,
+            busqueda : req.query.keywords
+        })
+    },
 }

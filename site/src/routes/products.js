@@ -1,19 +1,20 @@
 var express = require('express');
 const path = require('path')
 var router = express.Router();
-const { productList, productDetail, cart, productAdd, productEdit, crear, actualizar, eliminar, productAdmin } = require('../controllers/productsController');
+const { productList, productDetail, cart, productAdd, productEdit, crear, actualizar, eliminar, productAdmin, search } = require('../controllers/productsController');
 
 /*     Multer     */
 
 const upload = require('../middlewares/productsMulter');
 
-const checkRole = require('../middlewares/checkRole')
+const checkRole = require('../middlewares/checkRole');
 
 /* GET Products  */
 
-router.get('/productList', productList);
+router.get('/productList/:categoryId', productList);
 router.get('/productDetail/:id', productDetail);
 router.get('/cart', cart);
+router.get('/search', search);
 
 /*     Routes Admin   */
 
