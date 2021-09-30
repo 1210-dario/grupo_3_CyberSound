@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/head.ejs') %>
+    <body class="resultSearch">
+        <%- include('../partials/header.ejs') %>
+        <main>
+            <% if (result.length > 0) { %>
+                <article class="box">
+                    <h2>Resultados de la búsqueda: <%= busqueda %> </h2>
+                    <div class="product-container">
+                        <div class="product-container2">
+                            <% result.forEach(producto => { %>
+                            <% if ((producto/* .masVendido == true) && (producto.show == true */)) { %>
+                            <div class="producto top">
+                                <div class="card-title">
+                                    <h5><%= producto.name %></h5>
+                                </div>
+                                <img src="/images/products/<%= producto.images[0].fileName%>" alt="producto">
+                                <div class="heart">
+                                    <img src="/images/icons/logo-heart.svg" alt="corazon">
+                                </div> 
+                                <% if (producto.discount > 0) { %>
+                                    
+                                    <div class="masVendido">
+                                        <% if (producto.masVendido === true) { %>
+                                         
+                                            <p class="cartel-vendido">mas vendido</p>
+                                            <p class="descuento"><%= producto.discount %>%OFF</p>
+                                        </div>
+                                        <% }else {  %>
+                                        <p class="descuento"><%= producto.discount %>%OFF</p>
+                                    </div>
+                                <% } %>
+                               <% } else  {%>
+                                <div class="masVendido">
+                                    <% if (producto.masVendido === true) { %>
+                                     
+                                        <p class="cartel-vendido">mas vendido</p>
+                                    </div>
+                                    <% }else {  %>
+                                        <div class="espacio-div"><p></p></div>
+                                </div>
+        
+                                <% } %>
+        
+                                <% } %>
+                                <div class="precio-desc">
+                                    <% if (producto.discount > 0) { %>
+                                        <s>$ <%= toThousand(producto.price)%></s>
+                                        <% } else{ %>
+                                            <span>$ <%= toThousand(producto.price)%></span>
+                                            <% } %>    
+                                    <p><%= producto.discount%>% OFF</p>
+                                    <% if (producto.discount> 0) { %>
+                                        <span class="precio">$ <%= toThousand(conDescuento(producto.price,
+                                        producto.discount)) %> </span>
+                                    <% } %>
+                                </div>
+                                <div class="subtitle">
+                                    <h5><%= producto.name %></h5>
+        
+                                    
+                                    <div class="info">
+                                        <a href="/products/productDetail/<%= producto.id %>">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <% if (producto.envioFree === true) { %>
+                                    <div class="envio">
+                                        <i class="fas fa-truck"></i>
+                                        <p>envio gratis</p>
+                                    </div>
+                                    <% }else {  %>
+                                        <div class="espacio-div"><p></p></div>
+                                <% } %>
+                                <div class="precio-desc">
+                                    <img src="/images/icons/carrito-comprar.svg" alt="">
+                                </div>
+                                <div class="especificaciones">
+                                    <a href="/products/productDetail/<%= producto.id %>">especificaciones</a>
+                                </div>                            
+                            </div>
+                            <% } %>                   
+                            <% }) %>
+                        </div>
+                </article>        
+            <% } else{ %>
+                <h3>No hay resultado para la búsqueda: <%= busqueda %> </h3>
+                <% } %>
+        </main>
+        <h3 class="h3-carr-prox-PL">próximos lanzamientos</h3>
+        <section class="carrousel">
+            <img src="/images/carrousel/carrousel1.jpg" alt="carrousel">
+            <div class="arrows">
+                <button>
+                    <i class="fas fa-angle-left"></i>
+                </button>
+                <button>
+                    <i class="fas fa-angle-right"></i>
+                </button>
+            </div>
+            <ul class="dots">
+                <li><i class="far fa-circle"></i></li>
+                <li><i class="far fa-circle"></i></li>
+                <li><i class="fas fa-circle"></i></li>
+                <li><i class="far fa-circle"></i></li>
+                <li><i class="far fa-circle"></i></li>
+            </ul>
+        </section>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>

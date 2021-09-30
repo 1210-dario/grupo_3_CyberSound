@@ -1,0 +1,509 @@
+/* Main */
+.resultSearch{
+    background-color: var(--color-gris-oscuro);
+    }
+    
+    .resultSearch main{
+        background-color: var(--color-gris-oscuro);
+        margin: 0px auto;
+    }
+    
+    /* Carrousels */
+    .resultSearch .carrousel{
+        width: 100vw;
+        height: 195px;
+        position: relative;
+    }
+    
+    .resultSearch h3{
+        color: var(--color-naranja);
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .h3-carr-prox-PL{
+    padding: 15px 0px;
+    background-color: var(--color-gris-oscuro);
+    }
+    
+    .resultSearch .carrousel img{
+        width: 100vw;
+        height: 195px;
+    }
+    
+    .resultSearch .carrousel .arrows{
+        position: absolute;
+        width: 100vw;
+        bottom: 5em;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .resultSearch .carrousel .arrows button{
+        background-color: rgba(0,0,0, 0);
+        border: none;
+        margin: 0 10px;
+    }
+    
+    .resultSearch .carrousel .arrows i{
+        color: var(--color-violeta);
+        font-size: 40px;
+    }
+    
+    .resultSearch .carrousel .dots{
+        position: absolute;
+        width: 100vw;
+        bottom: 1.5em;
+        display: flex;
+        justify-content: space-around;
+        padding: 0 30vw 0 30vw;
+    }
+    
+    .resultSearch .carrousel .dots li i{
+        color: var(--color-violeta);
+        font-size: 15px;
+    }
+    /* Products */
+    
+    .resultSearch main .box .product-container .pro3{
+        display: none;
+    }
+    
+    .resultSearch main .box .product-container .producto .card-title{
+        display: none;
+    } 
+    
+    .resultSearch main .box .product-container .producto .heart{
+        display: none;
+    }
+    
+    .resultSearch main .box .product-container .producto .precio-desc img{
+        display: none;
+    }
+    
+    .resultSearch main .box .product-container .producto .envio{
+        display: none;
+    }
+    
+    .resultSearch main .box .product-container .producto .especificaciones{
+        display: none;
+    }
+    
+    .resultSearch main .box .product-container .producto .masVendido{
+        display: none;
+    }
+    
+    /* Mas Vendidos */
+    
+    .resultSearch main .box{
+        background-color: rgba(196, 196, 196, 0.05);
+        border-radius: 3%;
+    }
+    
+    /* Titulo */
+    .resultSearch main .box h2{
+        color: var(--color-naranja);
+        font-size: 23px;
+        font-weight: bold;
+        margin-left: 0.5em;
+        padding-top: 3px;
+    }
+    
+    /* Contenedor de Tarjetas */
+    
+    .resultSearch main article .product-container{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgba(196, 196, 196, 0.05);
+        border-top: 1px solid var(--color-violeta);
+        border-bottom: 1px solid var(--color-violeta);
+    }
+    
+    .resultSearch main article .product-container .product-container2{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .resultSearch main article .product-container .arriba{
+        border-top: 4px solid #212121;
+    }
+    /* Tarjetas */
+    .resultSearch main article .product-container .producto{
+        width: 50%;
+        height: 56.875vw;
+    }
+    
+    .resultSearch main article .product-container .top{
+        border-right: 2px solid #212121;
+        border-bottom: 2px solid #212121;
+        border-left: 2px solid #212121;
+    }
+    
+    .resultSearch main article .product-container .bot{
+        border-top: 2px solid #212121;
+        border-right: 2px solid #212121;
+        border-left: 2px solid #212121;
+    }
+    
+    .resultSearch main article .product-container .producto img{
+        width: 97%;
+        height: 37.125vw;
+    }
+    
+    .resultSearch main article .product-container .producto .precio-desc{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        height: 6.7vw;
+        align-items: flex-end;
+    }
+    
+    .resultSearch main article .product-container .producto .precio-desc h5{
+        color: var(--color-blanco);
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    .resultSearch main article .product-container .producto .precio-desc p{
+        color: var(--color-verde);
+        font-size: 9px;
+        font-weight: bold;
+    }
+    
+    .resultSearch main article .product-container .producto .subtitle{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        height: 10.4vw;
+        align-items: center;
+    }
+    
+    .resultSearch main article .product-container .producto .subtitle h5{
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--color-naranja);
+        text-transform: capitalize;
+        width: 60%;
+    }
+    
+    .resultSearch main article .product-container .producto .subtitle .info{
+        width: 15px;
+        height: 15px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border-radius: 50%;
+        background-color: rgba(24, 24, 24, 0.61);
+    }
+    
+    .resultSearch main article .product-container .producto .subtitle .info a{
+        display: flex;    
+    }
+    
+    .resultSearch main article .product-container .producto .subtitle .info a i{
+        color: var(--color-violeta);
+        font-size: 11px;
+    }
+    .h3-carr-prox-PL{
+        background-color: var(--color-gris-oscuro);
+    }
+    /* Breakpints o Media Querys */
+    
+    @media (min-width:426px){
+    
+        /* Carrousels */
+    
+        .resultSearch .carrousel{
+            height: 45.78vw;
+            position: relative;
+        }
+            /* Titulo Proximos Lanzamientos */
+        .resultSearch h3{
+        font-size: 31.5px;
+        }
+            /*==============================*/
+    
+        .resultSearch .carrousel img{
+            height: 45.78vw;
+        }
+        
+        .resultSearch .carrousel .arrows{
+            bottom: 20vw;
+        }
+        
+        .resultSearch .carrousel .arrows i{
+            font-size: 55px;
+        }
+        
+        .resultSearch .carrousel .dots{
+            bottom: 6vw;
+        }
+    
+        /* Productos */
+        
+        /* Titulo */
+        .resultSearch main .box h2{
+            font-size: 34px;
+            padding-top: 5px;
+        }
+    
+        /* Contenedor de Tarjetas */
+    
+        /* Tarjetas */
+        .resultSearch main article .product-container .producto{
+            width: 50%;
+            height: 56.875vw;
+        }
+    
+        .resultSearch main article .product-container .producto .precio-desc h5{
+            font-size: 20px;
+        }
+    
+        .resultSearch main article .product-container .producto .precio-desc p{
+            font-size: 13px;
+        }
+    
+        .resultSearch main article .product-container .producto .subtitle h5{
+            font-size: 18px;
+        }
+    
+        .resultSearch main article .product-container .producto .subtitle .info{
+            width: 38px;
+            height: 38px;
+        }
+        
+        .resultSearch main article .product-container .producto .subtitle .info a i{
+            font-size: 20px;
+        }
+       }
+    
+    @media (min-width:769px){
+    
+     
+        /* Productos */
+        .resultSearch main .box .product-container .pro3{
+            display: initial;
+        }
+        .resultSearch main article .product-container .arriba{
+            border-top:none;
+        }
+        .resultSearch main .box .product-container .producto .card-title{
+            display: block;
+            margin-top: 1.3vw;
+            margin-bottom: 0.65vw;
+        } 
+        
+        .resultSearch main .box .product-container .product-container2 .producto .heart{
+            display: inline-block;
+            position: absolute;
+            bottom: 44.36vw;
+            left: 21.06vw;
+        }
+    
+        .resultSearch main .box .product-container .producto .heart img{
+            width: 30px;
+            height: 30px;
+            position: inherit;
+        }
+        
+        .resultSearch main .box .product-container .producto .envio{
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 2.7vw;
+        }
+        
+        .resultSearch main .box .product-container .producto .especificaciones{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    
+        .resultSearch main .box .product-container .producto .masVendido{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    /* Contenedor de Tarjetas */
+    
+    .resultSearch main article .product-container{
+        justify-content: space-around;
+        background-color: none;
+        border-bottom: none;
+    }
+    /* Tarjetas */
+    .resultSearch main article .product-container .producto{
+        width: 30%;
+        height: 52vw;
+        margin: 15px 0;
+        border: 2px solid #212121;
+        background: rgba(229, 229, 229, 0.05);
+        box-shadow: 6px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 19px;
+        position: relative;
+    }
+    
+    .resultSearch main .box .product-container .producto .card-title h5{
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--color-naranja);
+        text-align: center;
+        text-transform: capitalize;
+    }
+    
+    .resultSearch main article .product-container .producto img{
+        width: 92%;
+        height: 24.41vw;
+        margin-left: 1.27vw;
+    }
+    
+    .resultSearch main .box .product-container .producto .masVendido .cartel-vendido{
+        color: black;
+        background-color: var(--color-violeta);
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .resultSearch main .box .product-container .producto .masVendido .descuento{
+        color: var(--color-verde);
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .resultSearch main article .product-container .producto .precio-desc{
+        justify-content: space-around;
+        height: auto;
+        align-items: center;
+    }
+    
+    .resultSearch main article .product-container .producto .precio-desc h5{
+        font-size: 18px;
+    }
+    
+    .resultSearch main .box .product-container .producto .precio-desc img{
+        display: initial;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .resultSearch main article .product-container .producto .precio-desc p{
+        display: none;
+    }
+    
+    .resultSearch main article .product-container .producto .subtitle{
+        display: none;
+    }
+    
+    .resultSearch main .box .product-container .producto .envio i, .envio p{
+        color: var(--color-verde);
+    }
+    
+    .resultSearch main .box .product-container .producto .envio i{
+        font-size: 18px;
+    }
+    
+    .resultSearch main .box .product-container .producto .envio p{
+        font-size: 15px;
+        text-transform: capitalize;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+    
+    
+    .resultSearch main .box .product-container .producto .especificaciones a{
+        background-color: var(--color-naranja);
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 22.11vw;
+        text-align: center;
+        border-radius: 100px;
+        padding: 0.78vw 0;
+    }
+    }
+    
+    @media (min-width:1024px){
+    
+        /* Carrousels */
+    
+        .resultSearch .carrousel{
+            max-height: 468px;
+            justify-content: center;
+            display: flex;
+        }
+        
+        .resultSearch .carrousel img{
+            max-height: 468px;
+            max-width: 1440px;
+        }
+        
+        .resultSearch .carrousel .arrows{
+            bottom: 205px;
+            max-width: 1440px;
+        }
+        
+        .resultSearch .carrousel .arrows i{
+            color: var(--color-violeta);
+            font-size: 60px;
+        }
+        
+        .resultSearch .carrousel .dots{
+            bottom: 61.45px;
+            max-width: 1440px;
+            width: 100%;
+            padding: 0 432px;        
+        }
+        
+        .resultSearch .carrousel .dots li i{
+            font-size: 18px;
+        }
+    
+        /* Contenedor de Categorias + productos */
+    
+           .resultSearch main{
+            width: 91.875vw;
+            max-width: 1323px;
+            
+        }
+    
+        /* Productos */
+    
+        /* Tarjetas */
+        .resultSearch main article .product-container .producto{
+            width: 275px;
+            height: 508px;
+        }
+    
+        .resultSearch main article .product-container .producto img{
+            width: 250px;
+            height: 250px;
+            margin-left: 10.5px;
+        }
+    
+        .resultSearch main .box .product-container .product-container2 .producto .heart{
+            bottom: 455px;
+            left: 218px;
+        }
+    
+        .resultSearch main article .product-container .producto .envio{
+            padding-left: 33px;
+        }
+    
+        .resultSearch main .box .product-container .producto .especificaciones {
+            margin-top: 15px;
+        }
+    
+        .resultSearch main .box .product-container .producto .especificaciones a{
+            width: 226px;
+            padding: 8px 0;
+        }
+    
+        .resultSearch main h3 {
+            font-size: 40px;
+        }
+    
+        .resultSearch main .box h2 {
+            font-size: 40px;
+        }
+    }
