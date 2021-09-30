@@ -199,6 +199,9 @@
 .productAdd section form .checkbox2{
     margin: 5px 30px;
 }
+.productAdd .text-danger{
+    color: red;
+}
 
 /* Breakpoints o MediaQuerys */
 

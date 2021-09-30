@@ -5,7 +5,7 @@ const cuotas = require('../utils/cuotas');
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
-const { log } = require('console');
+const {validationResult} = require('express-validator')
 
 module.exports = {
     productList: (req, res) => {
@@ -66,7 +66,10 @@ module.exports = {
         }).catch(error => console.log(error))
        
     },
-    crear: (req, res) => {      
+    crear: (req, res) => {  
+        let errors = validationResult(req);
+        
+        if(errors.isEmpty()){    
         const { name, description,cuotas, stock, price, discount, envioFree, masVendido, oferta, show, category, } = req.body;
         db.Product.create({
         
@@ -99,7 +102,17 @@ module.exports = {
             }
             return res.redirect('productAdmin')
         }).catch(error => console.log(error))
-    },
+
+        }else{
+        db.Category.findAll()
+        .then(categorias => {
+            return res.render('./products/productAdd',{
+                categorias,
+                errores : errors.mapped(),
+                old : req.body
+            })
+        }).catch(error => console.log(error))
+    }},
     productEdit: (req, res) => {
         let categorias = db.Category.findAll();
         let producto = db.Product.findByPk(req.params.id);
