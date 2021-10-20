@@ -199,9 +199,19 @@
 .productAdd section form .checkbox2{
     margin: 5px 30px;
 }
+
+   /*   validaciones   */
 .productAdd .text-danger{
     color: red;
+    
 }
+.productAdd .danger{
+    outline: 3px solid red;
+}
+.productAdd .validate{
+    outline: 3px solid var(--color-verde);
+}
+
 
 /* Breakpoints o MediaQuerys */
 
