@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
 const {Op} = require('sequelize');
+const {validationResult} = require('express-validator');
 
 module.exports = {
     productList: async (req, res) => {
@@ -89,15 +90,17 @@ module.exports = {
         }).catch(error => console.log(error))
        
     },
-    crear: (req, res) => {      
-        const { name, description,cuotas, stock, price, discount, envioFree, masVendido, oferta, show, category, } = req.body;
+    crear: (req, res) => {  
+        let errors = validationResult(req);
+        
+        if(errors.isEmpty()){    
+        const { name, description,stock, price, discount, envioFree, masVendido, oferta, show, category, } = req.body;
         db.Product.create({
         
             name : name.trim(),
             description : description.trim(),
             price,
             discount : discount != undefined ? +discount : 0,
-            quotas : cuotas.toString(),
             stock : stock != undefined ? +stock : 0,
             shipping : envioFree != undefined ? true : false,
             offer : oferta != undefined ? true : false,
@@ -122,7 +125,17 @@ module.exports = {
             }
             return res.redirect('productAdmin')
         }).catch(error => console.log(error))
-    },
+
+        }else{
+        db.Category.findAll()
+        .then(categorias => {
+            return res.render('./products/productAdd',{
+                categorias,
+                errores : errors.mapped(),
+                old : req.body
+            })
+        }).catch(error => console.log(error))
+    }},
     productEdit: (req, res) => {
         let categorias = db.Category.findAll();
         let producto = db.Product.findByPk(req.params.id);
@@ -137,7 +150,7 @@ module.exports = {
     },
     actualizar: (req, res) => {
 
-        const { name, description,cuotas, stock, price, discount, envioFree, masVendido, oferta, show, category, } = req.body;
+        const { name, description,stock, price, discount, envioFree, masVendido, oferta, show, category, } = req.body;
      
         db.Product.update(
             {
@@ -145,7 +158,6 @@ module.exports = {
             description : description.trim(),
             price,
             discount : discount != undefined ? +discount : 0,
-            quotas : cuotas.toString(),
             stock : stock != undefined ? +stock : 0,
             shipping : envioFree != undefined ? true : false,
             offer : oferta != undefined ? true : false,
@@ -167,7 +179,7 @@ module.exports = {
             where : {
                 id : req.params.id
             }
-        }).then( () => res.redirect('./products/productAdmin'))
+        }).then( () => res.redirect('/products/productAdmin'))
         .catch(error => console.log(error))      
     },
     productAdmin : (req,res) => {
