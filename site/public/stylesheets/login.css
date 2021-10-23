@@ -69,6 +69,23 @@
     font-weight: bold;
     color: var(--color-blanco);
 }
+
+/*##############################*/
+/* Al tener un error en el form */
+.login section form .is-invalid{
+    border: 2px solid red;
+}
+
+.login section #error-empty {
+    color: red;
+}
+
+/* Al estar ok el form */
+.login section form .is-valid{
+    border: 2px solid green;
+}
+/*##############################*/
+
 .remember{
     display: flex;
     align-items: center;

@@ -24,10 +24,6 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      quotas: {
-        type: Sequelize.STRING,
-        allowNull: true
-      },
       stock: {
         type: Sequelize.INTEGER,
         allowNull: false

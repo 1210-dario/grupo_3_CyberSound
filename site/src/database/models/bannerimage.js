@@ -17,13 +17,11 @@ module.exports = (sequelize, DataTypes) => {
   };
   BannerImage.init({
     fileName: DataTypes.STRING,
-    bannerId: DataTypes.INTEGER,
-    categoryId: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'BannerImage',
-    paranoid: true,
-    timestamps: true
+    modelName: 'BannerImages',
+    paranoid: false,
+    timestamps: false
   });
   return BannerImage;
 };

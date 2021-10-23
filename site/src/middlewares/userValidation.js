@@ -3,9 +3,9 @@ const { findByEmail } = require('../controllers/usersController');
 const {User} = require('../database/models');
 const bcrypt = require('bcryptjs');
 
-const _nameRequired = check('nombre').not().isEmpty().withMessage('El nombre es obligatorio');
+const _nameRequired = check('nombre').not().isEmpty().withMessage('El nombre es obligatorio').isLength({min:2}).withMessage('El nombre debe contener al menos 2 caracteres');
 const _nameType = check('nombre').isAlpha().withMessage('El nombre solo debe contener letras');
-const _lastNameRequired = check('apellido').not().isEmpty().withMessage('El apellido es obligatorio');
+const _lastNameRequired = check('apellido').not().isEmpty().withMessage('El apellido es obligatorio').isLength({min:2}).withMessage('El apellido debe contener al menos 2 caracteres');
 const _lastNameType = check('apellido').isAlpha().withMessage('El apellido solo debe contener letras');
 
 const _emailRequired = check('email').not().isEmpty().withMessage('El email es obligatorio');
@@ -19,16 +19,24 @@ const _emailExist = check('email').custom(
     }
 );
 
-const _passwordRequired = check('password').not().isEmpty().withMessage('La contraseña es obligatoria').isLength({min:6,max:15}).withMessage('La contraseña debe tener entre 6 y 12 caracteres');
+const _passwordRequired = check('password').not().isEmpty().withMessage('La contraseña es obligatoria').isLength({min:8,max:15}).withMessage('La contraseña debe tener entre 8 y 15 caracteres');
 const _password2Required = check('password2').not().isEmpty().withMessage('Debe volver a ingresar su contraseña');
 
-const _passwordValidation = body('password2')
+const _equalPasswordValidation = body('password2')
     .custom((value,{req}) => {
-        if(value !== req.body.password){
-            return false
+        if(value.trim() !== req.body.password.trim()){
+            throw new Error('Las contraseñas deben coincidir')
         }
         return true
     }).withMessage('Las contraseñas deben coincidir')
+
+const _passwordValidAlphaNumeric = body('password').custom((value) =>{
+    let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$/;
+    if(!regExPass.test(value)){
+        throw new Error('La contraseña debe tener entre 8 y 15 caractres, un número y una mayúscula')
+    }
+    return true
+}).withMessage('La contraseña debe tener entre 8 y 15 caractres, un número y una mayúscula');
 
 const _condicionsRequired = check('condiciones')
 .isString('on').withMessage('Debes aceptar los términos y condiciones')
@@ -40,7 +48,7 @@ const _credentialsValidation = body('email')
     if (bcrypt.compareSync(req.body.password,usuario.password)){
         return true
     }else{
-        return false
+        throw new Error('credenciales inválidas')
     }
 }).withMessage('credenciales inválidas')
 
@@ -55,7 +63,8 @@ const postRegisterRequestValidations = [
     _emailExist,
     _passwordRequired,
     _password2Required,
-    _passwordValidation,
+    _passwordValidAlphaNumeric,
+    _equalPasswordValidation,
     _condicionsRequired
 ]
 
