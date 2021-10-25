@@ -15,12 +15,12 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'categoryId',
         as : 'products'
       })
-      /* Category.belongsToMany(models.Banner,{
+      Category.belongsToMany(models.Banners,{
         as :'banners',
         through :'bannerimages',
         foreignKey :'categoryId',
         otherKey :'bannerId'
-      })   */
+      })
     }
   };
   Category.init({

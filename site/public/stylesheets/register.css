@@ -80,6 +80,22 @@
     font-weight: bold;
 }
 
+/*##############################*/
+/* Al tener un error en el form */
+.register section form .is-invalid{
+    border: 2px solid red;
+}
+
+.register section #error-empty {
+    color: red;
+}
+
+/* Al estar ok el form */
+.register section form .is-valid{
+    border: 2px solid green;
+}
+/*##############################*/
+
 .register section form input:focus{
     background-color: var(--color-violeta);
     outline: thin dotted;

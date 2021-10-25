@@ -11,30 +11,33 @@
             <a class="Cybersound" href="/">CyberSound</a>
         </div>
         <h1>registro</h1>
+        <span id="error-empty" class="text-danger small"></span>
         <button type="button" class="button-google"><a href="#"><i class="fab fa-google"></i> continuar con google</a></button>
         <p>o</p>
-        <form action="/users/register" method="POST">
-            <input type="text" name="nombre" id="" placeholder="Nombre" value="<%= locals.old && locals.old.nombre ? old.nombre : null%>">
-            <span class="text-danger small"><%= locals.errores && locals.errores.nombre ? errores.nombre.msg : null %> </span>
-            <input type="text" name="apellido" id="" placeholder="Apellido" value="<%= locals.old && locals.old.apellido ? old.apellido : null%>">
-            <span class="text-danger small"><%= locals.errores && locals.errores.apellido ? errores.apellido.msg : null %> </span>
-            <input type="email" name="email" id="" placeholder="Email" value="<%= locals.old && locals.old.email ? old.email : null%>">
-            <span class="text-danger small"><%= locals.errores && locals.errores.email ? errores.email.msg : null %> </span>            
-            <input type="password" name="password" id="" placeholder="Contraseña" value="">
-            <span class="text-danger small"><%= locals.errores && locals.errores.password ? errores.password.msg : null %> </span>
-            <input type="password" name="password2" id="" placeholder="Repetir Contraseña" value="">
-            <span class="text-danger small"><%= locals.errores && locals.errores.password2 ? errores.password2.msg : null %> </span>
+        <form action="/users/register" method="POST" id="form-register">
+            <input type="text" name="nombre" id="name" class="<%= locals.errores && locals.errores.nombre ? 'is-invalid' : null %> " placeholder="Nombre" value="<%= locals.old && locals.old.nombre ? old.nombre : null%>">
+            <span class="text-danger small" id="error-name"><%= locals.errores && locals.errores.nombre ? errores.nombre.msg : null %> </span>
+            <input type="text" name="apellido" id="lastname" class="<%= locals.errores && locals.errores.apellido ? 'is-invalid' : null %>" placeholder="Apellido" value="<%= locals.old && locals.old.apellido ? old.apellido : null%>">
+            <span class="text-danger small" id="error-lastname"><%= locals.errores && locals.errores.apellido ? errores.apellido.msg : null %> </span>
+            <input type="email" name="email" id="email" class="<%= locals.errores && locals.errores.email ? 'is-invalid' : null %> " placeholder="Email" value="<%= locals.old && locals.old.email ? old.email : null%>">
+            <span class="text-danger small" id="error-email"><%= locals.errores && locals.errores.email ? errores.email.msg : null %> </span>            
+            <input type="password" name="password" id="password" class="<%= locals.errores && locals.errores.password ? 'is-invalid' : null %> " placeholder="Contraseña" value="">
+            <span class="text-danger small" id="error-password"><%= locals.errores && locals.errores.password ? errores.password.msg : null %> </span>
+            <input type="password" name="password2" id="password2" class="<%= locals.errores && locals.errores.password2 ? 'is-invalid' : null %> "  placeholder="Repetir Contraseña" value="">
+            <span class="text-danger small" id="error-password2"><%= locals.errores && locals.errores.password2 ? errores.password2.msg : null %> </span>
             <div class="checkbox">
-                <input type="checkbox" name="condiciones" id="">
+                <input type="checkbox" name="condiciones" id="acepta" class="<%= locals.errores && locals.errores.condiciones ? 'is-invalid' : null %>">
                 <label for="condiciones">acepto terminos y condiciones</label>
             </div>
-            <span class="text-danger small my-2"><%= locals.errores && locals.errores.condiciones ? errores.condiciones.msg : null %> </span>
+            <span class="text-danger small my-2" id="error-acepta"><%= locals.errores && locals.errores.condiciones ? errores.condiciones.msg : null %> </span>
             <input type="submit" value="Continuar" class="button-continuar">
         </form>
         <h6>Tenes una cuenta?</h6>
         <a href="/users/login">Ingresar</a>
     </section>
     <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/scripts.ejs') %>
+    <script src="/javascripts/registerValidator.js"></script>
 
 </body>
 
