@@ -8,39 +8,33 @@
             <section>
                 
                 <h1>carga y edición de productos</h1>
-                <form action="/products/productAdd" method="POST" enctype="multipart/form-data">
-                    <input type="text" name="name" id="" placeholder="Nombre del Producto" required>
+                
+                <form action="/products/productAdd" id="product-form" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= locals.old && old.name ? old.name : null %>">
+                    <span class="text-danger" id="error-name"><%= locals.errores && errores.name ? errores.name.msg : null %> </span>
                     <label class="description-lab" for="description">Descripción</label>
-                    <textarea class="description-text" required name="description" cols="10" rows="5"></textarea> 
-                    <div ><!-- class="container" -->
-                        <!-- <label class="image" for="image">Elegir Imagen Principal</label> -->
-                        <input class="upload-box" type="file" multiple name="images" id="image" accept=".png, .jpeg, .jpg" required>
-                    </div>
-                    <label for="cuota">Elegir Cuotas</label>
-                    <div class="form-div-cuotas">
-                        <div class="checkbox">
-                            <input type="checkbox" name="cuotas" value=3 id="cuota">
-                            <label for="cuota">3</label>
-                        </div>
-                        <div class="checkbox checkbox2">
-                            <input type="checkbox" name="cuotas" value=6 id="cuota">
-                            <label for="cuota">6</label>
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="cuotas" value=12 id="cuota">
-                            <label for="cuota">12</label>
+                        <textarea id="description" class="description-text" name="description" cols="10" rows="5"><%= locals.old && old.description ? old.description : null %></textarea> 
+                        <span class="text-danger" id="error-description"><%= locals.errores && errores.description ? errores.description.msg : null %> </span>
+                    <div class="div-image">
+                        <label class="image" for="image">Elegir Imagen Principal</label>
+                        <div >
+                            <input class="upload-box" type="file" multiple name="images" id="image" accept=".png, .jpeg, .jpg" required>
                         </div>
                     </div>
+                    <span class="text-danger" id="error-images"><%= locals.errores && errores.images ? errores.images.msg : null %> </span>
                     <div class="checkbox">
                         <label for="stock">Stock Disponible</label>
                     </div>
-                    <input type="number" name="stock" value="" placeholder="Stock Disponible">
+                    <input type="number" name="stock"  id="stock" value="<%= locals.old && old.stock ? old.stock : null %>" placeholder="Stock Disponible">
+                    <span class="text-danger" id="error-stock"><%= locals.errores && errores.stock ? errores.stock.msg : null %> </span>
 
-                    <input type="number" required name="price" placeholder="Precio">
+                    <input type="number" name="price" id="price" value="<%= locals.old && old.price ? old.price : null %>" placeholder="Precio">
+                    <span class="text-danger" id="error-price" ><%= locals.errores && errores.price ? errores.price.msg : null %> </span>
                     <div class="checkbox">
                         <label for="discount">Descuento</label>
                     </div>
-                    <input type="number" name="discount" placeholder="Porcentaje de Descuento">
+                    <input type="number" name="discount" id="discount" value="<%= locals.old && old.discount ? old.discount : null %>" placeholder="Porcentaje de Descuento">
+                    <span class="text-danger" id="error-discount"><%= locals.errores && errores.discount ? errores.discount.msg : null %> </span>
                     <div class="checkbox">
                         <input type="checkbox" value=true name="envioFree" id="">
                         <label for="envioFree">Envio Gratis</label>
@@ -57,18 +51,20 @@
                         <input type="checkbox" name="show" value=true id="show">
                         <label for="cuota">Mostrar en Home</label>
                     </div>
-                    <select name="category" id="category" value=Categorias >
-                        <option value="" selected hidden>Categoria</option>
-                        <% categorias.forEach(categoria => { %>
-                        <option value="<%= categoria.id %>" <%= locals.old && old.categoryId === categoria.id ? 'selected' : null%> ><%= categoria.name %></option>
+                    <select name="category" id="category" >
+                        <option value="" select hidden>Categoria</option>
+                        <% categorias.forEach(category => { %>
+                        <option value="<%= category.id %>" <%= locals.old && old.category == category.id ? 'selected' : null%> ><%= category.name %></option>
                         <% }) %>
                     </select>
+                    <span class="text-danger" id="error-category"><%= locals.errores && errores.category ? errores.category.msg : null %> </span>
                     <input type="submit" value="Guardar Cambios" class="button-continuar">
                 </form>
+                <span id="error-empty" class="text-danger"></span>
 
             </section>
+            <script src="/javascripts/productValidator.js"></script>
             <%- include('../partials/footer.ejs') %>
-
     </body>
 
 </html>

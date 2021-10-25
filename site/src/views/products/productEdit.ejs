@@ -26,26 +26,6 @@
                 <input class="file" type="file" name="images" multiple id="image" accept=".png, .jpeg, .jpg" required>
             </div>
             <label for="cuota">Elegir Cuotas</label>
-            <div class="form-div-cuotas">
-                <div class="checkbox">
-                    <input type="checkbox" name="cuotas" value=3 id="cuota" <% if (producto.quotas[0] === "3") { %>
-                     checked
-                    <% } %> >
-                    <label for="cuota">3</label>
-                </div>
-                <div class="checkbox checkbox2">
-                    <input type="checkbox" name="cuotas" value=6 id="cuota" <% if (producto.quotas[1] == "6") { %>
-                    checked
-                    <% } %> >
-                    <label for="cuota">6</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" name="cuotas" value=12 id="cuota" <% if (producto.quotas[2] == 12) { %>
-                     checked
-                    <% } %> >
-                    <label for="cuota">12</label>
-                </div>
-            </div>
             <div class="checkbox">
                 <label for="stock">Stock Disponible</label>
             </div>

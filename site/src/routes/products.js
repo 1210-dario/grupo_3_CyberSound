@@ -7,6 +7,7 @@ const { productList, productDetail, cart, productAdd, productEdit, crear, actual
 
 const upload = require('../middlewares/productsMulter');
 
+const addProductCheck = require('../middlewares/addProductCheck');
 const checkRole = require('../middlewares/checkRole');
 
 /* GET Products  */
@@ -18,11 +19,11 @@ router.get('/search', search);
 
 /*     Routes Admin   */
 
-router.get('/productAdmin', checkRole ,productAdmin) // checkRole
-router.get('/productAdd',checkRole, productAdd);  // checkRole
-router.post('/productAdd',checkRole ,upload.array('images'), crear); // checkRole
-router.get('/productEdit/:id',checkRole,productEdit); //checkRole
-router.put('/productEdit/:id',checkRole,actualizar);   //checkRole
+router.get('/productAdmin', checkRole ,productAdmin); 
+router.get('/productAdd',checkRole, productAdd);  
+router.post('/productAdd',checkRole ,upload.array('images'), addProductCheck, crear); 
+router.get('/productEdit/:id',checkRole,productEdit); 
+router.put('/productEdit/:id',checkRole,actualizar);   
 router.delete('/productDelete/:id',checkRole, eliminar);
 
 

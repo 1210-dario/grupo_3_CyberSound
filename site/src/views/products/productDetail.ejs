@@ -60,7 +60,7 @@
                                    
                                     <div class="pagos">
                                         <span>Ver</span><a class="mediospago" href=""> Medios de pago</a>
-                                        <% if (producto.envioFree===true) { %>
+                                        <% if (producto.shipping===true) { %>
 
                                             <div class="truck-envio">
                                                 <i class="fas fa-truck"></i>
@@ -69,10 +69,9 @@
                                             </div>
                                             <div class="stock">
                                                 <% if (producto.stock> 0) { %>
-                                                    <p>stock disponible</p>
+                                                    <p>stock disponible <%= producto.stock %>  </p>
                                                     <div class="comprarcantidad">
-                                                        <span>cantidad :</span>
-                                                        <input type="text" class="boton-stock">
+                    
                                                     </div>
                                                     <% } %>
                                             </div>
