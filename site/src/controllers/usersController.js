@@ -66,11 +66,23 @@ module.exports = {
         return await User.findOne({where: { email: email}})
     },
 
-    userLogin: async (req, res) => {
+    findByUserEmail: async(req ,res) => {
+        const email = req.params.email;
 
+        const user = await User.findOne({where: { email: email}});
+
+        return res.status(200).json({user});
+    },
+
+    userLogin: async (req, res) => {
+        console.log('ENTRE AL CONTROLLER');
         const errors = validationResult(req);
 
         const { email, remember } = req.body;
+
+        console.log('ESTOY EN EL CONTROLLER');
+        console.log(errors.errors);
+        console.log(errors.isEmpty());
 
         if (errors.isEmpty()) {
 
