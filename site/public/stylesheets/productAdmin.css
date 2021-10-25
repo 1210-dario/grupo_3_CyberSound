@@ -25,16 +25,17 @@
 .productAdmin .tabla-admin{
  width: 95vw;
  text-align: center;
- margin: 40px auto;
-
+ margin: auto;
 }
  .violeta-table , .gris-table, .naranja-table{
     border: 1px solid black;
+    padding: 3px;
   }
 
 .description-text-admin{
     width: 200px;
     background-color: #e5e5e5;
+    font-size: 16px;
 }
 .fijo-admin{
  position:sticky;
@@ -63,4 +64,28 @@
 }
 .admin-delete{
     background-color: #DC3545;
+}
+@media (min-width:1024px){
+    .productAdmin .tabla-admin{
+        font-size: 12px;
+    }
+    .description-text-admin{
+        width: 120px;
+        font-size: 12px;
+    }
+    .productAdmin .boton-admin{
+        font-size: 14px;
+    }
+}
+@media (min-width:1440px){
+    .productAdmin .tabla-admin{
+        font-size: 18px;
+    }
+    .description-text-admin{
+        width: 200px;
+        font-size: 18px;
+    }
+    .productAdmin .boton-admin{
+        font-size: 18px;
+    }
 }

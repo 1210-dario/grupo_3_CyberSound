@@ -56,17 +56,19 @@ header nav h1{
 header nav .caja-2{
     display: flex;
     width: 3.625rem;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 header nav .caja-2 .logo-user ul{
     display: none;
+    justify-content:flex-end;
 }
 
-header nav .caja-2 .logo-user:hover ul{
+header nav .caja-2 .logo-user:focus-within ul{
     display: flex;
+    flex-direction: column;
     position: absolute;
-    right: 60px;
+    right:12%;
 }
 
 header nav .caja-2 .logo-user ul li{
@@ -220,58 +222,29 @@ header nav .caja-2 img{
 
     header{
         height: 9.9375rem;
-        /* display: flex;
-        justify-content: center; */
+        display: flex;
+        justify-content: center;
     }
 
     header nav{
         height: 6.9375rem;
-        width: 100%;
+        width: auto;
         max-width: 1950px;
+        margin:auto;
     }
-
-    /* Search Bar */
-
-    header .box-3{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    header .box-3 form input{
-        width: 185px;
-        height: 38px;
-        margin: auto;
-        font-weight: bold;
-    }
-
-    header .box-3 form button{
-        width: 100px;
-        height: 38px;
-        background: linear-gradient(to right, #159957, #155799);
-        padding-left: 0;
-        margin: auto;
-        border-radius: 10px;
-        border: none;
-        color: white;
-        font-size: bold;
-        font-size: 15px;
-        cursor: pointer;
-    }
-
     /* Caja 1 desktop */
 
     header nav .caja-1-desktop{
         display: flex;
         justify-content: space-between;
-        /* align-items: center; */
+        align-items: center;
         height: 4.375rem;
-        margin-left: 3vw;
+        margin-right: 8vw;
     }
 
     header nav .caja-1-desktop .logo-desktop{
         height: 4.375rem;
-        margin-right: 3vw;
+        margin-right: 1vw;
     }
 
     header nav .caja-1-desktop .logo-desktop a img{
@@ -300,7 +273,7 @@ header nav .caja-2 img{
     header nav .caja-1-desktop .barra-inicio ul>li>ul{
         display: none;
     }
-    header nav .caja-1-desktop .barra-inicio ul>li:hover>ul {
+    header nav .caja-1-desktop .barra-inicio ul>li:focus-within>ul {
         display: flex;
         position: absolute;
     }
@@ -332,17 +305,16 @@ header nav .caja-2 img{
     header nav .caja-2 .logo-heart , .logo-search{
         display: block;
     }
+    .logo-search{
+        height: 60px;
+        width: 190px;
+    }
 
     header nav .caja-2{
         width: 13.75rem;
-        margin-right: 4vw;
         height: 4.375rem;
         align-items: flex-end;
     }
-    header nav .spectator{
-        width: 6rem;
-    }
-
     header nav .caja-2 img{
         width: 2.5rem;
         height: 2.5rem;
@@ -352,3 +324,52 @@ header nav .caja-2 img{
         filter: hue-rotate(240deg);
     }
 }
+.flexbox {
+    background: #181818;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .search {
+    margin: 20px;
+  }
+  .search > div {
+    display: inline-block;
+    position: relative;
+  }
+  .search > div:after {
+    content: "";
+    background: #FF6D00;
+    width: 4px;
+    height: 18px;
+    position: absolute;
+    top: 17px;
+    right: -3px;
+    transform: rotate(135deg);
+  }
+  .search > div > input {
+    color: #FF6D00;
+    font-size: 16px;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    padding: 9px;
+    border: solid 3px #FF6D00;
+    outline: none;
+    border-radius: 35px;
+    transition: width 0.5s;
+  }
+  .search > div > input::placeholder {
+    color: #FF6D00;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+  }
+  .search > div > input:focus::placeholder {
+    opacity: 1;
+  }
+  .search > div > input:focus,
+  .search > div > input:not(:placeholder-shown) {
+   width: 200px;
+  }

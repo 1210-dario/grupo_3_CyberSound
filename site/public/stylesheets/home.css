@@ -77,6 +77,25 @@
 
 /* Products */
 
+.boton-admin-home{
+    display:table-cell;
+    font-size: 18px;
+    padding: 4px;
+    margin: 15px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: aliceblue;
+    border: none;
+    overflow: hidden;
+    transition: 300ms;
+    top: 10px;   
+}
+.boton-admin-home:hover{
+    box-shadow: 0 0 8px rgba(83, 255, 4, 0.5)
+}
+.admin-edit{
+    background-color:#007BFF;
+}
 .home main .main-home .box .product-container .pro3{
     display: none;
 }
@@ -343,6 +362,9 @@
 
 
     /* Productos */
+    .boton-admin-home{
+    display:none
+    }
     .home main .main-home .box .product-container .pro3{
         display: initial;
     }

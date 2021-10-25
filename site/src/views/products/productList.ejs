@@ -11,7 +11,7 @@
             <div class="product-container">
                 <div class="product-container2">
                     <% productos.forEach(producto => { %>
-                    <% if ((producto/* .masVendido == true) && (producto.show == true */)) { %>
+                    <% if ((producto)) { %>
                     <div class="producto top">
                         <div class="card-title">
                             <h5><%= producto.name %></h5>

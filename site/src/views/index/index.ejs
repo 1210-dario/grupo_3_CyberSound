@@ -45,6 +45,12 @@
                         <% productos.forEach(producto => { %>
                         <% if ((producto.bestSeller == true) && (producto.showMenu == true)) { %>
                         <div class="producto top">
+                            <% if (locals.userLogin) { %>
+                                <% if (locals.userLogin.role === "admin") { %>
+                                 
+                                   <a class="boton-admin-home admin-edit" href="/products/productEdit/<%= producto.id %>">Editar</a>                  
+                                <% } %>
+                            <% } %>
                             <div class="card-title">
                                 <h5><%= producto.name %></h5>
                             </div>
@@ -130,6 +136,12 @@
                         <% productos.forEach(producto => { %>
                         <% if ((producto.offer == true) && (producto.showMenu == true)) { %>
                         <div class="producto top">
+                            <% if (locals.userLogin) { %>
+                                <% if (locals.userLogin.role === "admin") { %>
+                                 
+                                   <a class="boton-admin-home admin-edit" href="/products/productEdit/<%= producto.id %>">Editar</a>                  
+                                <% } %>
+                            <% } %>
                             <div class="card-title">
                                 <h5><%= producto.name %></h5>
                             </div>

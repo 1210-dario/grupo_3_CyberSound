@@ -112,8 +112,7 @@
 .userProfile .form .boton-actualizar{
     width: 100px;
     height: 30px;
-    background: linear-gradient(to right, #159957, #155799);
-    /* background-color: var(--color-violeta); */
+    background: linear-gradient(to right,#159957 , #155799);
     padding-left: 0;
     margin: 15px auto;
     border-radius: 10px;
@@ -122,4 +121,26 @@
     font-size: bold;
     font-size: 15px;
     cursor: pointer;
+}
+.userProfile .form .boton-actualizar:hover{
+    box-shadow: 0 0 8px rgba(230, 255, 5, 0.472);
+}
+.userProfile .form .boton-cerrar-sesion{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    background: linear-gradient(to right, #FF6D00, var(--color-violeta));
+    padding-left: 0;
+    margin: 15px auto;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+.userProfile .form .boton-cerrar-sesion:hover{
+    box-shadow: 0 0 8px rgba(83, 255, 4, 0.5);
 }
