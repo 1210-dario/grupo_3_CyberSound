@@ -4,17 +4,27 @@ const db = require('../database/models')
 module.exports = {
     
     index: (req, res) => {
-        db.Product.findAll({
+       let productos = db.Product.findAll({
             include : [
                 {association : 'images'},
                 {association : 'category'}
             ]
-        }).then(productos =>
-             res.render('./index/index',{
-            productos,
-            toThousand,
-            conDescuento,
-        }))
+        })
+        let carrousel = db.Banner.findAll({
+        })
+        .then((carrousel) => {
+            return res.send(carrousel)
+
+        })
+        // Promise.all([productos,carrousel])
+        // .then(([productos,carrousel,]) =>
+        //      res.render('./index/index',{
+        //     productos,
+        //     carrousel,
+        //     toThousand,
+        //     conDescuento,
+        // }))
+        .catch(error => console.log(error))
         
     }
     

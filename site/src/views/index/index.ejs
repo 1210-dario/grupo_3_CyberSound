@@ -5,24 +5,7 @@
 <body class="home">
     <%- include('../partials/header.ejs') %> 
     <main>
-        <section class="carrousel">
-            <img src="/images/carrousel/carrousel1.jpg" alt="carrousel">
-            <div class="arrows">
-                <button>
-                    <i class="fas fa-angle-left"></i>
-                </button>
-                <button>
-                    <i class="fas fa-angle-right"></i>
-                </button>
-            </div>
-            <ul class="dots">
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="fas fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-            </ul>
-        </section>
+        <%- include('../partials/carrousel.ejs') %> 
 
         <section class="main-home">
             <article class="categories">
@@ -231,6 +214,7 @@
 
     </main>
     <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/scripts.ejs') %>
 </body>
 
 </html>
