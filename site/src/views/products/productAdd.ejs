@@ -15,12 +15,13 @@
                     <label class="description-lab" for="description">Descripción</label>
                         <textarea id="description" class="description-text" name="description" cols="10" rows="5"><%= locals.old && old.description ? old.description : null %></textarea> 
                         <span class="text-danger" id="error-description"><%= locals.errores && errores.description ? errores.description.msg : null %> </span>
-                    <div class="div-image">
-                        <label class="image" for="image">Elegir Imagen Principal</label>
-                        <div >
+                    <div>
+                        <label class="stock" for="image">Elegir Imagen Principal</label>
+                        
+                    </div>
+                    <div >
                             <input class="upload-box" type="file" multiple name="images" id="image" accept=".png, .jpeg, .jpg" required>
                         </div>
-                    </div>
                     <span class="text-danger" id="error-images"><%= locals.errores && errores.images ? errores.images.msg : null %> </span>
                     <div class="checkbox">
                         <label for="stock">Stock Disponible</label>
