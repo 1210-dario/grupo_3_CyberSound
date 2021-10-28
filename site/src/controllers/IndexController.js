@@ -4,17 +4,23 @@ const db = require('../database/models')
 module.exports = {
     
     index: (req, res) => {
-        db.Product.findAll({
+        let productos = db.Product.findAll({
             include : [
                 {association : 'images'},
                 {association : 'category'}
             ]
-        }).then(productos =>
+        })
+        let banner = db.Banners.findByPk(1,{
+            include : { all : true}
+        })
+        Promise.all([productos,banner])
+         .then(([productos,banner,]) =>
              res.render('./index/index',{
+            banner,
             productos,
             toThousand,
             conDescuento,
-        }))
+        })).catch(err => console.log(err))
         
     }
     
