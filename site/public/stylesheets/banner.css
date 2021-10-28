@@ -1,0 +1,14 @@
+.carousel-item{
+    height: 370px;
+    width: 100%;
+    background-size: 100%;
+}
+ #carrousel_1{
+    background-image: url('/images/carrousel/carrousel1.jpg');
+}
+ #carrousel_2{
+    background-image: url('/images/carrousel/carrousel1.jpg');
+}
+#carrousel_3{
+    background-image: url('/images/carrousel/carrousel1.jpg');
+}
