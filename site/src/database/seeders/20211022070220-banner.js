@@ -14,6 +14,37 @@ module.exports = {
    await queryInterface.bulkInsert('Banners', [
       {
         name: 'carrousel principal',
+        fileName: 'carrousel1.png',
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        name: 'carrousel principal',
+        fileName: 'carrousel2.png',
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        name: 'carrousel principal',
+        fileName: 'carrousel3.png',
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        name: 'carrousel secundario',
+        fileName: 'proximos1.png',
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        name: 'carrousel secundario',
+        fileName: 'proximos2.png',
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        name: 'carrousel secundario',
+        fileName: 'proximos3.jpg',
         createdAt: new Date,
         updatedAt: new Date
       },

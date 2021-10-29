@@ -10,17 +10,24 @@ module.exports = {
                 {association : 'category'}
             ]
         })
-        let banner = db.Banners.findByPk(1,{
-            include : { all : true}
+        let banners = db.Banners.findAll( { where : {name: 'carrousel principal'},
+            include : { all : true }
         })
-        Promise.all([productos,banner])
-         .then(([productos,banner,]) =>
+        let proximos = db.Banners.findAll( { where : {name: 'carrousel secundario'},
+            include : { all : true }
+        })
+        Promise.all([productos,banners,proximos])
+         .then(([productos,banners,proximos]) =>
              res.render('./index/index',{
-            banner,
+            banners,
+            proximos,
             productos,
             toThousand,
             conDescuento,
         })).catch(err => console.log(err))
+        // .then(banners =>{
+        //     return res.send(banners)
+        // })
         
     }
     

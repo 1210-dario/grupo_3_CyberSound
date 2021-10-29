@@ -1,14 +1,47 @@
+#carouselExampleCaptions, #carouselExampleIndicators2, .proximos{
+    display: none;
+}
 .carousel-item{
-    height: 370px;
+    height: 30vh;
     width: 100%;
     background-size: 100%;
 }
- #carrousel_1{
-    background-image: url('/images/carrousel/carrousel1.jpg');
+
+ .carousel-item h5{
+ color: var(--color-naranja);
+ 
 }
- #carrousel_2{
-    background-image: url('/images/carrousel/carrousel1.jpg');
+
+
+.carousel-item p{
+ color: var(--color-blanco);
+ 
 }
-#carrousel_3{
-    background-image: url('/images/carrousel/carrousel1.jpg');
+
+
+
+/* indicadores */
+
+.carousel-indicators [data-bs-target] {
+    height: 15px;
+    width: 15px;
+ border-radius: 50%;
+ background-color: var(--color-naranja);
+ 
+}
+
+/* Breakpints o Media Querys */
+
+@media (min-width:768px) {
+    #carouselExampleCaptions, #carouselExampleIndicators2, .proximos{
+        display: block;
+    }  
+}
+@media (min-width:1024px) {
+    .carousel-item{
+        height: 48vh;
+      
+    }
+    
+
 }

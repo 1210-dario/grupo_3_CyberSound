@@ -2,6 +2,7 @@
 
 .home main{
     background-color: var(--color-gris-oscuro);
+    padding-bottom: 5px;
 }
 
 /* Carrousels */

@@ -13,23 +13,38 @@ module.exports = {
     */
     await queryInterface.bulkInsert('BannerImages', [
       {
-        fileName: 'carrousel1.jpg',
-        bannerId: 1,
-        categoryId: 6,
+        BannerId: 1,
+        CategoryId: 6,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
-        fileName: 'carrousel1.jpg',
-        bannerId: 1,
-        categoryId: 6,
+        BannerId: 2,
+        CategoryId: 6,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
-        fileName: 'carrousel1.jpg',
-        bannerId: 1,
-        categoryId: 6,
+        BannerId: 3,
+        CategoryId: 6,
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        BannerId: 4,
+        CategoryId: 6,
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        BannerId: 5,
+        CategoryId: 6,
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        BannerId: 6,
+        CategoryId: 6,
         createdAt: new Date,
         updatedAt: new Date
       },

@@ -8,11 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      fileName: {
-        type: Sequelize.STRING(255),
-        allowNull: false
-      },
-      bannerId: {
+      BannerId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
@@ -21,7 +17,7 @@ module.exports = {
           key: 'id',
         },
       },
-      categoryId: {
+      CategoryId: {
         type: Sequelize.INTEGER,
         references: {
           model:{

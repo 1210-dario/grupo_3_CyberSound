@@ -11,17 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Banner.belongsToMany(models.Category,{
-        as :'categories',
-        through :'bannerimages',
-        foreignKey :'bannerId',
-        otherKey :'categoryId'
+      Banner.belongsToMany(models.Category,{  
+        through : 'bannerimages', 
       })
 
     }
   };
   Banner.init({
     name: DataTypes.STRING,
+    fileName: DataTypes.STRING,
     deletedAt: DataTypes.DATE
   }, {
     sequelize,
