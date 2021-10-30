@@ -5,25 +5,46 @@
 <body class="home">
     <%- include('../partials/header.ejs') %> 
     <main>
-        <section class="carrousel">
-            <img src="/images/carrousel/carrousel1.jpg" alt="carrousel">
-            <div class="arrows">
-                <button>
-                    <i class="fas fa-angle-left"></i>
-                </button>
-                <button>
-                    <i class="fas fa-angle-right"></i>
-                </button>
+        <div id="carouselExampleCaptions" class="carousel slide banners" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <ul class="dots">
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="fas fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-            </ul>
-        </section>
-
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="background-image: url('/images/carrousel/<%=banners[0].fileName%>');">          
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="/products/productList/8">
+                  <h5 class="banner_h5">POR GAMERS, PARA GAMERS.</h5>
+                  <p class="banner_p">Obtén ese producto que siempre quisiste, mira nuestras ofertas aqui.</p>
+                </a>
+                </div>
+              </div>
+              <div class="carousel-item" style="background-image: url('/images/carrousel/<%=banners[1].fileName%>');">     
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="">
+                        <h5 class="banner_h5">CYBERSOUND</h5>
+                        <p class="banner_p">Obtén el mouse perfecto para tu ordenador. Gaming o básico, con sensor óptico o láser, para zurdos y diestros. Desde ratones sencillos hasta ratones con 6, 13 o 19 botones, con iluminación o sin ella, Cybersound tiene un mouse para vos</p>
+                      </a>
+                </div>
+              </div>
+              <div class="carousel-item " style="background-image: url('/images/carrousel/<%=banners[2].fileName%>');">
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="">
+                        <h5 class="banner_h5">NUEVA SECCIÓN STREAMING</h5>
+                      </a>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         <section class="main-home">
             <article class="categories">
                 <ul>
@@ -221,28 +242,34 @@
                 </div>
             </article>
         </section>
-        <h3>próximos lanzamientos</h3>
-        <section class="carrousel">
-            <img src="/images/carrousel/carrousel1.jpg" alt="carrousel">
-            <div class="arrows">
-                <button>
-                    <i class="fas fa-angle-left"></i>
-                </button>
-                <button>
-                    <i class="fas fa-angle-right"></i>
-                </button>
+        <h3 class="proximos">próximos lanzamientos</h3>
+        <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <ul class="dots">
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="fas fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-            </ul>
-        </section>
+            <div class="carousel-inner">               
+
+              <div class="carousel-item active" style="background-image: url('/images/carrousel/<%=proximos[0].fileName%>');" ></div>
+              <div class="carousel-item" style="background-image: url('/images/carrousel/<%=proximos[1].fileName%>');"> </div>
+              <div class="carousel-item" style="background-image: url('/images/carrousel/<%=proximos[2].fileName%>');"></div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        
 
     </main>
     <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/scripts.ejs') %>
 </body>
 
 </html>
