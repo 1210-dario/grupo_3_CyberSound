@@ -7,7 +7,7 @@
         <%- include('../partials/header.ejs') %>
             <section>
                 
-                <h1>carga y edición de productos</h1>
+                <h1>carga de productos</h1>
                 
                 <form action="/products/productAdd" id="product-form" method="POST" enctype="multipart/form-data">
                     <input type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= locals.old && old.name ? old.name : null %>">
@@ -59,7 +59,7 @@
                         <% }) %>
                     </select>
                     <span class="text-danger" id="error-category"><%= locals.errores && errores.category ? errores.category.msg : null %> </span>
-                    <input type="submit" value="Guardar Cambios" class="button-continuar">
+                    <input type="submit" value="Cargar Producto" class="button-continuar">
                 </form>
                 <span id="error-empty" class="text-danger"></span>
 

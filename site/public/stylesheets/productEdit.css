@@ -6,6 +6,7 @@
     width: 100vw;
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .productEdit section .button-volver-nombre{
@@ -135,7 +136,6 @@
 .productEdit section form label.description-lab{
     font-weight: bold;
     color: var(--color-violeta);
-    font-size: 18px;
 }
 .description-text{
     width: 265px;
@@ -198,6 +198,26 @@
 }
 .productEdit section form .checkbox2{
     margin: 5px 30px;
+}
+.productAdd section .upload-box{
+    font-size: 16px;
+    background-color: var(--color-naranja);
+    border-radius:10px;
+    box-shadow: 5px 5px 10px black;
+    height: auto;
+    padding-left: 0px;
+    outline:none;
+}
+::-webkit-file-upload-button{
+    color: var(--color-blanco3);
+    background-color: var(--color-violeta);
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 0 1px 1px #6b4559;
+}
+::-webkit-file-upload-button:hover{
+    background: #438a5e;
 }
 
 /* Breakpoints o MediaQuerys */

@@ -98,8 +98,12 @@ background-color: var(--color-gris-oscuro);
 
 .productList main .box{
     background-color: rgba(196, 196, 196, 0.05);
-    border-radius: 3%;
+    border-radius: 35px;
 }
+.productList main .box .product-container .producto:hover{
+    box-shadow: 0px 1px 26px var(--color-violeta);
+    border: solid 0px var(--color-violeta);
+    }
 
 /* Titulo */
 .productList main .box h2{

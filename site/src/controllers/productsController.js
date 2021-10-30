@@ -18,6 +18,7 @@ module.exports = {
                 },
                 include: { all: true }
             })
+            productos[0].category.name = 'Mas Vendidos';
         }else if(req.params.categoryId == 8) {
             productos = await db.Product.findAll({
                 where : {
@@ -25,6 +26,7 @@ module.exports = {
                 },
                 include: { all: true }
             })
+            productos[0].category.name = 'Ofertas';
         }else {
             productos = await db.Product.findAll({
                 where : {
