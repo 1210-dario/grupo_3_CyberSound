@@ -12,6 +12,10 @@ module.exports = {
         type: Sequelize.STRING(50),
         allowNull: false
       },
+      fileName: {
+        type: Sequelize.STRING(50),
+        allowNull: false
+      },
       deletedAt: {
         type: Sequelize.DATE
       },
