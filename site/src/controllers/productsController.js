@@ -200,6 +200,14 @@ module.exports = {
         }))
     },
     search: async (req, res) => {
+        let proximos = await db.Banners.findAll({
+            where : {
+                name : 'carrousel secundario'
+            }, 
+            include : {
+                all : true
+            }
+        })
 
         const result = await db.Product.findAll({
             where: {
@@ -222,6 +230,7 @@ module.exports = {
         console.log(result),
             res.render('./products/resultSearch', {
                 title: 'Busqueda',
+                proximos,
                 result,
                 toThousand,
                 conDescuento,
