@@ -157,6 +157,9 @@ module.exports = {
             })
     },
     actualizar: (req, res) => {
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
 
         const { name, description, stock, price, discount, envioFree, masVendido, oferta, show, category, } = req.body;
 
@@ -177,10 +180,30 @@ module.exports = {
                 where: {
                     id: req.params.id
                 }
-            }
-        ).then(() => res.redirect('/'))
-            .catch(error => console.log(error))
-    },
+            }).then(() => { 
+                if(req.files.length != 0) {
+                    db.Image.destroy({
+                        where : {
+                            productId : req.params.id
+                        }
+                    }).then(() =>{
+                        let images = req.files.map(imagen => 
+                           imagen.filename);
+                           images.forEach(image => {
+                               db.image.create({
+                                   fileName : image,
+                                   productId : req.params.id
+                               })
+                           });
+                        
+
+                    })
+                }
+                return res.redirect('/')
+
+            }).catch(err => console.log(err))
+            
+    }},
 
     eliminar: (req, res) => {
         db.Product.destroy({

@@ -23,7 +23,7 @@ router.get('/productAdmin', checkRole ,productAdmin);
 router.get('/productAdd',checkRole, productAdd);  
 router.post('/productAdd',checkRole ,upload.array('images'), addProductCheck, crear); 
 router.get('/productEdit/:id',checkRole,productEdit); 
-router.put('/productEdit/:id',checkRole,actualizar);   
+router.put('/productEdit/:id',checkRole,upload.array('images'),actualizar);   
 router.delete('/productDelete/:id',checkRole, eliminar);
 
 

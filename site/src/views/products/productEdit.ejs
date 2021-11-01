@@ -8,7 +8,7 @@
     <section>
         
         <h1>Editar producto</h1>
-        <form action="/products/productEdit/<%= producto.id %>?_method=PUT" method="POST">
+        <form action="/products/productEdit/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
             <div class="checkbox">
                 <label for="discount">NOMBRE</label>
             </div>
@@ -23,7 +23,7 @@
                 <input class="file" type="file" name="images" multiple id="image" accept=".png, .jpeg, .jpg" required>
             </div> -->
             <div >
-                <input class="upload-box" value="<%= producto.images %> "type="file" multiple name="images" id="image" accept=".png, .jpeg, .jpg" required>
+                <input class="upload-box" value="<%= producto.images %> "type="file" multiple name="images" id="image" accept=".png, .jpeg, .jpg" >
             </div>
             <div class="checkbox">
                 <label for="stock">Stock Disponible</label>
