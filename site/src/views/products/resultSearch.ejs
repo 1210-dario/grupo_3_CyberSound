@@ -89,26 +89,36 @@
             <% } else{ %>
                 <h3 class="not-find">No hay resultado para la búsqueda: <%= busqueda %> </h3>
                 <% } %>
-        </main>
-        <h3 class="h3-carr-prox-PL">próximos lanzamientos</h3>
-        <section class="carrousel">
-            <img src="/images/carrousel/carrousel1.jpg" alt="carrousel">
-            <div class="arrows">
-                <button>
-                    <i class="fas fa-angle-left"></i>
-                </button>
-                <button>
-                    <i class="fas fa-angle-right"></i>
-                </button>
-            </div>
-            <ul class="dots">
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="fas fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-                <li><i class="far fa-circle"></i></li>
-            </ul>
-        </section>
+        </main>   
+        <h3 class="h3-carr-prox-PL proximos">próximos lanzamientos</h3>
+    <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+
+         <div class="carousel-item active" style="background-image: url('/images/carrousel/<%=proximos[0].fileName%>');">
+             
+          </div>
+          <div class="carousel-item" style="background-image: url('/images/carrousel/<%=proximos[1].fileName%>');">
+            
+          </div>
+          <div class="carousel-item" style="background-image: url('/images/carrousel/<%=proximos[2].fileName%>');">
+          </div>
+       
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
         <%- include('../partials/footer.ejs') %>
+        <%- include('../partials/scripts.ejs') %>
     </body>
 </html>

@@ -219,6 +219,18 @@
 ::-webkit-file-upload-button:hover{
     background: #438a5e;
 }
+.productEdit .prev_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.productEdit .prev_img img{
+width: 150px;
+height: 150px;
+overflow: hidden;
+
+}
 
 /* Breakpoints o MediaQuerys */
 
@@ -347,5 +359,4 @@
     .productEdit section a:hover{
         color: var(--color-violeta);
     }
-
 }
