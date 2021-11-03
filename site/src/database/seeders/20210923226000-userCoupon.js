@@ -11,7 +11,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-     await queryInterface.bulkInsert('userCoupons', [
+     await queryInterface.bulkInsert('UserCoupons', [
       {
         userId: 1,
         couponId: 1,
@@ -34,6 +34,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-     await queryInterface.bulkDelete('userCoupons', null, {});
+     await queryInterface.bulkDelete('UserCoupons', null, {});
   }
 };
