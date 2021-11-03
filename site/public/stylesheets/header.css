@@ -261,6 +261,7 @@ header nav .caja-2 img{
     header nav .caja-1-desktop .barra-inicio ul{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 0px;
     }
 
     header nav .caja-1-desktop .barra-inicio ul li a{

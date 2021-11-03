@@ -33,12 +33,8 @@
         <input type="text" name="apellido" id="" placeholder="Apellido" value="<%=locals.userLogin.apellido%>">
         </div>
 
-        <div class="inputBox">
-        <label for="email">Email</label>
-        <input class="email" type="email" name="email" id="" placeholder="Email" value="<%=locals.userLogin.email%>" disabled>  
-        </div>
         <input type="submit" value="Actualizar" class="boton-actualizar">
-        <a href="/users/logout" class="boton-cerrar-sesion">Cerrar Sesión</a><!-- <input href="/users/logout" type="" value="Cerrar Sesion" class="boton-cerrar-sesion"> -->
+        <a href="/users/logout" class="boton-cerrar-sesion">Cerrar Sesión</a>
     </form>
 
     <%- include('../partials/footer.ejs') %>
