@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const { register, login, userRegister, userLogin, logout, userProfile, userUpdate, findByUserEmail} = require('../controllers/usersController')
+const { register, login, userRegister, userLogin, logout, userProfile, userUpdate, findByUserEmail, deleteUser} = require('../controllers/usersController')
 const {postRegisterRequestValidations , postLoginRequestValidations} = require('../middlewares/userValidation');
 
 /* GET users listing. */
@@ -15,6 +15,7 @@ router.get('/logout', logout);
 
 router.get('/userProfile', userProfile);
 router.put('/userProfile/:id', userUpdate);
+router.delete('/deleteUser/:id', deleteUser);
 
 router.get('/email/:email', findByUserEmail);
 
