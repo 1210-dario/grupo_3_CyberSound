@@ -144,3 +144,22 @@
 .userProfile .form .boton-cerrar-sesion:hover{
     box-shadow: 0 0 8px rgba(83, 255, 4, 0.5);
 }
+.boton-delete{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 140px;
+    height: 30px;
+    background: rgb(155, 5, 5);
+    padding-left: 0;
+    margin: 15px auto 45px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+.boton-delete:hover{
+    box-shadow: 0 0 8px rgba(122, 0, 92, 0.883);
+}

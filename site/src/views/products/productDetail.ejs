@@ -25,10 +25,10 @@
                                     </div>
                                     <img src="/images/products/<%= producto.images[0].fileName%>" alt="teclado-gamer"
                                         class="principal-imagen">
-                                    <a href="">
+                                    <!-- <a href="">
                                         <img src="/images/icons/logo-heart.svg" alt="icon-heart" class="icono-heart">
-                                    </a>
-                                    <span class="numeroimagen">1/4</span>
+                                    </a> -->
+                                    <span class="numeroimagen">1/3</span>
 
                                 </div>
 
@@ -39,9 +39,9 @@
                                 <h2 class="titulo-producto2">
                                     <%= producto.name %>
                                 </h2>
-                                <a href="">
+                                <!-- <a href="">
                                     <img src="/images/icons/logo-heart.svg" alt="icon-heart" class="icono-heart">
-                                </a>
+                                </a> -->
                             </div>
                             <% if (producto.discount > 0) { %>
                                 <s>$ <%= toThousand(producto.price)%></s>
@@ -106,10 +106,10 @@
                                     <div class="card-title">
                                         <h5><%= producto.name %></h5>
                                     </div>
-                                    <img src="/images/products/<%= producto.images[0].fileName%>" alt="producto">
-                                    <div class="heart">
+                                    <a href="/products/productDetail/<%= producto.id %>"><img src="/images/products/<%= producto.images[0].fileName%>" alt="producto"></a>
+                                    <!-- <div class="heart">
                                         <img src="/images/icons/logo-heart.svg" alt="corazon">
-                                    </div> 
+                                    </div> --> 
                                     <% if (producto.discount > 0) { %>
                                         
                                         <div class="masVendido">
@@ -168,9 +168,9 @@
                                     <div class="precio-desc">
                                         <img src="/images/icons/carrito-comprar.svg" alt="">
                                     </div>
-                                    <div class="especificaciones">
+                                    <!-- <div class="especificaciones">
                                         <a href="/products/productDetail/<%= producto.id %>">especificaciones</a>
-                                    </div>                            
+                                    </div> -->                            
                                 </div>
                                 <% } %>                   
                                 <% }) %>

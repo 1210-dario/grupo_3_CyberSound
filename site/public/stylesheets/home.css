@@ -64,6 +64,12 @@
     width: 90.625vw;
     margin: 0 auto;
 }
+.home main .main-home .categories{
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: var(--color-gris-oscuro);
+}
 
 .home main .main-home .categories ul{
     display: flex;
@@ -168,6 +174,10 @@
 .home main .main-home article .product-container .producto{
     width: 50%;
     height: 57vw;
+}
+.home main .main-home article .product-container .producto:hover{
+    box-shadow: 0px 1px 26px var(--color-violeta);
+    border: solid 0px var(--color-violeta);
 }
 
 .home main .main-home article .product-container .top{

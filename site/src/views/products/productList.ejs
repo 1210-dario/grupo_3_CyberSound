@@ -14,17 +14,15 @@
                         <div class="product-container2">
                             <% productos.forEach(producto=> { %>
                                 <% if (producto) { %>
-                                    <a href="/products/productDetail/<%= producto.id %>">
                                         <div class="producto top">
-                                            <!-- <div class="card-title">
+                                            <div class="card-title">
                                                 <h5><%= producto.name %></h5>
-                                            </div> -->
-                                            <img src="/images/products/<%= producto.images[0].fileName%>"
-                                                alt="producto">
-                                            <div class="heart">
-                                                <img src="/images/icons/logo-heart.svg" alt="corazon">
                                             </div>
-                                            <% if (producto.discount> 0) { %>
+                                            <a href="/products/productDetail/<%= producto.id %>"><img src="/images/products/<%= producto.images[0].fileName%>"></a>
+                                            <!-- <div class="heart">
+                                                <img src="/images/icons/logo-heart.svg" alt="corazon">
+                                            </div> -->
+                                            <% if (producto.discount>0) { %>
                                                 <div class="masVendido">
                                                     <% if (producto.masVendido===true) { %>
                                                         <p class="cartel-vendido">mas vendido</p>
@@ -68,8 +66,6 @@
                                     <h5>
                                         <%= producto.name %>
                                     </h5>
-
-
                                     <div class="info">
                                         <a href="/products/productDetail/<%= producto.id %>">
                                             <i class="fas fa-plus"></i>
@@ -89,50 +85,59 @@
                                             <div class="precio-desc">
                                                 <img src="/images/icons/carrito-comprar.svg" alt="">
                                             </div>
-                                            <div class="card-title">
+                                            <!-- <div class="card-title">
                                                 <h5>
                                                     <%= producto.name %>
                                                 </h5>
-                                            </div>
+                                            </div> -->
                                             <!-- <div class="especificaciones">
                             <a href="/products/productDetail/<%= producto.id %>">especificaciones</a>
                         </div> -->
                     </div>
-                    </a>
+
                     <% } %>
                         <% }) %>
                             </div>
                 </article>
             </main>
-    <h3 class="h3-carr-prox-PL proximos">próximos lanzamientos</h3>
-    <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
+            <h3 class="h3-carr-prox-PL proximos">próximos lanzamientos</h3>
+            <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
 
-         <div class="carousel-item active" style="background-image: url('/images/carrousel/<%=proximos[0].fileName%>');">
-             
-          </div>
-          <div class="carousel-item" style="background-image: url('/images/carrousel/<%=proximos[1].fileName%>');">
-            
-          </div>
-          <div class="carousel-item" style="background-image: url('/images/carrousel/<%=proximos[2].fileName%>');">
-          </div>
-       
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    <%- include('../partials/footer.ejs') %>
-    <%- include('../partials/scripts.ejs') %>
-</body>
+                    <div class="carousel-item active"
+                        style="background-image: url('/images/carrousel/<%=proximos[0].fileName%>');">
+
+                    </div>
+                    <div class="carousel-item"
+                        style="background-image: url('/images/carrousel/<%=proximos[1].fileName%>');">
+
+                    </div>
+                    <div class="carousel-item"
+                        style="background-image: url('/images/carrousel/<%=proximos[2].fileName%>');">
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <%- include('../partials/footer.ejs') %>
+                <%- include('../partials/scripts.ejs') %>
+    </body>
+
 </html>
