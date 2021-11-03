@@ -1,4 +1,4 @@
-const {check} = require('express-validator');
+const {check,body} = require('express-validator');
 
 
 
@@ -13,6 +13,13 @@ module.exports = [
     check('price')
     .notEmpty().withMessage('Debes ingresar el precio')
     .isNumeric().withMessage('Solo numeros'),
-
+    body('images')
+    .custom((value,{req}) => {
+        if(req.files.length === 3 || req.files.length === 0 ){
+            return true
+        } else {
+            return false
+        }
+    }).withMessage('Debes ingresar 3 imagenes').bail()
         
 ]

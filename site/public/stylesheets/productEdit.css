@@ -231,6 +231,16 @@ height: 150px;
 overflow: hidden;
 
 }
+.productEdit form .text-danger{
+    color: red;
+    
+}
+.productEdit form .danger{
+    outline: 3px solid red;
+}
+.productEdit form .validate{
+    outline: 3px solid var(--color-verde);
+}
 
 /* Breakpoints o MediaQuerys */
 
