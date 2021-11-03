@@ -1,8 +1,11 @@
 const $ = id => document.getElementById(id);
 
 
+
+
+
+
 window.addEventListener('load', () => {
-    console.log($('product-form'))
     console.log("conectado con carga de productos")
 
     $('name').addEventListener('blur', () => {
@@ -65,8 +68,7 @@ window.addEventListener('load', () => {
             $('error-category').innerHTML = null
         }
         
-    })
-     
+    }) 
     $('images').addEventListener('blur', () => {
         let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/;
         let filePath = $('images').value
@@ -81,7 +83,7 @@ window.addEventListener('load', () => {
     
   
     })
-    
+  
     
 
 
@@ -90,19 +92,10 @@ window.addEventListener('load', () => {
     $('product-form').addEventListener('submit', e => {
         e.preventDefault();
         let elementosForm = $('product-form').elements;
-        console.log(elementosForm)
-        let error = false;
-        for (let i = 0; i < elementosForm.length - 1; i++) {
-
-            if (!elementosForm[i].value) {
-                elementosForm[i].classList.add('danger')
-                $('error-empty').innerHTML = 'Los campos señalados son obligatorios';
-                error = true
-            }
-        }
        
-        if (!error) {
+        
+        
             $('product-form').submit()
-        }
+        
     })
 })

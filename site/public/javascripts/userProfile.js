@@ -1,4 +1,4 @@
-console.log('admin conneted success');
+console.log('userProfile connected success');
 
 const confirmRemove = (e,form) => {
     e.preventDefault()

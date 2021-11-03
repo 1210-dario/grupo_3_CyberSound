@@ -8,35 +8,44 @@
     <section>
         
         <h1>Editar producto</h1>
-        <form action="/products/productEdit/<%= producto.id %>?_method=PUT" method="POST">
+        <form action="/products/productEdit/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="product-form">
             <div class="checkbox">
                 <label for="discount">NOMBRE</label>
             </div>
-            <input type="text" name="name" id="" placeholder="Nombre del Producto" required value="<%= producto.name %> ">
+            <input type="text" name="name" id="name" placeholder="Nombre del Producto"  value="<%= producto.name %> ">
+            <span class="text-danger" id="error-name"><%= locals.errores && errores.name ? errores.name.msg : null %> </span>
             <label class="description-lab" for="description">Descripción</label>
-            <textarea class="description-text" name="description" cols="10" rows="5"><%= producto.description %></textarea>
+            <textarea class="description-text" id="description" name="description" cols="10" rows="5"><%= producto.description %></textarea>
+            <span class="text-danger" id="error-description"><%= locals.errores && errores.description ? errores.description.msg : null %> </span>
+            <label>Imagenes Actuales</label>
+            <div class="prev_img">                                          
+                        <img src="/images/products/<%= producto.images[0].fileName%>" alt="producto-gamer">
+                        <img src="/images/products/<%= producto.images[1].fileName%>" alt="producto-gamer">
+                        <img src="/images/products/<%= producto.images[2].fileName%>" alt="producto-gamer">
+               
+            </div>
             <div class="checkbox">
-                <label for="images">IMAGEN</label>
+                <label for="images">Agregar nuevas Imagenes</label>
             </div>
-            <!-- <div class="div-image">
-                <label class="image" for="images">Elegir Imagen Principal</label>
-                <input class="file" type="file" name="images" multiple id="image" accept=".png, .jpeg, .jpg" required>
-            </div> -->
             <div >
-                <input class="upload-box" value="<%= producto.images %> "type="file" multiple name="images" id="image" accept=".png, .jpeg, .jpg" required>
+                <input class="upload-box" value="<%= producto.images %> "type="file" multiple name="images" id="images" >
             </div>
+            <span class="text-danger" id="error-images"><%= locals.errores && errores.images ? errores.images.msg : null %> </span>
             <div class="checkbox">
                 <label for="stock">Stock Disponible</label>
             </div>
-            <input type="number" name="stock" value="<%= producto.stock %>" placeholder="Stock Disponible">
+            <input type="number" name="stock"  id="stock" value="<%= producto.stock %>" placeholder="Stock Disponible">
+            <span class="text-danger" id="error-stock"><%= locals.errores && errores.stock ? errores.stock.msg : null %> </span>
             <div class="checkbox">
                 <label for="price">PRECIO</label>
             </div>
-            <input type="number" name="price" placeholder="Precio" value="<%= producto.price %>">
+            <input type="number" name="price" id="price" placeholder="Precio" value="<%= producto.price %>">
+            <span class="text-danger" id="error-price" ><%= locals.errores && errores.price ? errores.price.msg : null %> </span>
             <div class="checkbox">
                 <label for="discount">Descuento</label>
             </div>
-            <input type="number" name="discount" placeholder="Porcentaje de Descuento" value="<%= producto.discount %>">
+            <input type="number" name="discount" id="discount" placeholder="Porcentaje de Descuento" value="<%= producto.discount %>">
+            <span class="text-danger" id="error-discount"><%= locals.errores && errores.discount ? errores.discount.msg : null %> </span>
             <div class="checkbox">
                 <input type="checkbox" name="envioFree" id="" <% if (producto.shipping === true) { %>
                  checked
@@ -65,12 +74,15 @@
                    <% categorias.forEach(categoria => { %>
                          <option value="<%= categoria.id %>" <%= categoria.id == producto.categoryId ? 'selected' : null %> ><%= categoria.name %></option>
                         <% }) %>
+                        <span class="text-danger" id="error-category"><%= locals.errores && errores.category ? errores.category.msg : null %> </span>
             </select>
             <input type="submit" value="Guardar Cambios" class="button-continuar">
         </form>
-
+        <span id="error-empty" class="text-danger"></span>
     </section>
+    <script src="/javascripts/productEditValidator.js"></script>
     <%- include('../partials/footer.ejs') %>
+    
 
 </body>
 

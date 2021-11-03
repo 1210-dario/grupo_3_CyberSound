@@ -24,11 +24,7 @@ module.exports = {
             productos,
             toThousand,
             conDescuento,
-        })).catch(err => console.log(err))
-        // .then(banners =>{
-        //     return res.send(banners)
-        // })
-        
+        })).catch(err => console.log(err))   
     }
     
 }
