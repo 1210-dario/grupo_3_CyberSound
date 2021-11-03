@@ -130,18 +130,17 @@ module.exports = {
     },
     userUpdate: async (req, res) => {
         let id = req.params.id;
-        let { nombre, apellido, email, avatarId } = req.body;
+        let { nombre, apellido, avatarId } = req.body;
 
         const userUpdated = await User.update({
             firstName: nombre.trim(),
             lastName: apellido.trim(),
-            email,
             avatarId
         },{
             where: {id: id}
         });
 
-        const userLogin = await User.findOne({where: { email: email},
+        const userLogin = await User.findOne({where: { email: req.session.userLogin.email},
             include: { all: true }
         });
 
