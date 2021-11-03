@@ -42,8 +42,8 @@
                 <td ><textarea class="description-text-admin" name="description" cols="10" rows="3"><%= producto.description%></textarea></td> 
                 <td><a class="boton-admin admin-detail" href="/products/productDetail/<%= producto.id %>">Ver</a></td>
                 <td><a class="boton-admin admin-edit" href="/products/productEdit/<%= producto.id %>">Editar</a></td>
-                <td><form action="/products/productDelete/<%=producto.id %>?_method=DELETE" method="POST">
-                    <button class="boton-admin admin-delete">Borrar</button>
+                <td><form action="/products/productDelete/<%=producto.id %>?_method=DELETE" method="POST" id='formDelete<%=producto.id%>'>
+                    <button class="boton-admin admin-delete" type='submit' onclick="confirmRemove(event,document.querySelector('#formDelete<%=producto.id%>'))">Borrar</button>
                  </form></td>
                            
               </tr>
@@ -51,6 +51,9 @@
         </table>
         </div>
         <%- include('../partials/footer.ejs') %>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <%- include('../partials/scripts.ejs') %>
+        <script src="/javascripts/admin.js"></script>
         
     </body>
 
