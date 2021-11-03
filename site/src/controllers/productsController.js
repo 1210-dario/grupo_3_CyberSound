@@ -10,14 +10,14 @@ const { validationResult } = require('express-validator');
 
 module.exports = {
     productList: async (req, res) => {
-         let proximos = await db.Banners.findAll({
-             where : {
-                 name : 'carrousel secundario'
-             }, 
-             include : {
-                 all : true
-             }
-         })
+        let proximos = await db.Banners.findAll({
+            where: {
+                name: 'carrousel secundario'
+            },
+            include: {
+                all: true
+            }
+        })
         let productos;
         if (req.params.categoryId == 7) {
             productos = await db.Product.findAll({
@@ -27,7 +27,7 @@ module.exports = {
                 include: { all: true }
             })
             productos[0].category.name = 'Mas Vendidos';
-        }else if(req.params.categoryId == 8) {
+        } else if (req.params.categoryId == 8) {
             productos = await db.Product.findAll({
                 where: {
                     offer: true
@@ -35,7 +35,7 @@ module.exports = {
                 include: { all: true }
             })
             productos[0].category.name = 'Ofertas';
-        }else {
+        } else {
             productos = await db.Product.findAll({
                 where: {
                     categoryId: req.params.categoryId
@@ -146,7 +146,12 @@ module.exports = {
     },
     productEdit: (req, res) => {
         let categorias = db.Category.findAll();
-        let producto = db.Product.findByPk(req.params.id);
+        let producto = db.Product.findByPk(req.params.id, {
+            include: [
+                { association: 'images' },
+                { association: 'category' }
+            ]
+        });
         Promise.all([categorias, producto])
             .then(([categorias, producto]) => {
                 console.log(producto)
@@ -157,29 +162,72 @@ module.exports = {
             })
     },
     actualizar: (req, res) => {
+        let errors = validationResult(req);
 
-        const { name, description, stock, price, discount, envioFree, masVendido, oferta, show, category, } = req.body;
+        if (errors.isEmpty()) {
 
-        db.Product.update(
-            {
-                name: name.trim(),
-                description: description.trim(),
-                price,
-                discount: discount != undefined ? +discount : 0,
-                stock: stock != undefined ? +stock : 0,
-                shipping: envioFree != undefined ? true : false,
-                offer: oferta != undefined ? true : false,
-                bestSeller: masVendido != undefined ? true : false,
-                showMenu: show != undefined ? true : false,
-                categoryId: category
-            },
-            {
-                where: {
-                    id: req.params.id
-                }
-            }
-        ).then(() => res.redirect('/'))
-            .catch(error => console.log(error))
+            const { name, description, stock, price, discount, envioFree, masVendido, oferta, show, category, } = req.body;
+
+            db.Product.update(
+                {
+                    name: name.trim(),
+                    description: description.trim(),
+                    price,
+                    discount: discount != undefined ? +discount : 0,
+                    stock: stock != undefined ? +stock : 0,
+                    shipping: envioFree != undefined ? true : false,
+                    offer: oferta != undefined ? true : false,
+                    bestSeller: masVendido != undefined ? true : false,
+                    showMenu: show != undefined ? true : false,
+                    categoryId: category
+                },
+                {
+                    where: {
+                        id: req.params.id
+                    }
+                }).then(() => {
+                    if (req.files.length != 0) {
+                        db.Image.destroy({
+                            where: {
+                                productId: req.params.id
+                            }
+                        }).then(() => {
+                            var images = req.files.map(imagen => {
+                                return {
+                                    fileName: imagen.filename,
+                                    productId: req.params.id
+                                }
+                            });
+                            db.Image.bulkCreate(images, { validate: true })
+                                .then(() => console.log('Imagenes agreadas en la carpeta public'))
+
+
+                        })
+                    }
+                    return res.redirect('/')
+
+                }).catch(err => console.log(err))
+
+        } else {
+            let categorias = db.Category.findAll();
+            let producto = db.Product.findByPk(req.params.id, {
+                include: [
+                    { association: 'images' },
+                    { association: 'category' }
+                ]
+            });
+            Promise.all([categorias, producto])
+                .then(([categorias, producto]) => {
+                    console.log(producto)
+                    return res.render('./products/productEdit', {
+                        categorias,
+                        producto,
+                        errores: errors.mapped(),
+                        old: req.body
+                    })
+                })
+                .catch(err => console.log(err))
+        }
     },
 
     eliminar: (req, res) => {
@@ -201,11 +249,11 @@ module.exports = {
     },
     search: async (req, res) => {
         let proximos = await db.Banners.findAll({
-            where : {
-                name : 'carrousel secundario'
-            }, 
-            include : {
-                all : true
+            where: {
+                name: 'carrousel secundario'
+            },
+            include: {
+                all: true
             }
         })
 

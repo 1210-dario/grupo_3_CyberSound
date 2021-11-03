@@ -219,6 +219,28 @@
 ::-webkit-file-upload-button:hover{
     background: #438a5e;
 }
+.productEdit .prev_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.productEdit .prev_img img{
+width: 150px;
+height: 150px;
+overflow: hidden;
+
+}
+.productEdit form .text-danger{
+    color: red;
+    
+}
+.productEdit form .danger{
+    outline: 3px solid red;
+}
+.productEdit form .validate{
+    outline: 3px solid var(--color-verde);
+}
 
 /* Breakpoints o MediaQuerys */
 
@@ -347,5 +369,4 @@
     .productEdit section a:hover{
         color: var(--color-violeta);
     }
-
 }
