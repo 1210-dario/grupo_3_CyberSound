@@ -12,8 +12,8 @@ module.exports = {
      * }], {});
     */
     await queryInterface.bulkInsert('Products', [{
-      name: 'Teclado Mecanico Redragon Kumara',
-      description: 'Nuevo teclado mecanico Redragon Kumara, posee switchs brown e iluminacion led',
+      name: 'BlackDragon Mechanical Keyboard',
+      description: 'Nuevo teclado mecanico, posee switchs brown e iluminacion led con una gran capacidad de respuesta y resistirán hasta 50 millones de pulsaciones. La tecnología N-key rollover asegura que cada pulsación de botón se transfiere al juego y que, al activar el modo de juego, permaneces en él incluso si accidentalmente presionas la tecla de Windows. Pon la mente en el juego; pon la vista en el premio.',
       price: 10000,
       discount: 0,
       stock: 100,
@@ -26,8 +26,8 @@ module.exports = {
       updatedAt: new Date
     },
     {
-      name: 'Auriculares Redragon',
-      description: 'Auriculares redragon H505 con el mejor sonido del mercado',
+      name: 'Rainbow Ultimate Mechanical Keyboard',
+      description: 'Nuevo teclado mecanico, posee switchs brown e iluminacion led con una gran capacidad de respuesta y resistirán hasta 50 millones de pulsaciones. La tecnología N-key rollover asegura que cada pulsación de botón se transfiere al juego y que, al activar el modo de juego, permaneces en él incluso si accidentalmente presionas la tecla de Windows. Pon la mente en el juego; pon la vista en el premio.',
       price: 10000,
       discount: 0,
       stock: 100,
@@ -35,13 +35,13 @@ module.exports = {
       offer: true,
       bestSeller: true,
       showMenu: true,
-      categoryId: 4,
+      categoryId: 1,
       createdAt: new Date,
       updatedAt: new Date
     },
     {
-      name: "Hermiston, Olson and Wehner",
-      description: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+      name: "Azor Illuminated Mechanical Keyboard",
+      description: 'Nuevo teclado mecanico, posee switchs brown e iluminacion led con una gran capacidad de respuesta y resistirán hasta 50 millones de pulsaciones. La tecnología N-key rollover asegura que cada pulsación de botón se transfiere al juego y que, al activar el modo de juego, permaneces en él incluso si accidentalmente presionas la tecla de Windows. Pon la mente en el juego; pon la vista en el premio.',
       price: 19905.87,
       discount: 22,
       stock: 562,
@@ -53,8 +53,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Hickle-Schulist",
-      description: "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+      name: "TypeZeus Semi-mechanical Keyboard",
+      description: 'Nuevo teclado mecanico, posee switchs brown e iluminacion led con una gran capacidad de respuesta y resistirán hasta 50 millones de pulsaciones. La tecnología N-key rollover asegura que cada pulsación de botón se transfiere al juego y que, al activar el modo de juego, permaneces en él incluso si accidentalmente presionas la tecla de Windows. Pon la mente en el juego; pon la vista en el premio.',
       price: 23814.08,
       discount: 15,
       stock: 87,
@@ -66,8 +66,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Vandervort LLC",
-      description: "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+      name: "Azor Neon Mechanical Keyboard",
+      description: 'Nuevo teclado mecanico, posee switchs brown e iluminacion led con una gran capacidad de respuesta y resistirán hasta 50 millones de pulsaciones. La tecnología N-key rollover asegura que cada pulsación de botón se transfiere al juego y que, al activar el modo de juego, permaneces en él incluso si accidentalmente presionas la tecla de Windows. Pon la mente en el juego; pon la vista en el premio.',
       price: 2162.17,
       discount: 26,
       stock: 907,
@@ -79,8 +79,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Bradtke-Kuvalis",
-      description: "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+      name: "Quartz Mouse",
+      description: "Mouse ergonómico y ajustable, diseñado para jugar cómodamente durante horas. POR GAMERS,PARA GAMERS",
       price: 1372.84,
       discount: 29,
       stock: 130,
@@ -88,12 +88,12 @@ module.exports = {
       offer: false,
       bestSeller: false,
       showMenu: false,
-      categoryId: 1,
+      categoryId: 2,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Bosco LLC",
-      description: "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+      name: "Aero GX Mouse",
+      description: "Mouse ergonómico y ajustable, diseñado para jugar cómodamente durante horas. POR GAMERS,PARA GAMERS",
       price: 21493.61,
       discount: 1,
       stock: 638,
@@ -101,12 +101,12 @@ module.exports = {
       offer: true,
       bestSeller: false,
       showMenu: true,
-      categoryId: 1,
+      categoryId: 2,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Wyman Group",
-      description: "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+      name: "Iriun Lotto Mouse",
+      description: "Mouse ergonómico y ajustable, diseñado para jugar cómodamente durante horas. POR GAMERS,PARA GAMERS",
       price: 6652.03,
       discount: 27,
       stock: 52,
@@ -114,12 +114,12 @@ module.exports = {
       offer: true,
       bestSeller: false,
       showMenu: true,
-      categoryId: 1,
+      categoryId: 2,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Grimes, White and Bogan",
-      description: "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+      name: "Iriun Dragon Mouse",
+      description: "Mouse ergonómico y ajustable, diseñado para jugar cómodamente durante horas. POR GAMERS,PARA GAMERS",
       price: 25307.16,
       discount: 25,
       stock: 417,
@@ -127,12 +127,12 @@ module.exports = {
       offer: false,
       bestSeller: false,
       showMenu: true,
-      categoryId: 1,
+      categoryId: 2,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Cruickshank-Simonis",
-      description: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+      name: "Cyberdark GT Mouse",
+      description: "Mouse ergonómico y ajustable, diseñado para jugar cómodamente durante horas. POR GAMERS,PARA GAMERS",
       price: 28849.32,
       discount: 2,
       stock: 441,
@@ -140,13 +140,13 @@ module.exports = {
       offer: true,
       bestSeller: true,
       showMenu: true,
-      categoryId: 1,
+      categoryId: 2,
       createdAt: new Date,
       updatedAt: new Date
     },
     {
-      name: "Bashirian-Thompson",
-      description: "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+      name: "Ultra Wireless Mouse",
+      description: "Mouse ergonómico y ajustable, diseñado para jugar cómodamente durante horas. POR GAMERS,PARA GAMERS",
       price: 15776.21,
       discount: 14,
       stock: 52,
@@ -158,8 +158,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Simonis, Hilpert and Wehner",
-      description: "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+      name: "Ergo LT Mouse",
+      description: "Mouse ergonómico y ajustable, diseñado para jugar cómodamente durante horas. POR GAMERS,PARA GAMERS",
       price: 15041.16,
       discount: 17,
       stock: 146,
@@ -171,8 +171,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Ratke-Kris",
-      description: "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+      name: "Delirium Mouse",
+      description: "Mouse ergonómico y ajustable, diseñado para jugar cómodamente durante horas. POR GAMERS,PARA GAMERS",
       price: 18662.89,
       discount: 23,
       stock: 259,
@@ -184,8 +184,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Kessler, Jast and Ullrich",
-      description: "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+      name: "Ultron LT Mouse",
+      description: "Mouse ergonómico y ajustable, diseñado para jugar cómodamente durante horas. POR GAMERS,PARA GAMERS",
       price: 22677.4,
       discount: 6,
       stock: 991,
@@ -197,8 +197,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Ruecker and Sons",
-      description: "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+      name: "Redki Mouse",
+      description: "Mouse ergonómico y ajustable, diseñado para jugar cómodamente durante horas. POR GAMERS,PARA GAMERS",
       price: 1647.2,
       discount: 23,
       stock: 575,
@@ -210,8 +210,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Torp-Corwin",
-      description: "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+      name: "Rainbow RGB Silla",
+      description: "La silla de gaming tiene que ser cómoda y elegante. Porque, la verdad sea dicha: una silla de gaming es el componente más destacado de cualquier sala de gaming. Todas nuestras sillas demuestran espléndidamente ambas cualidades. Es increíblemente cómodas gracias a las almohadillas cervicales y lumbares, mientras que los bordes totalmente integrados con iluminación LED RGB aportan un atractivo estilo, El centro de atención de la sala de gaming.",
       price: 25229.38,
       discount: 12,
       stock: 293,
@@ -219,12 +219,12 @@ module.exports = {
       offer: false,
       bestSeller: false,
       showMenu: false,
-      categoryId: 2,
+      categoryId: 3,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Parker-Russel",
-      description: "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+      name: "Redki LTX Silla",
+      description: "La silla de gaming tiene que ser cómoda y elegante. Porque, la verdad sea dicha: una silla de gaming es el componente más destacado de cualquier sala de gaming. Todas nuestras sillas demuestran espléndidamente ambas cualidades. Es increíblemente cómodas gracias a las almohadillas cervicales y lumbares, mientras que los bordes totalmente integrados con iluminación LED RGB aportan un atractivo estilo, El centro de atención de la sala de gaming.",
       price: 625.58,
       discount: 23,
       stock: 463,
@@ -232,12 +232,12 @@ module.exports = {
       offer: false,
       bestSeller: true,
       showMenu: true,
-      categoryId: 2,
+      categoryId: 3,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Bogisich-Trantow",
-      description: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+      name: "Indigo GT Silla",
+      description: "La silla de gaming tiene que ser cómoda y elegante. Porque, la verdad sea dicha: una silla de gaming es el componente más destacado de cualquier sala de gaming. Todas nuestras sillas demuestran espléndidamente ambas cualidades. Es increíblemente cómodas gracias a las almohadillas cervicales y lumbares, mientras que los bordes totalmente integrados con iluminación LED RGB aportan un atractivo estilo, El centro de atención de la sala de gaming.",
       price: 12225.67,
       discount: 28,
       stock: 338,
@@ -245,13 +245,13 @@ module.exports = {
       offer: true,
       bestSeller: true,
       showMenu: true,
-      categoryId: 2,
+      categoryId: 3,
       createdAt: new Date,
       updatedAt: new Date
     },
     {
-      name: "Ullrich, Greenholt and Leannon",
-      description: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+      name: "Ultra DX Silla",
+      description: "La silla de gaming tiene que ser cómoda y elegante. Porque, la verdad sea dicha: una silla de gaming es el componente más destacado de cualquier sala de gaming. Todas nuestras sillas demuestran espléndidamente ambas cualidades. Es increíblemente cómodas gracias a las almohadillas cervicales y lumbares, mientras que los bordes totalmente integrados con iluminación LED RGB aportan un atractivo estilo, El centro de atención de la sala de gaming.",
       price: 4241.08,
       discount: 7,
       stock: 147,
@@ -263,8 +263,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Cormier, Collier and Quitzon",
-      description: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+      name: "Sature GT10 Microfono",
+      description: "Desde podcasts hasta documentales, desde canciones pop hasta tu gran obra; para todo ello vas a necesitar un gran micrófono que capture el audio con la mejor calidad posible. Nuestros microfonos brindan un gran escudo acústico, control de latencia cero y patrón de audio cardioide, todo lo necesario para empezar a grabar audio con calidad de estudio.",
       price: 2055.89,
       discount: 1,
       stock: 886,
@@ -276,8 +276,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Luettgen, Ullrich and Blanda",
-      description: "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+      name: "Million G78 Microfono",
+      description: "Desde podcasts hasta documentales, desde canciones pop hasta tu gran obra; para todo ello vas a necesitar un gran micrófono que capture el audio con la mejor calidad posible. Nuestros microfonos brindan un gran escudo acústico, control de latencia cero y patrón de audio cardioide, todo lo necesario para empezar a grabar audio con calidad de estudio.",
       price: 23175.38,
       discount: 23,
       stock: 764,
@@ -289,8 +289,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Parker Group",
-      description: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+      name: "Pop T67 Microfono",
+      description: "Desde podcasts hasta documentales, desde canciones pop hasta tu gran obra; para todo ello vas a necesitar un gran micrófono que capture el audio con la mejor calidad posible. Nuestros microfonos brindan un gran escudo acústico, control de latencia cero y patrón de audio cardioide, todo lo necesario para empezar a grabar audio con calidad de estudio.",
       price: 3616.92,
       discount: 21,
       stock: 675,
@@ -302,9 +302,9 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Ritchie Inc",
-      description: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
-      price: 17613.65,
+      name: "Zac KL89 Microfono",
+      description: "Desde podcasts hasta documentales, desde canciones pop hasta tu gran obra; para todo ello vas a necesitar un gran micrófono que capture el audio con la mejor calidad posible. Nuestros microfonos brindan un gran escudo acústico, control de latencia cero y patrón de audio cardioide, todo lo necesario para empezar a grabar audio con calidad de estudio.",
+      price: 10950.45,
       discount: 21,
       stock: 164,
       shipping: true,
@@ -315,8 +315,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Spencer-Hyatt",
-      description: "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+      name: "Zero LP90 Microfono",
+      description: "Desde podcasts hasta documentales, desde canciones pop hasta tu gran obra; para todo ello vas a necesitar un gran micrófono que capture el audio con la mejor calidad posible. Nuestros microfonos brindan un gran escudo acústico, control de latencia cero y patrón de audio cardioide, todo lo necesario para empezar a grabar audio con calidad de estudio.",
       price: 7950.45,
       discount: 20,
       stock: 517,
@@ -328,8 +328,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Hegmann, Feest and Gusikowski",
-      description: "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+      name: "Desert GX Webcam",
+      description: "Tanto si eres un streamer, un creador de contenidos o si trabajas desde casa, en los tiempos que corren necesitas una buena cámara web. Nuestras camaras hacen exactamente lo que esperas de una cámara web de calidad. Tiene una resolución Full HD y, gracias al balance de blancos automático, tu imagen siempre será la mejor.",
       price: 868.84,
       discount: 20,
       stock: 901,
@@ -341,8 +341,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Rolfson, Stanton and Herzog",
-      description: "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+      name: "Giro RT Webcam",
+      description: "Tanto si eres un streamer, un creador de contenidos o si trabajas desde casa, en los tiempos que corren necesitas una buena cámara web. Nuestras camaras hacen exactamente lo que esperas de una cámara web de calidad. Tiene una resolución Full HD y, gracias al balance de blancos automático, tu imagen siempre será la mejor.",
       price: 12958.4,
       discount: 17,
       stock: 346,
@@ -355,8 +355,8 @@ module.exports = {
       updatedAt: new Date
     },
     {
-      name: "Hettinger and Sons",
-      description: "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+      name: "Style R5 Webcam",
+      description: "Tanto si eres un streamer, un creador de contenidos o si trabajas desde casa, en los tiempos que corren necesitas una buena cámara web. Nuestras camaras hacen exactamente lo que esperas de una cámara web de calidad. Tiene una resolución Full HD y, gracias al balance de blancos automático, tu imagen siempre será la mejor.",
       price: 10725.01,
       discount: 4,
       stock: 72,
@@ -364,12 +364,12 @@ module.exports = {
       offer: true,
       bestSeller: false,
       showMenu: false,
-      categoryId: 4,
+      categoryId: 3,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Kassulke-Abshire",
-      description: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+      name: "Titan T5 Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 25697.22,
       discount: 21,
       stock: 393,
@@ -377,12 +377,12 @@ module.exports = {
       offer: true,
       bestSeller: true,
       showMenu: false,
-      categoryId: 4,
+      categoryId: 5,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Bartoletti-Treutel",
-      description: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+      name: "Vox P9 Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 24162.56,
       discount: 15,
       stock: 35,
@@ -390,12 +390,12 @@ module.exports = {
       offer: false,
       bestSeller: true,
       showMenu: true,
-      categoryId: 4,
+      categoryId: 5,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Osinski, Jacobi and Borer",
-      description: "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
+      name: "Litio R4 Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 27751.22,
       discount: 8,
       stock: 422,
@@ -403,12 +403,12 @@ module.exports = {
       offer: false,
       bestSeller: false,
       showMenu: true,
-      categoryId: 4,
+      categoryId: 5,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Carroll Inc",
-      description: "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+      name: "Letto K3 Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 8185.56,
       discount: 18,
       stock: 139,
@@ -416,12 +416,12 @@ module.exports = {
       offer: false,
       bestSeller: true,
       showMenu: false,
-      categoryId: 4,
+      categoryId: 5,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Hagenes, Wehner and Emard",
-      description: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+      name: "Ecco Lite Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 26457.43,
       discount: 8,
       stock: 316,
@@ -429,12 +429,12 @@ module.exports = {
       offer: true,
       bestSeller: false,
       showMenu: true,
-      categoryId: 4,
+      categoryId: 5,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Kessler-Krajcik",
-      description: "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+      name: "Maximus LT Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 26310.35,
       discount: 23,
       stock: 661,
@@ -442,12 +442,12 @@ module.exports = {
       offer: true,
       bestSeller: false,
       showMenu: true,
-      categoryId: 4,
+      categoryId: 5,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Quitzon Inc",
-      description: "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+      name: "Xion K9 Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 17016.95,
       discount: 28,
       stock: 177,
@@ -455,13 +455,13 @@ module.exports = {
       offer: false,
       bestSeller: false,
       showMenu: false,
-      categoryId: 4,
+      categoryId: 5,
       createdAt: new Date,
       updatedAt: new Date
     },
     {
-      name: "Jacobi-Zulauf",
-      description: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+      name: "Hulk K3 Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 22405.82,
       discount: 9,
       stock: 719,
@@ -473,8 +473,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Wyman-Conn",
-      description: "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      name: "Max Double Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 2583.42,
       discount: 3,
       stock: 718,
@@ -486,8 +486,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Mayert Group",
-      description: "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
+      name: "King OK Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 19824.86,
       discount: 9,
       stock: 229,
@@ -499,8 +499,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Kling, Satterfield and Baumbach",
-      description: "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+      name: "Mac C4 Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 16147.42,
       discount: 1,
       stock: 397,
@@ -512,8 +512,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Jacobson and Sons",
-      description: "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+      name: "Ether H6 Parlante",
+      description: "Gracias a los cables de 5 metros de longitud de los altavoces, es posible colocarlos casi en cualquier lugar de la habitación. Los cables de nuestros parlantes también proporcionan una longitud suficiente para colocarlos donde desee. Puede colocarse con facilidad bajo su pantalla plana o monitor, envolviéndole completamente de un gran sonido mientras esté jugando.",
       price: 9215.69,
       discount: 25,
       stock: 779,
@@ -525,8 +525,8 @@ module.exports = {
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Parisian, Miller and Schaden",
-      description: "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+      name: "Rainbow P9 Headphone",
+      description: "Nuestros auriculares resisten largas e intensas sesiones de gaming gracias a sus suaves almohadillas pivotantes y su diadema autoajustable. Cada auricular se ajustan perfectamente a la forma de la oreja y anulan cualquier ruido que pueda distraerte mientras avanzas hacia la victoria, no pierdas tiempo escribiendo, el microfono incorpardo sera suficiente para comunicarte con todos.",
       price: 1915.44,
       discount: 22,
       stock: 333,
@@ -534,12 +534,12 @@ module.exports = {
       offer: false,
       bestSeller: true,
       showMenu: false,
-      categoryId: 5,
+      categoryId: 4,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Huel and Sons",
-      description: "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+      name: "Soul BX Headphone",
+      description: "Nuestros auriculares resisten largas e intensas sesiones de gaming gracias a sus suaves almohadillas pivotantes y su diadema autoajustable. Cada auricular se ajustan perfectamente a la forma de la oreja y anulan cualquier ruido que pueda distraerte mientras avanzas hacia la victoria, no pierdas tiempo escribiendo, el microfono incorpardo sera suficiente para comunicarte con todos.",
       price: 10508.6,
       discount: 14,
       stock: 152,
@@ -547,12 +547,12 @@ module.exports = {
       offer: true,
       bestSeller: false,
       showMenu: false,
-      categoryId: 5,
+      categoryId: 4,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Lebsack LLC",
-      description: "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+      name: "Quartz L1 Headphone",
+      description: "Nuestros auriculares resisten largas e intensas sesiones de gaming gracias a sus suaves almohadillas pivotantes y su diadema autoajustable. Cada auricular se ajustan perfectamente a la forma de la oreja y anulan cualquier ruido que pueda distraerte mientras avanzas hacia la victoria, no pierdas tiempo escribiendo, el microfono incorpardo sera suficiente para comunicarte con todos.",
       price: 6365.69,
       discount: 1,
       stock: 439,
@@ -560,13 +560,13 @@ module.exports = {
       offer: false,
       bestSeller: false,
       showMenu: true,
-      categoryId: 5,
+      categoryId: 4,
       createdAt: new Date,
       updatedAt: new Date
     },
     {
-      name: "Stroman and Sons",
-      description: "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+      name: "Lethal R6 Headphone",
+      description: "Nuestros auriculares resisten largas e intensas sesiones de gaming gracias a sus suaves almohadillas pivotantes y su diadema autoajustable. Cada auricular se ajustan perfectamente a la forma de la oreja y anulan cualquier ruido que pueda distraerte mientras avanzas hacia la victoria, no pierdas tiempo escribiendo, el microfono incorpardo sera suficiente para comunicarte con todos.",
       price: 14565.17,
       discount: 14,
       stock: 309,
@@ -574,12 +574,12 @@ module.exports = {
       offer: false,
       bestSeller: true,
       showMenu: true,
-      categoryId: 6,
+      categoryId: 4,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Klein Group",
-      description: "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+      name: "Redki K90 Headphone",
+      description: "Nuestros auriculares resisten largas e intensas sesiones de gaming gracias a sus suaves almohadillas pivotantes y su diadema autoajustable. Cada auricular se ajustan perfectamente a la forma de la oreja y anulan cualquier ruido que pueda distraerte mientras avanzas hacia la victoria, no pierdas tiempo escribiendo, el microfono incorpardo sera suficiente para comunicarte con todos.",
       price: 26976.06,
       discount: 5,
       stock: 822,
@@ -587,12 +587,12 @@ module.exports = {
       offer: false,
       bestSeller: true,
       showMenu: true,
-      categoryId: 6,
+      categoryId: 4,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Oberbrunner-Klocko",
-      description: "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+      name: "Darkmetal G1 Headphone",
+      description: "Nuestros auriculares resisten largas e intensas sesiones de gaming gracias a sus suaves almohadillas pivotantes y su diadema autoajustable. Cada auricular se ajustan perfectamente a la forma de la oreja y anulan cualquier ruido que pueda distraerte mientras avanzas hacia la victoria, no pierdas tiempo escribiendo, el microfono incorpardo sera suficiente para comunicarte con todos.",
       price: 26574.3,
       discount: 13,
       stock: 418,
@@ -600,12 +600,12 @@ module.exports = {
       offer: false,
       bestSeller: true,
       showMenu: true,
-      categoryId: 6,
+      categoryId: 4,
       createdAt: new Date,
       updatedAt: new Date
     }, {
-      name: "Berge Group",
-      description: "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+      name: "Ultra KZ Headphone",
+      description: "Nuestros auriculares resisten largas e intensas sesiones de gaming gracias a sus suaves almohadillas pivotantes y su diadema autoajustable. Cada auricular se ajustan perfectamente a la forma de la oreja y anulan cualquier ruido que pueda distraerte mientras avanzas hacia la victoria, no pierdas tiempo escribiendo, el microfono incorpardo sera suficiente para comunicarte con todos.",
       price: 11406.88,
       discount: 21,
       stock: 450,
@@ -613,59 +613,7 @@ module.exports = {
       offer: false,
       bestSeller: true,
       showMenu: true,
-      categoryId: 6,
-      createdAt: new Date,
-      updatedAt: new Date
-    }, {
-      name: "Lemke, Tromp and Lowe",
-      description: "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-      price: 22028.35,
-      discount: 15,
-      stock: 383,
-      shipping: false,
-      offer: true,
-      bestSeller: true,
-      showMenu: true,
-      categoryId: 6,
-      createdAt: new Date,
-      updatedAt: new Date
-    }, {
-      name: "Mante, Kuhn and Wilderman",
-      description: "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
-      price: 23252.94,
-      discount: 23,
-      stock: 958,
-      shipping: false,
-      offer: true,
-      bestSeller: true,
-      showMenu: true,
-      categoryId: 6,
-      createdAt: new Date,
-      updatedAt: new Date
-    }, {
-      name: "Casper, Abshire and Jakubowski",
-      description: "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-      price: 26010.42,
-      discount: 18,
-      stock: 331,
-      shipping: false,
-      offer: true,
-      bestSeller: false,
-      showMenu: true,
-      categoryId: 6,
-      createdAt: new Date,
-      updatedAt: new Date
-    }, {
-      name: "Borer, Windler and Macejkovic",
-      description: "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
-      price: 27517.32,
-      discount: 4,
-      stock: 581,
-      shipping: false,
-      offer: false,
-      bestSeller: false,
-      showMenu: false,
-      categoryId: 6,
+      categoryId: 4,
       createdAt: new Date,
       updatedAt: new Date
     }
