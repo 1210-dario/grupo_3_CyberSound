@@ -11,7 +11,8 @@ main{
 }
 .cant-items-cart{
     display: flex;
-    font-size: 11px;
+    font-size: 15px;
+    font-weight: bold;
     align-items: flex-end;   
 }
 .line-carrito-cart{
@@ -55,7 +56,13 @@ main{
 }
 .quit-product-cart{
     font-weight: bold;
+    cursor: pointer;
 }
+
+.quit-product-cart:hover {
+    color: red;
+}
+
 .descript-product-cart{
     list-style-type: disc;
     margin-left: 20px;

@@ -2,6 +2,7 @@ var express = require('express');
 const path = require('path')
 var router = express.Router();
 const { productList, productDetail, cart, productAdd, productEdit, crear, actualizar, eliminar, productAdmin, search } = require('../controllers/productsController');
+const { addProduct , removeProduct, showCart } = require('../controllers/cartController');
 
 /*     Multer     */
 
@@ -17,6 +18,10 @@ router.get('/productList/:categoryId', productList);
 router.get('/productDetail/:id', productDetail);
 router.get('/cart', cart);
 router.get('/search', search);
+
+router.get('/carrito', showCart);
+router.get('/addCarrito/:id', addProduct);
+router.get('/removeCarrito/:id', removeProduct);
 
 /*     Routes Admin   */
 
