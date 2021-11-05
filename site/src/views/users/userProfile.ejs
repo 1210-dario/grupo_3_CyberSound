@@ -11,13 +11,13 @@
         
         <h3>Icono actual:</h3>
         <div class="avatar">
-            <img src="/images/userAvatar/<%=locals.userLogin.image%>" alt="userAvatar">
+            <img src="/images/userAvatar/<%=locals.userLogin.image%>" alt="userAvatar" id="avatar-actual">
         </div>
         <h3>Elegí tu avatar:</h3>
         <div class="avatar-election">
             <% avatars.forEach(avatar => { %>
                 <label>
-                    <input type="radio" name="avatarId" value="<%=avatar.id%>">
+                    <input type="radio" name="avatarId" value="<%=avatar.id%>" onclick="changePhoto('<%=avatar.name%>')">
                     <img src="/images/userAvatar/<%=avatar.name%>"  alt="avatar">
                 </label>
             <% }) %>

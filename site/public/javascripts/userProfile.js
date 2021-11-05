@@ -18,3 +18,7 @@ const confirmRemove = (e,form) => {
         }
     })
 };
+
+const changePhoto = (fileName) => {
+    $('avatar-actual').src=`/images/userAvatar/${fileName}`
+}
