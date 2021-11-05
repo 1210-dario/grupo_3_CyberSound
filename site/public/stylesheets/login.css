@@ -19,6 +19,7 @@
 }
 .login .caja-login{
           margin-top: 30px;
+          margin-bottom: 120px;
 }
 .login .button-volver-nombre .fas{
     font-size: 40px;
@@ -29,7 +30,8 @@
 }
 
 .login .button-volver-nombre .fas, .Cybersound, .h1-ingresar{ 
-    color:var(--color-violeta);   
+    color:var(--color-violeta);
+    margin-top: 80px;   
 }
 .login .google{
     background-color: var(--color-naranja);

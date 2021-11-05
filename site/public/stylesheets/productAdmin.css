@@ -12,15 +12,22 @@
     max-height: 20px;
 }
 .productAdmin .violeta-table{
-    background-color: var(--color-violeta);
-    
+    background-color: var(--color-violeta);    
+}
+.img-table{
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px
 }
 .productAdmin .gris-table{
     background-color: grey;
 }
 .productAdmin .naranja-table{
     background-color: var(--color-naranja);
-   
+    position: sticky;
+    top: 159px;
+    z-index: 2;
 }
 .productAdmin .tabla-admin{
  width: 95vw;

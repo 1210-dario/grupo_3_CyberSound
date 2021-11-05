@@ -97,7 +97,7 @@
                         </ul>
                     </div>
                     <article class="box">
-                        <h2>Otros productos</h2>
+                        <h2>Productos Relacionados</h2>
                         <div class="product-container">
                             <div class="product-container2">
                                 <% relacionados.forEach(producto => { %>
@@ -177,13 +177,14 @@
                             </div>
                         </div>
                         <div class="more">
-                            <a href="/products/productList/7" class="ver-mas">Ver más</a>
-                            <a href="/products/productList/7" class="ver-mas">></a>
+                            <a href="/products/productList/<%= producto.categoryId %>" class="ver-mas">Ver más</a>
+                            <a href="/products/productList/<%= producto.categoryId %>" class="ver-mas">></a>
                         </div>
                     </article>
                 </section>
             </main>
             <%- include('../partials/footer.ejs') %>
+            <%- include('../partials/scripts.ejs') %>
     </body>
 
 </html>

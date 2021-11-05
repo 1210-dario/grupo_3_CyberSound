@@ -11,7 +11,8 @@ main{
 }
 .cant-items-cart{
     display: flex;
-    font-size: 11px;
+    font-size: 15px;
+    font-weight: bold;
     align-items: flex-end;   
 }
 .line-carrito-cart{
@@ -55,7 +56,13 @@ main{
 }
 .quit-product-cart{
     font-weight: bold;
+    cursor: pointer;
 }
+
+.quit-product-cart:hover {
+    color: red;
+}
+
 .descript-product-cart{
     list-style-type: disc;
     margin-left: 20px;
@@ -169,6 +176,14 @@ main{
     font-size: 25px;
     padding: 1px 20px;
     border-radius: 12px;
+}
+.credit-cards-cart{
+    margin:auto;
+    width: auto;
+    margin-bottom: 50px;
+}
+.credit-cards-img{
+    width:40vw;
 }
 @media (min-width:426px){
    .carrito-cart{

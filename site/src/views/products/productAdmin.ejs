@@ -12,7 +12,7 @@
 
             <table>
         <tr class="fijo-admin">
-          <td class="naranja-table">ID</td>
+          <td class="naranja-table">Imagen</td>
           <td class="naranja-table">Nombre</td>
           <td class="naranja-table">Stock</td>
           <td class="naranja-table">Precio</td>
@@ -29,7 +29,7 @@
         </tr>
         <% productos.forEach(producto => { %>
             <tr>
-                <td class="violeta-table"><%= producto.id %></td>
+                <td class="violeta-table images-table"><img class="img-table" src="/images/products/<%= producto.images[0].fileName %>"></td>
                 <td class="gris-table"><%= producto.name %></td>
                 <td class="gris-table"><%= producto.stock %></td>
                 <td class="violeta-table">$<%= producto.price %></td>

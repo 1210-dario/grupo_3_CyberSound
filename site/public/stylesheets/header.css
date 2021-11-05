@@ -93,6 +93,22 @@ header nav .caja-2 img{
     height: 1.75rem;
 }
 
+header nav .caja-2 .logo-cart .quantity{
+    position: absolute;
+    right: 460px;
+    top: 50px;
+    color: deeppink;
+    font-weight: bold;
+}
+/* header nav .caja-2 .logo-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+} */
+
+
+
 /* Media Querys */
 
 @media (min-width:426px){
@@ -221,7 +237,7 @@ header nav .caja-2 img{
     /* Header */
 
     header{
-        height: 9.9375rem;
+        height: 8rem;
         display: flex;
         justify-content: center;
     }

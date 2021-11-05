@@ -62,7 +62,6 @@ module.exports = {
                 { association: 'category' }
             ]
         }).then(producto => {
-            console.log(producto);
             db.Category.findOne({
                 where: {
                     id: producto.categoryId
@@ -87,8 +86,22 @@ module.exports = {
         }).catch(error => console.log(error))
     },
     cart: (req, res) => {
+        const cart = req.session.carrito;
+        let contador = 0;
+        let subtotal = 0;
+        let total = 0;
+        cart.forEach(element => {
+            contador += element.quantity;
+            subtotal += Number.parseFloat(element.totalPrice);
+            total += Number.parseFloat(element.totalPrice);
+        });
+        console.log(contador, subtotal, total);
         res.render('./products/cart', {
             title: 'Cart',
+            cart,
+            contador,
+            subtotal,
+            total
         })
     },
     productAdd: (req, res) => {
@@ -154,7 +167,6 @@ module.exports = {
         });
         Promise.all([categorias, producto])
             .then(([categorias, producto]) => {
-                console.log(producto)
                 return res.render('./products/productEdit', {
                     categorias,
                     producto
@@ -218,7 +230,6 @@ module.exports = {
             });
             Promise.all([categorias, producto])
                 .then(([categorias, producto]) => {
-                    console.log(producto)
                     return res.render('./products/productEdit', {
                         categorias,
                         producto,
@@ -241,6 +252,7 @@ module.exports = {
     productAdmin: (req, res) => {
         db.Product.findAll({
             include: [
+                { association: 'images' },
                 { association: 'category' },
             ]
         }).then(productos => res.render('./products/productAdmin', {

@@ -7,6 +7,12 @@
     margin: 0;
     padding: 0;
 }
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 12;
+    background-color: var(--color-gris-oscuro);
+}
 
 ul{
     list-style: none;
