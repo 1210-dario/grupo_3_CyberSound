@@ -50,6 +50,7 @@ module.exports = {
                 image: result.avatar.dataValues.name,
                 email: result.email
             }
+            req.session.carrito = [];
             return res.redirect('../');
         }else{
             return res.render('./users/register',{
@@ -75,14 +76,10 @@ module.exports = {
     },
 
     userLogin: async (req, res) => {
-        console.log('ENTRE AL CONTROLLER');
+
         const errors = validationResult(req);
 
         const { email, remember } = req.body;
-
-        console.log('ESTOY EN EL CONTROLLER');
-        console.log(errors.errors);
-        console.log(errors.isEmpty());
 
         if (errors.isEmpty()) {
 
@@ -98,6 +95,8 @@ module.exports = {
                 image: userLogin.avatar.dataValues.name,
                 email: userLogin.email
             }
+
+            req.session.carrito = [];
 
             if (remember != undefined) {
                 /* Aplicacion de Cookie */

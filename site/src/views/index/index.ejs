@@ -136,7 +136,9 @@
                                     <div class="espacio-div"><p></p></div>
                             <% } %>
                             <div class="precio-desc">
-                                <img src="/images/icons/carrito-comprar.svg" alt="">
+                                <a href="#" onclick="agregarItem('<%=producto.id%>')">
+                                    <img src="/images/icons/carrito-comprar.svg" alt="">
+                                </a>
                             </div>
                             <!-- <div class="especificaciones">
                                 <a href="/products/productDetail/<%= producto.id %>">especificaciones</a>
@@ -227,7 +229,9 @@
                                     <div class="espacio-div"><p></p></div>
                             <% } %>
                             <div class="precio-desc">
-                                <img src="/images/icons/carrito-comprar.svg" alt="">
+                                <a href="#" onclick="agregarItem('<%=producto.id%>')">
+                                    <img src="/images/icons/carrito-comprar.svg" alt="">
+                                </a>
                             </div>
                             <!-- <div class="especificaciones">
                                 <a href="/products/productDetail/<%= producto.id %>">especificaciones</a>
@@ -271,6 +275,7 @@
     </main>
     <%- include('../partials/footer.ejs') %>
     <%- include('../partials/scripts.ejs') %>
+    
 </body>
 
 </html>
