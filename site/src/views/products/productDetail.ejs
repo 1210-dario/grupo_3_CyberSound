@@ -77,7 +77,7 @@
                                             </div>
                                             <% if (producto.stock>0) { %>
 
-                                                <div class="comprar"> <a href="/products/cart"><button type="button"
+                                                <div class="comprar"> <a href="#" onclick="agregarItem('<%=producto.id%>')"><button type="button"
                                                             class="boton-comprar">Comprar
                                                             ahora</button></a>
                                                     <% } else { %>
