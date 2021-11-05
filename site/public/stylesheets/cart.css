@@ -177,6 +177,14 @@ main{
     padding: 1px 20px;
     border-radius: 12px;
 }
+.credit-cards-cart{
+    margin:auto;
+    width: auto;
+    margin-bottom: 50px;
+}
+.credit-cards-img{
+    width:40vw;
+}
 @media (min-width:426px){
    .carrito-cart{
        width: 90%;
