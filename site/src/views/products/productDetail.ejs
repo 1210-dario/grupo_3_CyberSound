@@ -16,14 +16,14 @@
                             <div class="caja1-imagenes">
                                 <div class="product-imagen">
                                     <div class="small-imagen">
-                                        <img src="/images/products/<%= producto.images[0].fileName%>" alt="teclado-gamer"
-                                            class="small-1">
-                                        <img src="/images/products/<%= producto.images[1].fileName%>" alt="teclado-gamer"
-                                            class="small-2">
-                                        <img src="/images/products/<%= producto.images[2].fileName%>" alt="teclado-gamer"
-                                            class="small-3">
+                                        <% producto.images.forEach((image,index) => { %>
+                                         
+                                            <img onclick="document.getElementById('img-principal').setAttribute('src','/images/products/<%=image.fileName%>')" src="/images/products/<%= image.fileName%>" alt="teclado-gamer"
+                                                class="small-1">
+                                           
+                                        <% }) %>
                                     </div>
-                                    <img src="/images/products/<%= producto.images[0].fileName%>" alt="teclado-gamer"
+                                    <img id="img-principal" src="/images/products/<%= producto.images[0].fileName%>" alt="teclado-gamer"
                                         class="principal-imagen">
                                     <!-- <a href="">
                                         <img src="/images/icons/logo-heart.svg" alt="icon-heart" class="icono-heart">
