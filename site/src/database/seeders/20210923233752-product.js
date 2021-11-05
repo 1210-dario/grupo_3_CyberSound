@@ -616,6 +616,19 @@ module.exports = {
       categoryId: 4,
       createdAt: new Date,
       updatedAt: new Date
+    } , {
+      name: "Dead KZ Headphone",
+      description: "Nuestros auriculares resisten largas e intensas sesiones de gaming gracias a sus suaves almohadillas pivotantes y su diadema autoajustable. Cada auricular se ajustan perfectamente a la forma de la oreja y anulan cualquier ruido que pueda distraerte mientras avanzas hacia la victoria, no pierdas tiempo escribiendo, el microfono incorpardo sera suficiente para comunicarte con todos.",
+      price: 11406.88,
+      discount: 21,
+      stock: 450,
+      shipping: false,
+      offer: false,
+      bestSeller: true,
+      showMenu: true,
+      categoryId: 4,
+      createdAt: new Date,
+      updatedAt: new Date
     }
     ], {});
   },

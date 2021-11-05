@@ -493,8 +493,14 @@ module.exports = {
         updatedAt: new Date
       },
       {
-        fileName: 'parlante0-1.png',
+        fileName: 'webcam2-3.png',
         productId: 27,
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        fileName: 'parlante0-1.png',
+        productId: 28,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -512,7 +518,7 @@ module.exports = {
       },
       {
         fileName: 'parlante1-1.png',
-        productId: 28,
+        productId: 29,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -530,7 +536,7 @@ module.exports = {
       },
       {
         fileName: 'parlante2-1.png',
-        productId: 29,
+        productId: 30,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -548,7 +554,7 @@ module.exports = {
       },
       {
         fileName: 'parlante3-1.png',
-        productId: 30,
+        productId: 31,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -566,7 +572,7 @@ module.exports = {
       },
       {
         fileName: 'parlante4-1.png',
-        productId: 31,
+        productId: 32,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -584,7 +590,7 @@ module.exports = {
       },
       {
         fileName: 'parlante5-1.png',
-        productId: 32,
+        productId: 33,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -602,7 +608,7 @@ module.exports = {
       },
       {
         fileName: 'parlante6-1.png',
-        productId: 33,
+        productId: 34,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -620,7 +626,7 @@ module.exports = {
       },
       {
         fileName: 'parlante7-1.png',
-        productId: 34,
+        productId: 35,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -638,7 +644,7 @@ module.exports = {
       },
       {
         fileName: 'parlante8-1.png',
-        productId: 35,
+        productId: 36,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -656,7 +662,7 @@ module.exports = {
       },
       {
         fileName: 'parlante9-1.png',
-        productId: 36,
+        productId: 37,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -674,7 +680,7 @@ module.exports = {
       },
       {
         fileName: 'parlante10-1.png',
-        productId: 37,
+        productId: 38,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -692,7 +698,7 @@ module.exports = {
       },
       {
         fileName: 'parlante11-1.png',
-        productId: 38,
+        productId: 39,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -710,7 +716,7 @@ module.exports = {
       },
       {
         fileName: 'auri0-1.png',
-        productId: 39,
+        productId: 40,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -728,7 +734,7 @@ module.exports = {
       },
       {
         fileName: 'auri1-1.png',
-        productId: 40,
+        productId: 41,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -746,7 +752,7 @@ module.exports = {
       },
       {
         fileName: 'auri2-1.png',
-        productId: 41,
+        productId: 42,
         createdAt: new Date,
         updatedAt: new Date
       },
@@ -764,79 +770,92 @@ module.exports = {
       },
       {
         fileName: 'auri3-1.png',
-        productId: 42,
+        productId: 43,
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        fileName: 'auri3-2.png',
+        productId: 43,
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        fileName: 'auri3-3.png',
+        productId: 43,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
         fileName: 'auri4-1.png',
-        productId: 43,
+        productId: 44,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
         fileName: 'auri4-2.png',
-        productId: 43,
+        productId: 44,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
         fileName: 'auri4-3.png',
-        productId: 43,
+        productId: 44,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
         fileName: 'auri5-1.png',
-        productId: 44,
+        productId: 45,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
         fileName: 'auri5-2.png',
-        productId: 44,
+        productId: 45,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
         fileName: 'auri5-3.png',
-        productId: 44,
+        productId: 45,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
         fileName: 'auri6-1.png',
-        productId: 45,
+        productId: 46,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
         fileName: 'auri6-2.png',
-        productId: 45,
+        productId: 46,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
         fileName: 'auri6-3.png',
-        productId: 45,
+        productId: 46,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
         fileName: 'auri7-1.png',
-        productId: 46,
+        productId: 47,
         createdAt: new Date,
         updatedAt: new Date
       },
       {
         fileName: 'auri7-2.png',
-        productId: 46,
+        productId: 47,
         createdAt: new Date,
         updatedAt: new Date
-      },
+      }
+      ,
       {
-        fileName: 'auri7-3.png',
-        productId: 46,
+        fileName: 'auri7-2.png',
+        productId: 47,
         createdAt: new Date,
         updatedAt: new Date
       }
