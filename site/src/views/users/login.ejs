@@ -9,8 +9,6 @@
         <h1 class="h1-ingresar">Ingresar</h1>
         <span id="error-empty" class="text-danger small"></span>
         <div class="caja-login"> 
-        <button class="google"><a href="/"><i class="fab fa-google"></i>Ingresar con google</a></button>
-        <h2>o</h2>
         <form action="/users/login" method="POST" id="form-login">
             <div>
                 <input type="email" name="email" placeholder="Email" id="email" class="input-naranja <%= locals.errores && locals.errores.email ? 'is-invalid' : null %>">
