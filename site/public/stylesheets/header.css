@@ -94,18 +94,17 @@ header nav .caja-2 img{
 }
 
 header nav .caja-2 .logo-cart .quantity{
-    position: absolute;
-    right: 460px;
-    top: 50px;
     color: deeppink;
     font-weight: bold;
+    height: 8px;
+    width: 8px;
 }
-/* header nav .caja-2 .logo-cart{
+
+header nav .caja-2 .logo-cart a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
-} */
+}
 
 
 

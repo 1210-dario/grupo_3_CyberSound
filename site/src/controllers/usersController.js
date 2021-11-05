@@ -180,7 +180,9 @@ module.exports = {
                   id: req.params.id
                 }
               });
-              return userDeleted;
+              req.session.destroy();
+              res.cookie('usuario', null, { maxAge: -1 })
+              return res.redirect('../../')
         } catch(err){
             next(err);
         }
