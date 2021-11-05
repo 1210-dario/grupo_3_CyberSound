@@ -241,6 +241,7 @@ module.exports = {
     productAdmin: (req, res) => {
         db.Product.findAll({
             include: [
+                { association: 'images' },
                 { association: 'category' },
             ]
         }).then(productos => res.render('./products/productAdmin', {
