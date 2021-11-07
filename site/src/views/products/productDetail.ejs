@@ -80,11 +80,11 @@
                                                 <div class="comprar">
                                                     <% if (locals.userLogin) { %>
                                                         <a href="#" onclick="agregarItem('<%=producto.id%>','<%=locals.userLogin.role%>')">
-                                                            <img src="/images/icons/carrito-comprar.svg" alt="">
+                                                            <button type="button" class="boton-comprar">Comprar ahora</button>
                                                         </a>
                                                     <% }else{ %> 
                                                         <a href="#" onclick="agregarItem('<%=producto.id%>',undefined)">
-                                                            <img src="/images/icons/carrito-comprar.svg" alt="">
+                                                            <button type="button" class="boton-comprar">Comprar ahora</button>
                                                         </a>
                                                         <% }%>
                                                     <% } else { %>
