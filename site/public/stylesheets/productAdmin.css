@@ -26,7 +26,7 @@
 .productAdmin .naranja-table{
     background-color: var(--color-naranja);
     position: sticky;
-    top: 159px;
+    top: 7.9rem;
     z-index: 2;
 }
 .productAdmin .tabla-admin{

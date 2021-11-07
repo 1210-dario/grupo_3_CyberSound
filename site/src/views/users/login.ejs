@@ -13,8 +13,10 @@
             <div>
                 <input type="email" name="email" placeholder="Email" id="email" class="input-naranja <%= locals.errores && locals.errores.email ? 'is-invalid' : null %>">
                 <span class="text-danger small" id="error-email"><%= locals.errores && locals.errores.email && errores.email.msg != 'credenciales inválidas' ? errores.email.msg : null %> </span>
-           
-                <input type="password" name="password" placeholder="Contraseña" id="password" class="input-naranja <%= locals.errores && locals.errores.email ? 'is-invalid' : null %>">
+                <div class="span-eye-input">
+                    <span class="icon-eye"><i class="fas fa-eye-slash"></i></span>
+                    <input type="password" name="password" placeholder="Contraseña" id="password" class="input-naranja <%= locals.errores && locals.errores.email ? 'is-invalid' : null %>">
+                </div>
                 <span class="text-danger small" id="error-password"><%= locals.errores && locals.errores.password ? errores.password.msg : null %> </span>
             </div>
 
@@ -33,6 +35,7 @@
     <%- include('../partials/footer.ejs') %>
     <%- include('../partials/scripts.ejs') %>
     <script src="/javascripts/loginValidator.js"></script>
+    <script src="/javascripts/login.js"></script>
 </body>
 
 </html>

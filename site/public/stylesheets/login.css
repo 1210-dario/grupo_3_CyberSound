@@ -71,6 +71,27 @@
     font-weight: bold;
     color: var(--color-blanco);
 }
+.span-eye-input{
+    position: relative;
+    height: 100%;
+    width: 265px;
+    margin: auto;    
+}
+.icon-eye {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor:pointer;
+}
+.icon-eye .fas{
+color: #fff;
+font-size: 18px;
+}
+.icon-eye .fas:hover{
+font-size: 22px;
+}
+
 
 /*##############################*/
 /* Al tener un error en el form */
