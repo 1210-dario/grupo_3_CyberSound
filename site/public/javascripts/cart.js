@@ -19,15 +19,19 @@
     }
     }
     
-    const agregarItem = async (id) => {
-        try {
-            console.log('Entre a agregar item');
-            const url = `/products/addCarrito/${id}`;
-            const response = await fetch(url);
-            const result = await response.json();
-            refresh()
-        } catch (error) {
-            console.log(error);
+    const agregarItem = async (id, role) => {
+        if(role!= undefined){
+            try {
+                console.log('Entre a agregar item');
+                const url = `/products/addCarrito/${id}`;
+                const response = await fetch(url);
+                const result = await response.json();
+                refresh()
+            } catch (error) {
+                console.log(error);
+            }
+        }else{
+            loginAlert()
         }
     }
 
@@ -43,5 +47,9 @@
             console.log(error);
         }
     }
+
+    const loginAlert = () => {    
+        Swal.fire('Debes loguearte para agregar productos al carrito!');
+    };
 
     refresh();

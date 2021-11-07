@@ -77,14 +77,19 @@
                                             </div>
                                             <% if (producto.stock>0) { %>
 
-                                                <div class="comprar"> <a href="#" onclick="agregarItem('<%=producto.id%>')"><button type="button"
-                                                            class="boton-comprar">Comprar
-                                                            ahora</button></a>
+                                                <div class="comprar">
+                                                    <% if (locals.userLogin) { %>
+                                                        <a href="#" onclick="agregarItem('<%=producto.id%>','<%=locals.userLogin.role%>')">
+                                                            <img src="/images/icons/carrito-comprar.svg" alt="">
+                                                        </a>
+                                                    <% }else{ %> 
+                                                        <a href="#" onclick="agregarItem('<%=producto.id%>',undefined)">
+                                                            <img src="/images/icons/carrito-comprar.svg" alt="">
+                                                        </a>
+                                                        <% }%>
                                                     <% } else { %>
                                                         <h2>sin stock</h2>
                                                         <% } %>
-
-
                                                 </div>
                                     </div>
                         </div>
@@ -166,7 +171,15 @@
                                             <div class="espacio-div"><p></p></div>
                                     <% } %>
                                     <div class="precio-desc">
-                                        <img src="/images/icons/carrito-comprar.svg" alt="">
+                                        <% if (locals.userLogin) { %>
+                                            <a href="#" onclick="agregarItem('<%=producto.id%>','<%=locals.userLogin.role%>')">
+                                                <img src="/images/icons/carrito-comprar.svg" alt="">
+                                            </a>
+                                        <% }else{ %> 
+                                            <a href="#" onclick="agregarItem('<%=producto.id%>',undefined)">
+                                                <img src="/images/icons/carrito-comprar.svg" alt="">
+                                            </a>
+                                            <% }%>
                                     </div>
                                     <!-- <div class="especificaciones">
                                         <a href="/products/productDetail/<%= producto.id %>">especificaciones</a>
@@ -183,6 +196,7 @@
                     </article>
                 </section>
             </main>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
             <%- include('../partials/footer.ejs') %>
             <%- include('../partials/scripts.ejs') %>
     </body>
