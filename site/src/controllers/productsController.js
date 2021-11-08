@@ -178,7 +178,7 @@ module.exports = {
 
         if (errors.isEmpty()) {
 
-            const { name, description, stock, price, discount, envioFree, masVendido, oferta, show, category, } = req.body;
+            const { name, description, stock, price, discount, envioFree, masVendido, oferta, show, categoryId, } = req.body;
 
             db.Product.update(
                 {
@@ -191,7 +191,7 @@ module.exports = {
                     offer: oferta != undefined ? true : false,
                     bestSeller: masVendido != undefined ? true : false,
                     showMenu: show != undefined ? true : false,
-                    categoryId: category
+                    categoryId
                 },
                 {
                     where: {

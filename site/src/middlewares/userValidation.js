@@ -4,9 +4,9 @@ const {User} = require('../database/models');
 const bcrypt = require('bcryptjs');
 
 const _nameRequired = check('nombre').not().isEmpty().withMessage('El nombre es obligatorio').isLength({min:2}).withMessage('El nombre debe contener al menos 2 caracteres');
-const _nameType = check('nombre').isAlpha().withMessage('El nombre solo debe contener letras');
+const _nameType = check('nombre').isAlpha('es-ES', {ignore: ' '}).withMessage('El nombre solo debe contener letras');
 const _lastNameRequired = check('apellido').not().isEmpty().withMessage('El apellido es obligatorio').isLength({min:2}).withMessage('El apellido debe contener al menos 2 caracteres');
-const _lastNameType = check('apellido').isAlpha().withMessage('El apellido solo debe contener letras');
+const _lastNameType = check('apellido').isAlpha('es-ES', {ignore: ' '}).withMessage('El apellido solo debe contener letras');
 
 const _emailRequired = check('email').not().isEmpty().withMessage('El email es obligatorio');
 const _emailValid = check('email').isEmail().withMessage('El email debe ser un email valido');

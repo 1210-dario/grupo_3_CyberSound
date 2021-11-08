@@ -85,10 +85,27 @@
     cursor:pointer;
 }
 .icon-eye .fas{
-color: #fff;
+color: black;
 font-size: 18px;
 }
+
 .icon-eye .fas:hover{
+font-size: 22px;
+}
+
+.icon-eye2 {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor:pointer;
+}
+.icon-eye2 .fas{
+color: black;
+font-size: 18px;
+}
+
+.icon-eye2 .fas:hover{
 font-size: 22px;
 }
 
