@@ -26,7 +26,7 @@ module.exports = {
       updatedAt: new Date
     },
     {
-      name: 'Rainbow Ultimate Mechanical Keyboard',
+      name: 'Rainbow Mechanical Keyboard',
       description: 'Nuevo teclado mecanico, posee switchs brown e iluminacion led con una gran capacidad de respuesta y resistirán hasta 50 millones de pulsaciones. La tecnología N-key rollover asegura que cada pulsación de botón se transfiere al juego y que, al activar el modo de juego, permaneces en él incluso si accidentalmente presionas la tecla de Windows. Pon la mente en el juego; pon la vista en el premio.',
       price: 10000,
       discount: 0,
@@ -48,7 +48,7 @@ module.exports = {
       shipping: false,
       offer: true,
       bestSeller: true,
-      showMenu: true,
+      showMenu: false,
       categoryId: 1,
       createdAt: new Date,
       updatedAt: new Date
@@ -244,7 +244,7 @@ module.exports = {
       shipping: false,
       offer: true,
       bestSeller: true,
-      showMenu: true,
+      showMenu: false,
       categoryId: 3,
       createdAt: new Date,
       updatedAt: new Date
@@ -389,7 +389,7 @@ module.exports = {
       shipping: false,
       offer: false,
       bestSeller: true,
-      showMenu: true,
+      showMenu: false,
       categoryId: 5,
       createdAt: new Date,
       updatedAt: new Date
@@ -584,7 +584,7 @@ module.exports = {
       discount: 5,
       stock: 822,
       shipping: true,
-      offer: false,
+      offer: true,
       bestSeller: true,
       showMenu: true,
       categoryId: 4,
@@ -599,7 +599,7 @@ module.exports = {
       shipping: false,
       offer: false,
       bestSeller: true,
-      showMenu: true,
+      showMenu: false,
       categoryId: 4,
       createdAt: new Date,
       updatedAt: new Date
@@ -612,7 +612,7 @@ module.exports = {
       shipping: false,
       offer: false,
       bestSeller: true,
-      showMenu: true,
+      showMenu: false,
       categoryId: 4,
       createdAt: new Date,
       updatedAt: new Date
