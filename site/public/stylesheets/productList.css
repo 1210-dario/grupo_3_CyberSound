@@ -157,7 +157,6 @@ background-color: var(--color-gris-oscuro);
 
 .productList main article .product-container .producto .precio-desc{
     width: 100%;
-    display: none;
     justify-content: space-around;
     height: 6.7vw;
     align-items: flex-end;
@@ -385,7 +384,7 @@ background-color: var(--color-gris-oscuro);
 }
 
 .productList main .box .product-container .producto .precio-desc img{
-    display: none;
+    display: initial;
     width: 32px;
     height: 32px;
 }

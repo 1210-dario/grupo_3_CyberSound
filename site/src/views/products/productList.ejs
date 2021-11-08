@@ -24,7 +24,7 @@
                                             </div> -->
                                             <% if (producto.discount>0) { %>
                                                 <div class="masVendido">
-                                                    <% if (producto.masVendido===true) { %>
+                                                    <% if (producto.bestSeller === true) { %>
                                                         <p class="cartel-vendido">mas vendido</p>
                                                         <p class="descuento">
                                                             <%= producto.discount %>%OFF
@@ -38,7 +38,7 @@
                                         <% } %>
                                             <% } else {%>
                                                 <div class="masVendido">
-                                                    <% if (producto.masVendido===true) { %>
+                                                    <% if (producto.bestSeller === true) { %>
                                                         <p class="cartel-vendido">mas vendido</p>
                                                 </div>
                                                 <% }else { %>
@@ -49,7 +49,7 @@
                         <% } %>
                             <% } %>
                                 <div class="precio-desc">
-                                    <% if (producto.discount> 0) { %>
+                                    <% if (producto.discount > 0) { %>
                                         <s>$ <%= toThousand(producto.price)%></s>
                                         <% } else{ %>
                                             <span>$ <%= toThousand(producto.price)%></span>
@@ -57,7 +57,7 @@
                                                 <p>
                                                     <%= producto.discount%>% OFF
                                                 </p>
-                                                <% if (producto.discount> 0) { %>
+                                                <% if (producto.discount > 0) { %>
                                                     <span class="precio">$ <%= toThousand(conDescuento(producto.price,
                                                             producto.discount)) %> </span>
                                                     <% } %>
@@ -72,7 +72,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <% if (producto.envioFree===true) { %>
+                                <% if (producto.shipping === true) { %>
                                     <div class="envio">
                                         <i class="fas fa-truck"></i>
                                         <p>envio gratis</p>
